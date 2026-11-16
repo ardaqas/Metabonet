@@ -40,6 +40,8 @@ This document states in advance what we expect, how each expectation will be tes
 | S4 | Data audit | Go/no-go criteria in `research_plan.md`, Section 4 met | Narrow the question (e.g., single medium) rather than add complexity |
 | S5 | Compute contingency (D38) | One complete target is timed before the rest. Projected total ≤ ~8 h at B = 1,000 | Reduce B to **500** for N-met and N-all, log the change here and in the decision log **before** running any further target |
 
+**Phase 2 outcomes (2026-11-16; `docs/phase2_report.md`):** S1 **pass** (74 targets: median ΔR²(P) = −0.0004, max 0.008, none > 0.02). S2 **pass** (20/20 synthetic targets beat N-met at p < 0.05; median recovery 69% of the injected signal, median absolute error 0.045). S3 **all items "no"** (evidence per item in the report). S5: 65 s per median-size target, projected 1.7 h → **B stays 1,000**. S4 passed in Phase 0.
+
 ---
 
 ## 3. Hypotheses

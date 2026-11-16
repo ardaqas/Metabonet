@@ -1,0 +1,13 @@
+{
+  "n_sims": 20,
+  "B_nmet": 200,
+  "signal_var_target": 0.15,
+  "median_true_delta": 0.14884667772994076,
+  "median_delta_m1": 0.10528641563620185,
+  "median_recovery_ratio": 0.6940291614207135,
+  "median_abs_error": 0.045370602092658696,
+  "frac_beats_nmet": 1.0,
+  "pass_beats_nmet_ge_95pct": true,
+  "pass_close_abs_error_le_0.05": true,
+  "S2_pass": true
+}

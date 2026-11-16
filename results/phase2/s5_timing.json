@@ -1,0 +1,15 @@
+{
+  "timing_target": "2-deoxycytidine",
+  "k": 11,
+  "B": 1000,
+  "wall_seconds": 64.93137311935425,
+  "t_m1": 0.03316092491149902,
+  "t_m2": 10.399473190307617,
+  "t_nmet": 26.07603621482849,
+  "t_nall": 28.3078510761261,
+  "t_perm": 0.05534696578979492,
+  "projected_total_hours_74_targets": 1.6684197558297051,
+  "contingency_threshold_hours": 8.0,
+  "reduce_B_to_500": false,
+  "note": "result arrays stored in timing_target_*.npz; not interpreted in Phase 2"
+}

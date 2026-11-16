@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 NB := notebooks/00_data_audit.ipynb
 
-.PHONY: env data verify freeze audit test all phase1
+.PHONY: env data verify freeze audit test all phase1 phase2
 
 env:            ## create the pinned virtual environment
 	uv venv --python 3.10 .venv && uv pip install --python $(PY) -r requirements.txt
@@ -27,3 +27,7 @@ all: data test audit
 phase1:         ## Phase 1: Human-GEM parsing, gene + metabolite mapping, gene sets, outcome-blind target selection
 	$(PY) -m src.phase0.download --verify
 	$(PY) -m src.phase1.run
+
+phase2:         ## Phase 2: frozen folds + pipeline controls (S1 permuted target, S2 synthetic recovery, S5 timing)
+	$(PY) -m src.phase0.download --verify
+	$(PY) -m src.phase2.run all

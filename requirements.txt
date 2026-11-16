@@ -10,3 +10,5 @@ ipykernel==7.3.0
 jupyter_client
 pytest==8.3.5
 cobra==0.32.1          # Phase 1: SBML parsing only (no FBA)
+scikit-learn==1.6.1    # Phase 2: StratifiedGroupKFold + RidgeCV reference in tests
+scipy==1.15.3

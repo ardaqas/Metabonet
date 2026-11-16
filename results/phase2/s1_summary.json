@@ -1,0 +1,10 @@
+{
+  "n_targets": 74,
+  "median_delta_r2_perm": -0.00041619451786891197,
+  "max_delta_r2_perm": 0.008371433645551063,
+  "min_delta_r2_perm": -0.0034273213812440863,
+  "n_targets_above_0.02": 0,
+  "pass_median_within_0.005": true,
+  "pass_no_target_above_0.02": true,
+  "S1_pass": true
+}
