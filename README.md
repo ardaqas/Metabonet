@@ -4,10 +4,6 @@
 
 *Cells build, use and move thousands of small molecules; this project tests whether the activity of the genes that handle a molecule predicts how much of it a cancer cell line contains.*
 
-## Result in one line
-
-For 37 of 74 pre-specified polar metabolites in 735 CCLE solid-tumour cell lines, genes in the metabolite's Human-GEM reaction neighbourhood improved held-out prediction beyond lineage and culture medium, more than size-matched random metabolic genes (pre-specified, frozen in a dated git commit; robust in four sensitivity analyses). A post hoc check showed these sets also beat non-overlapping gene sets from other metabolites (33 of 33 judged).
-
 ## The idea in 30 seconds
 
 Every small molecule in a cell is made, used up or moved by a few enzymes and transporters, and each one is encoded by a known gene. If those genes are more active in a cell line, you might expect more (or less) of the molecule there. I tested this for 74 molecules in 735 cancer cell lines, always predicting cell lines the model had not seen, after accounting for tissue type and growth medium. The hypotheses and the list of molecules were fixed before any model was run, and every result is compared with randomly chosen genes.
@@ -21,6 +17,10 @@ Three earlier studies used the same CCLE data and reached different conclusions:
 - **Schildcrout et al. 2024 (Recon8D, bioRxiv** ([doi](https://doi.org/10.1101/2024.08.17.608400)); **published as Metab8D, Commun Biol 2026** ([doi](https://doi.org/10.1038/s42003-026-10409-3))**):** 2,000 random genes predicted about as well as 2,000 metabolic genes, suggesting that much of the signal is general cell state rather than metabolism. The numbers are from the preprint.
 
 None of them asked, for each metabolite, whether the few genes of its own reactions beat equally sized random genes once lineage and medium are accounted for. That narrower question is what this project tests. It complements rather than contradicts the Recon8D result, which compared large gene pools, not metabolite-specific neighbourhoods.
+
+## Result in one line
+
+For 37 of 74 pre-specified polar metabolites in 735 CCLE solid-tumour cell lines, genes in the metabolite's Human-GEM reaction neighbourhood improved held-out prediction beyond lineage and culture medium, more than size-matched random metabolic genes (pre-specified, frozen in a dated git commit; robust in four sensitivity analyses). A post hoc check showed these sets also beat non-overlapping gene sets from other metabolites (33 of 33 judged).
 
 ## How it works
 
