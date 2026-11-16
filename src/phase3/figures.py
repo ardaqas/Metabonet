@@ -187,7 +187,7 @@ def fig_readme_scatter() -> None:
                    Line2D([], [], marker="o", mfc=SURFACE, mec=MUTED, mew=1.5, ls="", ms=8, label=f"not a clear win ({n_open})"),
                    Line2D([], [], marker="D", color=ORANGE, ls="", ms=9, markeredgecolor=INK,
                           label=f"positive controls ({n_pc}; {n_pc_win} clear wins)")]
-        ax.legend(handles=handles, loc="lower right", borderaxespad=0.6, handletextpad=0.4)
+        ax.legend(handles=handles, loc="lower right", borderaxespad=0.4, handletextpad=0.3, fontsize=10.2)
         FIG.mkdir(parents=True, exist_ok=True)
         fig.savefig(FIG / "fig_readme_scatter.png", bbox_inches="tight")
         plt.close(fig)
