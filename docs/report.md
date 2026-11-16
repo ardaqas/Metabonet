@@ -97,6 +97,7 @@ Three targets were chosen by a rule fixed beforehand (`case_studies.md`): the to
 9. **Network and mapping.** Gene sets depend on Human-GEM v2.0.0, whose gene-reaction rules contain known errors [5]; the OR-lists of isozymes make every isozyme a feature. Two HMDB identifiers are unverified (hmdb.ca blocks scripts); the mappings rest on KEGG/ChEBI and name + formula.
 10. **Dependence between targets.** Targets with overlapping gene sets are not independent; the clustered reading addresses this but 56 clusters are still not 56 independent biological systems.
 11. **No external validation:** one dataset, no tumours, no second cell-line panel, no experiments.
+12. **Expression filter.** A mean-expression filter (mean log2(TPM+1) ≥ 1 across the 735 lines, fixed in advance to be outcome-blind) removes genes expressed strongly in only a subset of lines, which can be the most informative ones. IDO1 and TDO2 are the example: both are above 1 in only 18% and 30% of lines, so they are removed from any gene set, including a second-neighbour one (`case_studies.md` §3). Genes that switch on in a minority of lines (for example when induced) are therefore under-represented in every gene set tested.
 
 ## 8. Transparency: deviations, disclosures and corrections
 

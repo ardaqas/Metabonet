@@ -56,3 +56,16 @@ make audit     # verify checksums, execute notebooks/00_data_audit.ipynb (rebuil
 ```
 
 Frozen Phase 0 outputs and their SHA-256 values are in `data/processed/FREEZE.tsv`. Two consecutive `make audit` runs gave byte-identical outputs.
+
+## Terms of use
+
+The MIT licence in `LICENSE` covers the **code** in this repository only. The inputs stay under their providers' original terms, and the raw files are not redistributed (`data/raw/` is not committed):
+
+- **CCLE 2019 files** (metabolomics, RNA-seq, annotations; Broad Institute) and **DepMap `Model.csv`**: see the terms of the Broad CCLE and DepMap portals.
+- **Li et al. 2019 supplementary tables:** see the terms of the publisher (Nature Portfolio).
+- **Human-GEM v2.0.0** (SysBioChalmers): released under CC BY 4.0 (the licence field of its GitHub repository).
+- **Cellosaurus** (SIB Swiss Institute of Bioinformatics): see its terms of use.
+- **KEGG and ChEBI** responses are cached only to verify identifiers (`data/raw/idlookup/`, not committed).
+
+Tables in `data/processed/` and `results/` that are derived from these sources (for example cell-line annotations, per-metabolite summaries, and the observed values of three metabolites in `results/phase4/`) remain subject to the same terms. Cite the original sources when reusing them (`literature_review.md` §10).
+

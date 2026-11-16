@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 NB := notebooks/00_data_audit.ipynb
 
-.PHONY: env data verify freeze audit test all phase1 phase2 phase3 phase4 verify-results
+.PHONY: env data verify freeze audit test all phase1 phase2 phase3 phase4 verify-results check-docs
 
 env:            ## create the pinned virtual environment
 	uv venv --python 3.10 .venv && uv pip install --python $(PY) -r requirements.txt
@@ -52,3 +52,6 @@ phase4:         ## Phase 4: case studies (gene roles, coefficients, out-of-fold 
 
 verify-results: ## check the Phase 3 per-target arrays against results/phase3/RESULTS_MANIFEST.tsv
 	$(PY) -m src.phase3.manifest --verify
+
+check-docs:     ## check relative links, absolute paths and file sizes, and the numbers quoted in README.md
+	$(PY) scripts/check_docs.py all
