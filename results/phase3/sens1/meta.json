@@ -1,0 +1,13 @@
+{
+  "analysis": "sens1",
+  "population": "all_lines",
+  "n_lines": 896,
+  "B": 1000,
+  "folds": "results/phase3/folds_all_lines.csv",
+  "n_features": 74,
+  "kwargs": {
+    "with_m2": false,
+    "with_nall": false
+  },
+  "started_utc": "2026-11-16T15:59:15Z"
+}

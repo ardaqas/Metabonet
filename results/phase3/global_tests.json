@@ -1,0 +1,807 @@
+{
+  "n_targets": 74,
+  "S1_permuted_control": {
+    "median": -0.0004161945178690396,
+    "max": 0.008371433645550852,
+    "n_above_0.02": 0,
+    "pass": true
+  },
+  "H1": {
+    "wilcoxon_p": 7.124822752279116e-14,
+    "median_dr2_m1": 0.028817706199057117,
+    "n_dr2_ge_0.02": 51,
+    "frac_dr2_ge_0.02": 0.6891891891891891,
+    "n_dr2_positive": 69,
+    "supported": true
+  },
+  "H2": {
+    "n_targets": 74,
+    "wilcoxon_p_vs_median_null": 2.6130691183257518e-11,
+    "median_excess_over_null": 0.019047465417694816,
+    "n_above_own_p95": 39,
+    "expected_above_p95": 3.7,
+    "binomial_p": 4.969493978414539e-31,
+    "n_network_specific": 37,
+    "network_specific_targets": [
+      "2-deoxyadenosine",
+      "2-deoxycytidine",
+      "PEP",
+      "acetylcarnitine",
+      "adenosine",
+      "alpha-glycerophosphate",
+      "alpha-glycerophosphocholine",
+      "alpha-ketoglutarate",
+      "carnitine",
+      "citrulline",
+      "creatine",
+      "cystathionine",
+      "cytidine",
+      "glutamate",
+      "glutamine",
+      "glutathione oxidized",
+      "glutathione reduced",
+      "guanosine",
+      "inosine",
+      "inositol",
+      "lysine",
+      "malate",
+      "malonylcarnitine",
+      "niacinamide",
+      "palmitoylcarnitine",
+      "pantothenate",
+      "phosphocreatine",
+      "proline",
+      "propionylcarnitine",
+      "putrescine",
+      "sorbitol",
+      "stearoylcarnitine",
+      "taurine",
+      "thymidine",
+      "uracil",
+      "uridine",
+      "xanthosine"
+    ],
+    "classification": "supported"
+  },
+  "H2_clustered_secondary": {
+    "n_clusters": 56,
+    "n_multi_target_clusters": 5,
+    "wilcoxon_p": 1.5239706778932863e-08,
+    "median_excess": 0.015598426922962393,
+    "n_clusters_above_p95": 27,
+    "binomial_p": 1.3145246946239686e-20,
+    "per_cluster": [
+      {
+        "cluster_id": "C01",
+        "n": 9,
+        "excess": 0.07515375954272964,
+        "above": 0.05788052876953586
+      },
+      {
+        "cluster_id": "C02",
+        "n": 6,
+        "excess": 0.07530197575601667,
+        "above": 0.05987117878268945
+      },
+      {
+        "cluster_id": "C03",
+        "n": 3,
+        "excess": -0.0024218279176262125,
+        "above": -0.027468361891828143
+      },
+      {
+        "cluster_id": "C04",
+        "n": 3,
+        "excess": 0.007695172396446792,
+        "above": -0.00878161862313907
+      },
+      {
+        "cluster_id": "C05",
+        "n": 2,
+        "excess": 0.0030519667960999695,
+        "above": 0.0010255071089957624
+      },
+      {
+        "cluster_id": "C06",
+        "n": 1,
+        "excess": 0.003932901272305533,
+        "above": -0.010972942788432917
+      },
+      {
+        "cluster_id": "C07",
+        "n": 1,
+        "excess": 0.004975853443209336,
+        "above": -0.011581733845547306
+      },
+      {
+        "cluster_id": "C08",
+        "n": 1,
+        "excess": 0.014387475125024071,
+        "above": -0.006343478222168769
+      },
+      {
+        "cluster_id": "C09",
+        "n": 1,
+        "excess": -0.002151956341923245,
+        "above": -0.024777396939785912
+      },
+      {
+        "cluster_id": "C10",
+        "n": 1,
+        "excess": 0.011573285951041463,
+        "above": -0.0029221844456127632
+      },
+      {
+        "cluster_id": "C11",
+        "n": 1,
+        "excess": 0.05169464369527898,
+        "above": 0.03827042387041202
+      },
+      {
+        "cluster_id": "C12",
+        "n": 1,
+        "excess": 0.014983155937094289,
+        "above": -0.00023818129331099058
+      },
+      {
+        "cluster_id": "C13",
+        "n": 1,
+        "excess": 0.12867892055050756,
+        "above": 0.10902002204745298
+      },
+      {
+        "cluster_id": "C14",
+        "n": 1,
+        "excess": 0.2605430119420663,
+        "above": 0.23977052352941078
+      },
+      {
+        "cluster_id": "C15",
+        "n": 1,
+        "excess": 0.018676766519009354,
+        "above": 0.0016399804581680305
+      },
+      {
+        "cluster_id": "C16",
+        "n": 1,
+        "excess": 0.009063746619554544,
+        "above": -0.011184511962173488
+      },
+      {
+        "cluster_id": "C17",
+        "n": 1,
+        "excess": 0.023877471824961905,
+        "above": -0.0013876089105808835
+      },
+      {
+        "cluster_id": "C18",
+        "n": 1,
+        "excess": -0.0013363267074276378,
+        "above": -0.028478655868594643
+      },
+      {
+        "cluster_id": "C19",
+        "n": 1,
+        "excess": -0.001548512419920157,
+        "above": -0.018798051403676595
+      },
+      {
+        "cluster_id": "C20",
+        "n": 1,
+        "excess": 0.010129225788869123,
+        "above": -0.007332851586824162
+      },
+      {
+        "cluster_id": "C21",
+        "n": 1,
+        "excess": 0.02716358196184758,
+        "above": 0.006430645979597152
+      },
+      {
+        "cluster_id": "C22",
+        "n": 1,
+        "excess": 0.20118516051609125,
+        "above": 0.18454632201959245
+      },
+      {
+        "cluster_id": "C23",
+        "n": 1,
+        "excess": 0.15885302143511043,
+        "above": 0.12151796159821497
+      },
+      {
+        "cluster_id": "C24",
+        "n": 1,
+        "excess": 0.00048498927586755337,
+        "above": -0.006654773945252027
+      },
+      {
+        "cluster_id": "C25",
+        "n": 1,
+        "excess": 0.018773023081775017,
+        "above": -0.007565872122527042
+      },
+      {
+        "cluster_id": "C26",
+        "n": 1,
+        "excess": 0.04693736767339813,
+        "above": 0.03062029925055071
+      },
+      {
+        "cluster_id": "C27",
+        "n": 1,
+        "excess": 0.02663746651185961,
+        "above": 0.011296930094122616
+      },
+      {
+        "cluster_id": "C28",
+        "n": 1,
+        "excess": 0.060235379556967325,
+        "above": 0.021039025700837252
+      },
+      {
+        "cluster_id": "C29",
+        "n": 1,
+        "excess": 0.049936445006576693,
+        "above": 0.0013448888020780453
+      },
+      {
+        "cluster_id": "C30",
+        "n": 1,
+        "excess": 0.015250921499530196,
+        "above": 0.009971868112245964
+      },
+      {
+        "cluster_id": "C31",
+        "n": 1,
+        "excess": 0.007981393744323011,
+        "above": -0.010120959063560423
+      },
+      {
+        "cluster_id": "C32",
+        "n": 1,
+        "excess": -0.015936971913668392,
+        "above": -0.03462014761055216
+      },
+      {
+        "cluster_id": "C33",
+        "n": 1,
+        "excess": 0.0029186929413384023,
+        "above": -0.013545783483797856
+      },
+      {
+        "cluster_id": "C34",
+        "n": 1,
+        "excess": -0.0008098457428268147,
+        "above": -0.006987337828866293
+      },
+      {
+        "cluster_id": "C35",
+        "n": 1,
+        "excess": 0.04470344440821349,
+        "above": 0.03015608235236606
+      },
+      {
+        "cluster_id": "C36",
+        "n": 1,
+        "excess": 0.016349995394627077,
+        "above": -0.004461245079461995
+      },
+      {
+        "cluster_id": "C37",
+        "n": 1,
+        "excess": 0.010903512118807891,
+        "above": -0.019947778261730883
+      },
+      {
+        "cluster_id": "C38",
+        "n": 1,
+        "excess": -0.005753671534299321,
+        "above": -0.023454080071226964
+      },
+      {
+        "cluster_id": "C39",
+        "n": 1,
+        "excess": 0.006055205216451101,
+        "above": -0.02256207518048034
+      },
+      {
+        "cluster_id": "C40",
+        "n": 1,
+        "excess": 0.019321907753614618,
+        "above": 0.002424660648481118
+      },
+      {
+        "cluster_id": "C41",
+        "n": 1,
+        "excess": 0.029748410593642756,
+        "above": 0.015824179652726186
+      },
+      {
+        "cluster_id": "C42",
+        "n": 1,
+        "excess": -0.005944875607331198,
+        "above": -0.023643573070249304
+      },
+      {
+        "cluster_id": "C43",
+        "n": 1,
+        "excess": 0.026862681287813932,
+        "above": 0.01782288390915733
+      },
+      {
+        "cluster_id": "C44",
+        "n": 1,
+        "excess": 0.00772341847938946,
+        "above": -0.00399075424779852
+      },
+      {
+        "cluster_id": "C45",
+        "n": 1,
+        "excess": -0.03258523520785014,
+        "above": -0.06970332314201862
+      },
+      {
+        "cluster_id": "C46",
+        "n": 1,
+        "excess": 0.027485734864286557,
+        "above": 0.011440886962684766
+      },
+      {
+        "cluster_id": "C47",
+        "n": 1,
+        "excess": 0.029975678314899796,
+        "above": 0.016862871614487428
+      },
+      {
+        "cluster_id": "C48",
+        "n": 1,
+        "excess": 0.019555616386600593,
+        "above": 0.002277545181946495
+      },
+      {
+        "cluster_id": "C49",
+        "n": 1,
+        "excess": 0.040852751028310666,
+        "above": 0.020521682294159054
+      },
+      {
+        "cluster_id": "C50",
+        "n": 1,
+        "excess": -4.187966132652727e-05,
+        "above": -0.013858089155424896
+      },
+      {
+        "cluster_id": "C51",
+        "n": 1,
+        "excess": 0.0830053992190678,
+        "above": 0.04193022209228128
+      },
+      {
+        "cluster_id": "C52",
+        "n": 1,
+        "excess": 0.1885020127246735,
+        "above": 0.17778663407318895
+      },
+      {
+        "cluster_id": "C53",
+        "n": 1,
+        "excess": 0.012055392542513317,
+        "above": 0.0030479143982527768
+      },
+      {
+        "cluster_id": "C54",
+        "n": 1,
+        "excess": 0.0757379777501591,
+        "above": 0.05155922219193407
+      },
+      {
+        "cluster_id": "C55",
+        "n": 1,
+        "excess": 0.01594593234639459,
+        "above": -0.007984060296540446
+      },
+      {
+        "cluster_id": "C56",
+        "n": 1,
+        "excess": 0.008439311276429806,
+        "above": -0.018174407339362025
+      }
+    ]
+  },
+  "H3": {
+    "n_targets": 74,
+    "wilcoxon_p_vs_median_null": 1.43391892417096e-10,
+    "median_excess_over_null": 0.017369876623129846,
+    "n_above_own_p95": 42,
+    "expected_above_p95": 3.7,
+    "binomial_p": 4.101193368038806e-35,
+    "n_network_specific": 38,
+    "network_specific_targets": [
+      "2-deoxyadenosine",
+      "2-deoxycytidine",
+      "PEP",
+      "acetylcarnitine",
+      "adenosine",
+      "alpha-glycerophosphate",
+      "alpha-glycerophosphocholine",
+      "alpha-ketoglutarate",
+      "aspartate",
+      "carnitine",
+      "citrulline",
+      "creatine",
+      "cystathionine",
+      "cytidine",
+      "glutamate",
+      "glutamine",
+      "glutathione oxidized",
+      "glutathione reduced",
+      "guanosine",
+      "inosine",
+      "inositol",
+      "lysine",
+      "malate",
+      "malonylcarnitine",
+      "niacinamide",
+      "palmitoylcarnitine",
+      "pantothenate",
+      "phosphocreatine",
+      "proline",
+      "propionylcarnitine",
+      "putrescine",
+      "sorbitol",
+      "stearoylcarnitine",
+      "taurine",
+      "thymidine",
+      "uracil",
+      "uridine",
+      "xanthosine"
+    ],
+    "classification": "supported"
+  },
+  "H4": {
+    "wilcoxon_p_m2_gt_m1": 1.1376275970922253e-06,
+    "median_dr2_m2": 0.06894984855124836,
+    "n_m2_ge_m1": 58,
+    "n_m1_beats_m2_by_0.02": 8,
+    "m1_beats_m2_targets": [
+      "2-deoxyadenosine",
+      "2-deoxycytidine",
+      "adenosine",
+      "alpha-glycerophosphate",
+      "carnitine",
+      "creatine",
+      "cytidine",
+      "palmitoylcarnitine"
+    ],
+    "n_capture_defined": 66,
+    "median_capture_ratio": 0.4588399415585447,
+    "n_capture_ge_0.7": 24,
+    "capture_ge_0.7_targets": [
+      "2-deoxyadenosine",
+      "2-deoxycytidine",
+      "5-adenosylhomocysteine",
+      "CMP",
+      "GMP",
+      "acetylcarnitine",
+      "adenosine",
+      "alpha-glycerophosphate",
+      "alpha-glycerophosphocholine",
+      "alpha-ketoglutarate",
+      "carnitine",
+      "creatine",
+      "cystathionine",
+      "cytidine",
+      "glutamate",
+      "glutathione reduced",
+      "inosine",
+      "lysine",
+      "palmitoylcarnitine",
+      "sorbitol",
+      "stearoylcarnitine",
+      "taurine",
+      "thymidine",
+      "uridine"
+    ],
+    "supported": true
+  },
+  "H5": {
+    "controls": [
+      {
+        "feature": "creatine",
+        "dr2_m1": 0.20192518280222282,
+        "p_nmet": 0.000999000999000999,
+        "q_nmet": 0.0035202892345749487,
+        "passes": true
+      },
+      {
+        "feature": "kynurenine",
+        "dr2_m1": -0.0008707175612093665,
+        "p_nmet": 0.8681318681318682,
+        "q_nmet": 0.8922466422466423,
+        "passes": false
+      },
+      {
+        "feature": "taurine",
+        "dr2_m1": 0.1881267912932528,
+        "p_nmet": 0.000999000999000999,
+        "q_nmet": 0.0035202892345749487,
+        "passes": true
+      }
+    ],
+    "n_pass": 2,
+    "n_controls": 3,
+    "unadjusted": [
+      {
+        "feature": "1-methylnicotinamide",
+        "r2_genes_only_unadjusted": 0.6492666664745987,
+        "r2_m0": 0.16424949370057076,
+        "dr2_m1_adjusted": 0.3666602148661332
+      },
+      {
+        "feature": "creatine",
+        "r2_genes_only_unadjusted": 0.34102510928394764,
+        "r2_m0": 0.09832658258605194,
+        "dr2_m1_adjusted": 0.20192518280222282
+      },
+      {
+        "feature": "kynurenine",
+        "r2_genes_only_unadjusted": -0.0016141077243554847,
+        "r2_m0": -0.00928290757672261,
+        "dr2_m1_adjusted": -0.0008707175612093665
+      },
+      {
+        "feature": "taurine",
+        "r2_genes_only_unadjusted": 0.23307208743983296,
+        "r2_m0": 0.02633392291780188,
+        "dr2_m1_adjusted": 0.1881267912932528
+      }
+    ]
+  },
+  "H6": {
+    "by_class": {
+      "synthesised": {
+        "n": 51,
+        "median_r2_m0": 0.03262445322464806,
+        "median_dr2_m1": 0.03378762428145114,
+        "median_excess_over_nmet": 0.02716358196184758,
+        "n_network_specific": 29
+      },
+      "medium-supplied": {
+        "n": 11,
+        "median_r2_m0": 0.20054985432683575,
+        "median_dr2_m1": 0.009485842764640795,
+        "median_excess_over_nmet": 0.001333759409423525,
+        "n_network_specific": 2
+      },
+      "mixed": {
+        "n": 12,
+        "median_r2_m0": 0.13636964500273918,
+        "median_dr2_m1": 0.025903847289312498,
+        "median_excess_over_nmet": 0.02171654410578125,
+        "n_network_specific": 6
+      }
+    },
+    "mannwhitney_p_medium_vs_synth": 0.000531908590261697
+  },
+  "pipeline_diagnostic": [
+    {
+      "feature": "1-methylnicotinamide",
+      "k": 2,
+      "dr2_m1": 0.3666602148661332,
+      "p_nmet": 0.000999000999000999,
+      "nmet_median": 0.014021223996810522,
+      "note": "not a target; outside selection rules (D34)"
+    }
+  ],
+  "sensitivity": {
+    "main": {
+      "analysis": "main (primary set, N-met)",
+      "n_targets": 74,
+      "wilcoxon_p_vs_median_null": 2.6130691183257518e-11,
+      "median_excess_over_null": 0.019047465417694816,
+      "n_above_own_p95": 39,
+      "expected_above_p95": 3.7,
+      "binomial_p": 4.969493978414539e-31,
+      "n_network_specific": 37,
+      "classification": "supported"
+    },
+    "sens1": {
+      "analysis": "1: all cancer lines incl. haematopoietic (896)",
+      "n_targets": 74,
+      "wilcoxon_p_vs_median_null": 2.7320014695306775e-12,
+      "median_excess_over_null": 0.01740966809360781,
+      "n_above_own_p95": 43,
+      "expected_above_p95": 3.7,
+      "binomial_p": 1.6028760711390495e-36,
+      "n_network_specific": 35,
+      "classification": "supported",
+      "network_specific_targets": [
+        "2-deoxyadenosine",
+        "2-deoxycytidine",
+        "PEP",
+        "acetylcarnitine",
+        "adenosine",
+        "alanine",
+        "alpha-glycerophosphate",
+        "alpha-glycerophosphocholine",
+        "alpha-ketoglutarate",
+        "aspartate",
+        "carnitine",
+        "citrulline",
+        "creatine",
+        "cystathionine",
+        "cytidine",
+        "glucuronate",
+        "glutamate",
+        "glutathione oxidized",
+        "glutathione reduced",
+        "glycine",
+        "inosine",
+        "inositol",
+        "malonylcarnitine",
+        "palmitoylcarnitine",
+        "pantothenate",
+        "phosphocreatine",
+        "proline",
+        "propionylcarnitine",
+        "putrescine",
+        "sorbitol",
+        "stearoylcarnitine",
+        "taurine",
+        "thymidine",
+        "uracil",
+        "uridine"
+      ]
+    },
+    "sens2": {
+      "analysis": "2: enzymatic-only gene sets (targets with k_enz >= 3)",
+      "n_targets": 67,
+      "wilcoxon_p_vs_median_null": 1.460961445592322e-10,
+      "median_excess_over_null": 0.015225851380817052,
+      "n_above_own_p95": 33,
+      "expected_above_p95": 3.35,
+      "binomial_p": 3.0557418016414037e-25,
+      "n_network_specific": 27,
+      "classification": "supported",
+      "network_specific_targets": [
+        "2-deoxyadenosine",
+        "2-deoxycytidine",
+        "PEP",
+        "adenosine",
+        "alpha-glycerophosphate",
+        "alpha-glycerophosphocholine",
+        "alpha-ketoglutarate",
+        "citrulline",
+        "cystathionine",
+        "cytidine",
+        "glutamate",
+        "glutathione oxidized",
+        "glutathione reduced",
+        "lysine",
+        "malate",
+        "malonylcarnitine",
+        "niacinamide",
+        "palmitoylcarnitine",
+        "phosphocreatine",
+        "putrescine",
+        "sorbitol",
+        "stearoylcarnitine",
+        "thymidine",
+        "uracil",
+        "urate",
+        "uridine",
+        "xanthosine"
+      ]
+    },
+    "sens3": {
+      "analysis": "3: variance-matched random metabolic genes",
+      "n_targets": 74,
+      "wilcoxon_p_vs_median_null": 5.5478470003685956e-11,
+      "median_excess_over_null": 0.018198062608908126,
+      "n_above_own_p95": 38,
+      "expected_above_p95": 3.7,
+      "binomial_p": 1.0255937688887453e-29,
+      "n_network_specific": 35,
+      "classification": "supported",
+      "network_specific_targets": [
+        "2-deoxyadenosine",
+        "2-deoxycytidine",
+        "PEP",
+        "acetylcarnitine",
+        "adenosine",
+        "alpha-glycerophosphate",
+        "alpha-glycerophosphocholine",
+        "alpha-ketoglutarate",
+        "carnitine",
+        "citrulline",
+        "creatine",
+        "cystathionine",
+        "cytidine",
+        "glutamate",
+        "glutamine",
+        "glutathione oxidized",
+        "guanosine",
+        "inosine",
+        "inositol",
+        "lysine",
+        "malate",
+        "niacinamide",
+        "palmitoylcarnitine",
+        "pantothenate",
+        "phosphocreatine",
+        "proline",
+        "propionylcarnitine",
+        "putrescine",
+        "sorbitol",
+        "stearoylcarnitine",
+        "taurine",
+        "thymidine",
+        "uracil",
+        "uridine",
+        "xanthosine"
+      ]
+    },
+    "sens4": {
+      "analysis": "4: primary set without 26 problematic lines (709)",
+      "n_targets": 74,
+      "wilcoxon_p_vs_median_null": 2.260752504142516e-11,
+      "median_excess_over_null": 0.017033478465785956,
+      "n_above_own_p95": 38,
+      "expected_above_p95": 3.7,
+      "binomial_p": 1.0255937688887453e-29,
+      "n_network_specific": 36,
+      "classification": "supported",
+      "network_specific_targets": [
+        "2-deoxyadenosine",
+        "2-deoxycytidine",
+        "PEP",
+        "acetylcarnitine",
+        "adenosine",
+        "alanine",
+        "alpha-glycerophosphate",
+        "alpha-glycerophosphocholine",
+        "alpha-ketoglutarate",
+        "aspartate",
+        "carnitine",
+        "citrulline",
+        "creatine",
+        "cystathionine",
+        "cytidine",
+        "glutamate",
+        "glutamine",
+        "glutathione oxidized",
+        "glutathione reduced",
+        "inosine",
+        "inositol",
+        "malate",
+        "niacinamide",
+        "palmitoylcarnitine",
+        "pantothenate",
+        "phosphocreatine",
+        "proline",
+        "propionylcarnitine",
+        "putrescine",
+        "sorbitol",
+        "stearoylcarnitine",
+        "taurine",
+        "thymidine",
+        "uracil",
+        "uridine",
+        "xanthosine"
+      ]
+    },
+    "robustness": {
+      "H2_main": "supported",
+      "H2_by_analysis": {
+        "main": "supported",
+        "sens1": "supported",
+        "sens2": "supported",
+        "sens3": "supported",
+        "sens4": "supported"
+      },
+      "robust": true,
+      "n_analyses_available": 4
+    }
+  }
+}

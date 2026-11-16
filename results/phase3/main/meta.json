@@ -1,0 +1,13 @@
+{
+  "analysis": "main",
+  "population": "primary",
+  "n_lines": 735,
+  "B": 1000,
+  "folds": "results/phase2/folds.csv",
+  "n_features": 75,
+  "kwargs": {
+    "with_m2": true,
+    "with_nall": true
+  },
+  "started_utc": "2026-11-16T15:59:15Z"
+}

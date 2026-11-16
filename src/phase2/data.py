@@ -49,11 +49,51 @@ class Inputs:
         return np.array([gi[g] for g in genes], dtype=int)
 
 
-@lru_cache(maxsize=1)
-def load_inputs() -> Inputs:
+POPULATIONS = {                      # D46: analysis populations; categories re-collapsed (< 15 -> Other) per population
+    "primary": lambda c: c["in_primary_set"],
+    "all_lines": lambda c: c["has_rnaseq"] & c["in_model"] & ~c["is_duplicate_line"] & ~c["is_non_cancerous"] & c["medium_assigned"],
+    "no_problematic": lambda c: c["in_primary_set"] & ~c["is_problematic"],
+}
+MIN_CATEGORY_N = 15
+
+
+def _collapse(s: pd.Series, min_n: int = MIN_CATEGORY_N, other: str = "Other") -> pd.Series:
+    vc = s.value_counts()
+    return s.where(s.isin(vc[vc >= min_n].index), other)
+
+
+def population_cells(population: str) -> pd.DataFrame:
     cells = pd.read_csv(PROCESSED / "cell_lines_phase0.csv")
-    cells = cells[cells["in_primary_set"]].sort_values("CCLE_ID").reset_index(drop=True)
+    cells = cells[POPULATIONS[population](cells)].sort_values("CCLE_ID").reset_index(drop=True)
+    if population != "primary":
+        cells["lineage_collapsed"] = _collapse(cells["lineage"])
+        base = cells["medium_base"].where(cells["medium_base"] != "mixture", "other")   # D13: mixtures -> other
+        cells["medium_category"] = _collapse(base, other="other")
+    return cells
+
+
+@lru_cache(maxsize=1)
+def _universe() -> tuple[list[str], list[str], pd.Series]:
+    """Gene universe frozen on the primary set (D40); reused unchanged by every population."""
+    cells = population_cells("primary")
     lines = cells["CCLE_ID"].tolist()
+    eg, _ = genemap.expression_genes(lines)
+    gtf = genemap.read_gtf_genes().set_index("gene_id")["gene_type"]
+    gmap = pd.read_csv(P1 / "gene_mapping.csv")
+    mapped = set(gmap.loc[gmap["mapped"], "ccle_gene_id"])
+    expressed = set(eg.loc[eg["expressed"], "gene_id"])
+    gtype = eg["gene_id"].map(gtf).fillna("")
+    coding = set(eg.loc[gtype.eq("protein_coding").values, "gene_id"])
+    universe = sorted((expressed & coding) | (expressed & mapped))
+    met_pool = sorted(expressed & mapped)
+    return universe, met_pool, gtype.set_axis(eg["gene_id"]).reindex(universe)
+
+
+@lru_cache(maxsize=3)
+def load_inputs(population: str = "primary") -> Inputs:
+    cells = population_cells(population)
+    lines = cells["CCLE_ID"].tolist()
+    universe, met_pool, gtype = _universe()
 
     sel = pd.read_csv(P1 / "target_selection.csv")
     targets = sorted(sel.loc[sel["target_strict"], "feature"])
@@ -63,15 +103,7 @@ def load_inputs() -> Inputs:
     metab = load.load_metabolomics().set_index("CCLE_ID")
     Y = metab.loc[lines, targets + diagnostics].astype(float)
 
-    eg, logx = genemap.expression_genes(lines)          # logx: all genes x primary lines (ENSGR dropped)
-    gtf = genemap.read_gtf_genes().set_index("gene_id")["gene_type"]
-    gmap = pd.read_csv(P1 / "gene_mapping.csv")
-    mapped = set(gmap.loc[gmap["mapped"], "ccle_gene_id"])
-    expressed = set(eg.loc[eg["expressed"], "gene_id"])
-    gtype = eg["gene_id"].map(gtf).fillna("")
-    coding = set(eg.loc[gtype.eq("protein_coding").values, "gene_id"])
-    universe = sorted((expressed & coding) | (expressed & mapped))
-    met_pool = sorted(expressed & mapped)
+    _, logx = genemap.expression_genes(lines)           # logx: all genes x population lines (ENSGR dropped)
 
     members = pd.read_csv(P1 / "gene_set_members.csv")
     members = members[members["expressed"] & members["feature"].isin(targets + diagnostics)]
@@ -82,7 +114,7 @@ def load_inputs() -> Inputs:
         assert set(sets_p[f]) <= set(universe), f
 
     X = logx.loc[universe, lines].to_numpy(dtype=np.float32).T   # lines x genes
-    return Inputs(cells=cells, Y=Y, X=X, genes=pd.Index(universe), gene_type=gtype.set_axis(eg["gene_id"]).reindex(universe),
+    return Inputs(cells=cells, Y=Y, X=X, genes=pd.Index(universe), gene_type=gtype,
                   targets=targets, diagnostics=diagnostics, sets_primary=sets_p, sets_enzymatic=sets_e,
                   met_pool=met_pool, classes=classes)
 

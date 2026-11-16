@@ -142,3 +142,26 @@ def test_design_has_intercept_and_all_levels():
 
 def test_target_seed_is_deterministic():
     assert pl.target_seed("x", "nmet") == pl.target_seed("x", "nmet") != pl.target_seed("x", "nall")
+
+
+def test_variance_deciles_and_matched_draws():
+    r = np.random.default_rng(5)
+    X = (r.normal(size=(100, 60)) * np.linspace(0.1, 3, 60)).astype(np.float32)   # increasing variance
+    pool = np.arange(0, 50)
+    dec = pl.variance_deciles(X, pool)
+    assert set(dec[pool]) == set(range(10)) and (dec[50:] == -1).all()
+    v = X[:, pool].astype(float).var(axis=0)
+    assert (np.diff(dec[pool][np.argsort(v)]) >= 0).all()       # deciles follow the empirical variance ranking
+    target = np.array([2, 27, 48])
+    draws = pl.matched_draws(np.setdiff1d(pool, target), dec, target, 30, r)
+    assert draws.shape == (30, 3) and not np.isin(draws, target).any()
+    for d in draws:
+        assert sorted(dec[d]) == sorted(dec[target])
+        assert len(set(d)) == 3
+
+
+def test_population_collapsing_rule():
+    from src.phase2.data import _collapse
+    s = pd.Series(["A"] * 20 + ["B"] * 14 + ["C"] * 15)
+    out = _collapse(s)
+    assert set(out[:20]) == {"A"} and set(out[20:34]) == {"Other"} and set(out[34:]) == {"C"}

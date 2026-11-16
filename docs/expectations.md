@@ -125,6 +125,8 @@ Stated so they can be compared with outcomes, not to steer the analysis.
 
 Every row is a publishable-quality, honest outcome for a portfolio project. The project succeeds if the design can distinguish these rows, not if a particular row is obtained.
 
+**Phase 3 outcome (2026-11-16; `docs/phase3_report.md`):** H1 yes, H2 yes (37 network-specific targets; global p = 3e-11), H3 yes → the last row. H2 is robust across all four sensitivity analyses. H4 holds on average, with 8 targets where M1 beats M2 by more than 0.02 (checked, Section 5 of the report). H5: creatine and taurine pass; kynurenine fails. The leakage and selection-bias checks that this row requires are reported in the Phase 3 report, together with what they do not exclude.
+
 ---
 
 ## 6. Sensitivity analyses (pre-specified; maximum four)

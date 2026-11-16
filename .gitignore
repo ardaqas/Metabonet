@@ -9,3 +9,11 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 .DS_Store
+
+# Phase 3 per-target arrays: regenerable and large; verified through results/phase3/RESULTS_MANIFEST.tsv (D51)
+results/phase3/main/*.npz
+results/phase3/sens1/*.npz
+results/phase3/sens2/*.npz
+results/phase3/sens3/*.npz
+results/phase3/sens4/*.npz
+results/phase3/logs/

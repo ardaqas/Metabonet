@@ -50,7 +50,8 @@ def cmd_folds() -> None:
 
 
 def run_target(name: str, inp, ev: pl.Evaluator, B: int = B_DEFAULT, with_m2: bool = True,
-               with_enzymatic: bool = True) -> dict:
+               with_enzymatic: bool = True, with_nall: bool = True, with_enz_null: bool = False,
+               with_varmatched: bool = False, var_dec: np.ndarray | None = None) -> dict:
     """Full evaluation of one feature under the frozen folds. Returns arrays only (no interpretation)."""
     y = inp.Y[name].to_numpy(dtype=float)
     tf = ev.target_folds(y)
@@ -75,9 +76,20 @@ def run_target(name: str, inp, ev: pl.Evaluator, B: int = B_DEFAULT, with_m2: bo
         t = time.time()
         d_met, dr_met = ev.null_draws(y, tf, met_pool, k, B, np.random.default_rng(pl.target_seed(name, "nmet")))
         out.update(d_nmet=d_met, draws_nmet=dr_met, t_nmet=time.time() - t)
-        t = time.time()
-        d_all, dr_all = ev.null_draws(y, tf, all_pool, k, B, np.random.default_rng(pl.target_seed(name, "nall")))
-        out.update(d_nall=d_all, draws_nall=dr_all, t_nall=time.time() - t)
+        if with_nall:
+            t = time.time()
+            d_all, dr_all = ev.null_draws(y, tf, all_pool, k, B, np.random.default_rng(pl.target_seed(name, "nall")))
+            out.update(d_nall=d_all, draws_nall=dr_all, t_nall=time.time() - t)
+        if with_enz_null and out.get("k_enz", 0) >= 3:        # sensitivity 2 (D36): size-matched to k_enz
+            ge = inp.idx(inp.sets_enzymatic[name])
+            pool_e = np.setdiff1d(inp.idx(inp.met_pool), ge)
+            d_e, dr_e = ev.null_draws(y, tf, pool_e, len(ge), B, np.random.default_rng(pl.target_seed(name, "nmet_enz")))
+            out.update(d_nmet_enz=d_e, draws_nmet_enz=dr_e)
+        if with_varmatched:                                      # sensitivity 3 (D47): variance-decile matched
+            assert var_dec is not None
+            dr_v = pl.matched_draws(met_pool, var_dec, g, B, np.random.default_rng(pl.target_seed(name, "nmet_vm")))
+            d_v, _ = ev.null_draws(y, tf, met_pool, k, B, None, draws=dr_v)
+            out.update(d_nmet_vm=d_v, draws_nmet_vm=dr_v)
     # permuted-target control (D43): one stratified permutation, identical folds and procedure
     t = time.time()
     yp = pl.permute_within_strata(y, strata(inp.cells), np.random.default_rng(pl.target_seed(name, "perm")))

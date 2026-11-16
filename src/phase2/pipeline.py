@@ -109,13 +109,37 @@ class Evaluator:
         return SetResult(np.array(r2), np.array(rho), aidx, k=len(gidx))
 
     def null_draws(self, y: np.ndarray, tf: TargetFolds, pool: np.ndarray, k: int, B: int,
-                   rng: np.random.Generator) -> tuple[np.ndarray, np.ndarray]:
-        """B random size-k subsets of `pool` (gene positions). Returns (delta R^2 per draw x repeat, draws)."""
-        draws = np.stack([rng.choice(pool, size=k, replace=False) for _ in range(B)])
-        d = np.empty((B, len(self.folds)))
+                   rng: np.random.Generator, draws: np.ndarray | None = None) -> tuple[np.ndarray, np.ndarray]:
+        """B random size-k subsets of `pool` (gene positions), or the given `draws`.
+        Returns (delta R^2 per draw x repeat, draws)."""
+        if draws is None:
+            draws = np.stack([rng.choice(pool, size=k, replace=False) for _ in range(B)])
+        d = np.empty((len(draws), len(self.folds)))
         for b in range(B):
             d[b] = self.evaluate(y, tf, np.sort(draws[b])).r2 - tf.r2_m0
         return d, draws
+
+
+def variance_deciles(X: np.ndarray, pool: np.ndarray) -> np.ndarray:
+    """Decile (0-9) of expression variance for every gene, computed within `pool` (outcome-blind)."""
+    v = X[:, pool].astype(np.float64).var(axis=0)
+    ranks = np.argsort(np.argsort(v))
+    dec_pool = np.minimum((ranks * 10) // len(pool), 9)
+    dec = np.full(X.shape[1], -1, dtype=int)
+    dec[pool] = dec_pool
+    return dec
+
+
+def matched_draws(pool: np.ndarray, dec: np.ndarray, target_genes: np.ndarray, B: int,
+                  rng: np.random.Generator) -> np.ndarray:
+    """B size-k subsets of `pool` whose variance-decile profile equals that of `target_genes` (D47)."""
+    by_dec = {d: pool[dec[pool] == d] for d in range(10)}
+    need = {d: int((dec[target_genes] == d).sum()) for d in range(10)}
+    out = np.empty((B, len(target_genes)), dtype=int)
+    for b in range(B):
+        parts = [rng.choice(by_dec[d], size=n, replace=False) for d, n in need.items() if n]
+        out[b] = np.sort(np.concatenate(parts))
+    return out
 
 
 def permute_within_strata(y: np.ndarray, strata: np.ndarray, rng: np.random.Generator) -> np.ndarray:
