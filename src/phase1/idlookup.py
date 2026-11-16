@@ -124,13 +124,25 @@ def parse_chebi(d: dict, cid: str) -> dict:
             "secondary": [f"CHEBI:{s}" if not str(s).startswith("CHEBI") else s for s in (d.get("secondary_ids") or [])]}
 
 
+def _utc(ts: float) -> str:
+    return dt.datetime.fromtimestamp(ts, dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def write_meta() -> None:
+    """Describe the cache from the files themselves (their modification times), so that re-running the pipeline,
+    which only reads the cache, never changes it. The cached responses were each written once, when first fetched."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    (CACHE / "query_meta.json").write_text(json.dumps({
+    files = [f for f in CACHE.rglob("*") if f.is_file() and f.name != "query_meta.json"]
+    times = [f.stat().st_mtime for f in files]
+    text = json.dumps({
         "kegg_api": KEGG, "chebi_api": CHEBI,
-        "queried_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "note": "HMDB (hmdb.ca) not queryable by script (Cloudflare challenge, HTTP 403).",
-    }, indent=2))
+        "n_kegg_files": sum(f.parent.name == "kegg" for f in files), "n_chebi_files": sum(f.parent.name == "chebi" for f in files),
+        "first_response_utc": _utc(min(times)) if times else "", "last_response_utc": _utc(max(times)) if times else "",
+        "note": "HMDB (hmdb.ca) not queryable by script (Cloudflare challenge, HTTP 403). Times are file modification times.",
+    }, indent=2) + "\n"
+    path = CACHE / "query_meta.json"
+    if not path.exists() or path.read_text() != text:        # keep the file (and its mtime) untouched on identical reruns
+        path.write_text(text)
 
 
 def register_manifest() -> None:
@@ -138,7 +150,6 @@ def register_manifest() -> None:
     from ..phase0.download import hash_file, load_manifest, save_manifest, upsert
     from ..phase0.sources import REPO
 
-    meta = json.loads((CACHE / "query_meta.json").read_text())
     man = load_manifest()
     for p in sorted(CACHE.rglob("*")):
         if not p.is_file():
@@ -149,7 +160,7 @@ def register_manifest() -> None:
             "key": f"idlookup_{src}", "path": str(p.relative_to(REPO)),
             "url": KEGG if src == "kegg" else (CHEBI if src == "chebi" else ""),
             "release": "live API (KEGG REST / ChEBI backend API)", "bytes": n, "sha256": sha, "md5": md5,
-            "http_last_modified": "", "http_etag": "", "retrieved_utc": meta.get("queried_utc", ""),
+            "http_last_modified": "", "http_etag": "", "retrieved_utc": _utc(p.stat().st_mtime) + " (file mtime)",
             "note": "cached ID-verification response",
         })
     save_manifest(man)

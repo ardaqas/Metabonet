@@ -1,0 +1,12 @@
+feature,gene,hg_gene,ccle_gene_id,roles,n_reactions,example_reactions,coef_mean,coef_sd,sign_consistency,coef_full_data,expr_mean_log2tpm1,expr_sd_log2tpm1
+2-deoxycytidine,CDA,ENSG00000158825,ENSG00000158825.5,consuming,1,deoxycytidine aminohydrolase [Pyrimidine metabolism],-0.34893,0.013379,1,-0.35417,2.396,2.3491
+2-deoxycytidine,DCK,ENSG00000156136,ENSG00000156136.5,consuming/reversible,4,ATP:deoxycitidine 5'-phosphotransferase [Nucleotide metabolism] ; ATP:deoxycitidine 5'-phosphotransferase [Pyrimidine metabolism] ; MAR08479 [Nucleotide metabolism],-0.062865,0.010876,1,-0.064045,4.1832,0.68002
+2-deoxycytidine,NT5C3A,ENSG00000122643,ENSG00000122643.14,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Pyrimidine metabolism],0.057221,0.012044,1,0.058234,5.1048,0.66746
+2-deoxycytidine,NT5E,ENSG00000135318,ENSG00000135318.7,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Pyrimidine metabolism],-0.040253,0.011118,1,-0.039409,4.2915,2.4603
+2-deoxycytidine,NT5C3B,ENSG00000141698,ENSG00000141698.12,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Pyrimidine metabolism],0.033258,0.0094396,1,0.033921,5.9408,0.91001
+2-deoxycytidine,ACP2,ENSG00000134575,ENSG00000134575.5,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Nucleotide metabolism],0.032594,0.010178,1,0.032607,4.4638,0.74732
+2-deoxycytidine,SLC29A1,ENSG00000112759,ENSG00000112759.12,transport,3,MAR06368 [Transport reactions] ; MAR08475 [Transport reactions] ; MAR08476 [Transport reactions],-0.02732,0.011371,0.98,-0.027978,5.5888,0.96741
+2-deoxycytidine,RBAK,ENSG00000146587,ENSG00000146587.13,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Pyrimidine metabolism],0.018927,0.011697,0.96,0.018071,2.7931,0.57322
+2-deoxycytidine,NT5C2,ENSG00000076685,ENSG00000076685.14,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Pyrimidine metabolism],0.014949,0.0095003,0.96,0.015495,5.8967,0.74229
+2-deoxycytidine,NT5C,ENSG00000125458,ENSG00000125458.2,producing,1,2'-deoxycytidine 5'-monophosphate phosphohydrolase [Pyrimidine metabolism],0.012463,0.0074473,0.96,0.012818,5.478,0.73395
+2-deoxycytidine,SLC29A2,ENSG00000174669,ENSG00000174669.7,transport,3,MAR06368 [Transport reactions] ; MAR08475 [Transport reactions] ; MAR08476 [Transport reactions],0.0084547,0.0087254,0.76,0.009267,3.3755,1.5656

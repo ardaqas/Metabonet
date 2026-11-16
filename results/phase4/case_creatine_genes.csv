@@ -1,0 +1,7 @@
+feature,gene,hg_gene,ccle_gene_id,roles,n_reactions,example_reactions,coef_mean,coef_sd,sign_consistency,coef_full_data,expr_mean_log2tpm1,expr_sd_log2tpm1
+creatine,SLC6A8,ENSG00000130821,ENSG00000130821.11,transport,2,MAR04992 [Transport reactions] ; MAR08429 [Transport reactions],0.13227,0.005309,1,0.1339,4.6685,1.6019
+creatine,CKMT1A,ENSG00000223572,ENSG00000223572.5,reversible,2,"MAR04584 [Glycine, serine and threonine metabolism] ; MAR08427 [Arginine and proline metabolism]",0.018153,0.01171,0.98,0.018347,2.8118,2.2328
+creatine,CKB,ENSG00000166165,ENSG00000166165.8,reversible,2,"MAR04584 [Glycine, serine and threonine metabolism] ; MAR08427 [Arginine and proline metabolism]",-0.013316,0.0049719,0.98,-0.013449,6.1554,2.0497
+creatine,GAMT,ENSG00000130005,ENSG00000130005.7,reversible,1,S-Adenosyl-L-methionine:guanidinoacetate N-methyltransferase [Arginine and proline metabolism],-0.0046737,0.0045189,0.84,-0.0046745,4.1962,1.7029
+creatine,CKMT1B,ENSG00000237289,ENSG00000237289.5,reversible,2,"MAR04584 [Glycine, serine and threonine metabolism] ; MAR08427 [Arginine and proline metabolism]",-0.0043146,0.011628,0.66,-0.004315,2.9658,2.2369
+creatine,SLC16A9,ENSG00000165449,ENSG00000165449.7,transport,1,MAR04992 [Transport reactions],0.0032076,0.0041385,0.74,0.0032198,1.3637,1.2152

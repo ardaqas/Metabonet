@@ -1,4 +1,4 @@
-# Phase 0 environment (pinned). Python 3.10.
+# MetaboNet environment (all direct dependencies pinned; Python 3.10.11). Full lock: requirements.lock
 pandas==2.2.3
 numpy==1.26.4
 openpyxl==3.1.5
@@ -7,7 +7,7 @@ matplotlib==3.10.3
 nbformat==5.11.1
 nbconvert==7.17.2
 ipykernel==7.3.0
-jupyter_client
+jupyter-client==8.10.0
 pytest==8.3.5
 cobra==0.32.1          # Phase 1: SBML parsing only (no FBA)
 scikit-learn==1.6.1    # Phase 2: StratifiedGroupKFold + RidgeCV reference in tests

@@ -24,7 +24,7 @@ The machine-readable record is `data/raw/MANIFEST.tsv`. It is written by `src/ph
 | humangem_reactions_tsv | `humangem/reactions.tsv` | same commit | v2.0.0 | 886,012 | `1436dd90e959714366270a9904fd6a5108044a2f7f1d7f8360bf7a195fc9e28f` |
 | humangem_readme_md, humangem_dependencies_txt | `humangem/README.md`, `dependencies.txt` | same commit | v2.0.0 (built with RAVEN 2.11.0, libSBML 5.20.2) | — | in MANIFEST |
 | gencode_v19_gtf | `ccle2019/gencode.v19.genes.v7_model.patched_contigs.gtf.gz` | https://data.broadinstitute.org/ccle/ | CCLE 2019 gene model (GENCODE v19) | 7,509,840 | `225017a79843a51d3428810bc9656e6353dcce570c816acf02ead8f7d23e8956` |
-| idlookup_kegg / idlookup_chebi | `idlookup/kegg/*.txt` (141), `idlookup/chebi/*.json` (420), `query_meta.json` | KEGG REST `rest.kegg.jp/get/`, ChEBI backend API | live APIs, queried 2026-11-16T13:59Z | — | one row per file in MANIFEST |
+| idlookup_kegg / idlookup_chebi | `idlookup/kegg/*.txt` (141), `idlookup/chebi/*.json` (420), `query_meta.json` | KEGG REST `rest.kegg.jp/get/`, ChEBI backend API | live APIs, fetched 2026-11-16, 13:36–13:47 UTC (file modification times) | — | one row per file in MANIFEST |
 
 - **Human-GEM integrity.** The tag was resolved to its commit through the GitHub API, and the files were downloaded from that commit, not from a branch. On every download and `make verify`, each file's **git blob SHA-1** is recomputed and compared with the blob SHA that GitHub lists for the commit (`src/phase0/sources.py::HUMANGEM_BLOBS`). All six match. Human-GEM v2.0.1, v2.1.0 and v2.1.1 also exist (Sept–Oct 2026) but are not used (D30).
 - **COBRApy 0.32.1** is used only to parse the SBML. No solver or FBA is called.

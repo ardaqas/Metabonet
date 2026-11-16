@@ -1,0 +1,8 @@
+feature,gene,hg_gene,ccle_gene_id,roles,n_reactions,example_reactions,coef_mean,coef_sd,sign_consistency,coef_full_data,expr_mean_log2tpm1,expr_sd_log2tpm1
+kynurenine,AADAT,ENSG00000109576,ENSG00000109576.9,consuming,1,Kynurenine-Oxoglutarate Transaminase [Tryptophan metabolism],0.0017945,0.0035796,1,1.972e-05,2.4824,1.1326
+kynurenine,KYAT1,ENSG00000171097,ENSG00000171097.9,consuming,1,"MAR04222 [Phenylalanine, tyrosine and tryptophan biosynthesis]",0.0010789,0.0023123,1,1.3994e-05,2.8757,0.79925
+kynurenine,SLC43A1,ENSG00000149150,ENSG00000149150.4,transport,1,Transport of L-Kynurenine [Transport reactions],0.00085765,0.0015013,0.96,1.1829e-05,2.4182,1.5902
+kynurenine,KYNU,ENSG00000115919,ENSG00000115919.10,consuming,1,"L-Kynurenine hydrolase [Phenylalanine, tyrosine and tryptophan biosynthesis]",-0.000727,0.0014901,0.9,-7.8923e-06,2.3238,2.3486
+kynurenine,AFMID,ENSG00000183077,ENSG00000183077.11,producing,1,"MAR04216 [Phenylalanine, tyrosine and tryptophan biosynthesis]",-0.00066096,0.0016716,0.94,-7.0871e-06,4.9781,0.71689
+kynurenine,SLC7A8,ENSG00000092068,ENSG00000092068.14,transport,1,Transport of L-Kynurenine [Transport reactions],-0.00036781,0.0013706,0.8,-2.8863e-06,2.138,2.1297
+kynurenine,KYAT3,ENSG00000137944,ENSG00000137944.12,consuming,2,"Kynurenine-Oxoglutarate Transaminase [Tryptophan metabolism] ; MAR04222 [Phenylalanine, tyrosine and tryptophan biosynthesis]",-3.8036e-05,0.001132,0.6,1.9867e-06,3.959,0.69859

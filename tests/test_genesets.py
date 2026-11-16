@@ -109,3 +109,27 @@ def test_symport_is_not_transport_for_partner_unless_moved(toy):
 def test_jaccard():
     assert gsr.jaccard({"a", "b"}, {"b", "c"}) == pytest.approx(1 / 3)
     assert gsr.jaccard(set(), set()) == 0.0
+
+
+def test_gene_roles_for_case_studies():
+    """src/phase4/casestudies.gene_roles: producing / consuming / reversible / transport relative to the target."""
+    import cobra
+    from src.phase4.casestudies import gene_roles
+
+    m = cobra.Model("roles")
+    X_c, X_m, Y_c = (cobra.Metabolite(i, compartment=c) for i, c in (("MAM1c", "c"), ("MAM1m", "m"), ("MAM2c", "c")))
+    m.add_metabolites([X_c, X_m, Y_c])
+
+    def add(rid, stoich, gpr, lb=0.0, ub=1000.0):
+        r = cobra.Reaction(rid, lower_bound=lb, upper_bound=ub)
+        m.add_reactions([r]); r.add_metabolites(stoich); r.gene_reaction_rule = gpr
+
+    add("R_prod", {Y_c: -1, X_c: 1}, "GP")                        # irreversible, X is a product
+    add("R_cons", {X_c: -1, Y_c: 1}, "GC")                        # irreversible, X is a reactant
+    add("R_rev", {X_c: -1, Y_c: 1}, "GR", lb=-1000.0)             # reversible
+    add("R_tr", {X_c: -1, X_m: 1}, "GT", lb=-1000.0)              # transport (X on both sides)
+    add("R_back", {Y_c: -1, X_c: 1}, "GB", lb=-1000.0, ub=0.0)    # runs only backwards: X is consumed
+    roles = gene_roles(m, "MAM1", ["R_prod", "R_cons", "R_rev", "R_tr", "R_back"])
+    assert roles["GP"]["roles"] == {"producing"} and roles["GC"]["roles"] == {"consuming"}
+    assert roles["GR"]["roles"] == {"reversible"} and roles["GT"]["roles"] == {"transport"}
+    assert roles["GB"]["roles"] == {"consuming"}
