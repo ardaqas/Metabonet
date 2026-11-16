@@ -170,7 +170,7 @@ Any change after freezing (targets, gene-set rules, thresholds, model, CV design
 
 ## 9. Target list (to be appended at freeze)
 
-**Frozen on: 2026-11-16 (commit: `FREEZE_COMMIT_HASH`).** Generated from `data/processed/phase1/target_selection.csv` by `src/phase1/report_tables.py` after the project owner's review decisions D31–D38. **74 targets.** From this point every change to the list is a logged deviation (§8).
+**Frozen on: 2026-11-16 (commit: `5ed608cd126467a3df41810c37204c2f86ebeaf7`).** Generated from `data/processed/phase1/target_selection.csv` by `src/phase1/report_tables.py` after the project owner's review decisions D31–D38. **74 targets.** From this point every change to the list is a logged deviation (§8).
 
 - *k* = expressed genes in the first-neighbour set (primary / enzymatic-only); "S2" marks targets kept in sensitivity analysis 2 (D36).
 - Cluster = single-linkage Jaccard > 0.5 cluster for the secondary H2 reading (D37); blank = singleton.
