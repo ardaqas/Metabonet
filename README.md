@@ -1,14 +1,16 @@
 # MetaboNet
 
+**Author:** Arda Alpay
+
 *Cells build, use and move thousands of small molecules; this project tests whether the activity of the genes that handle a molecule predicts how much of it a cancer cell line contains.*
 
 ## Result in one line
 
-For 37 of 74 pre-specified polar metabolites in 735 CCLE solid-tumour cell lines, genes in the metabolite's Human-GEM reaction neighbourhood improved held-out prediction beyond lineage and culture medium, more than size-matched random metabolic genes (pre-registered; robust in four sensitivity analyses). A post hoc check showed these sets also beat non-overlapping gene sets from other metabolites (33 of 33 judged).
+For 37 of 74 pre-specified polar metabolites in 735 CCLE solid-tumour cell lines, genes in the metabolite's Human-GEM reaction neighbourhood improved held-out prediction beyond lineage and culture medium, more than size-matched random metabolic genes (pre-specified, frozen in a dated git commit; robust in four sensitivity analyses). A post hoc check showed these sets also beat non-overlapping gene sets from other metabolites (33 of 33 judged).
 
 ## The idea in 30 seconds
 
-Every small molecule in a cell is made, used up or moved by a few enzymes and transporters, and each one is encoded by a known gene. If those genes are more active in a cell line, you might expect more (or less) of the molecule there. We tested this for 74 molecules in 735 cancer cell lines, always predicting cell lines the model had not seen, after accounting for tissue type and growth medium. The hypotheses and the list of molecules were fixed before any model was run, and every result is compared with randomly chosen genes.
+Every small molecule in a cell is made, used up or moved by a few enzymes and transporters, and each one is encoded by a known gene. If those genes are more active in a cell line, you might expect more (or less) of the molecule there. I tested this for 74 molecules in 735 cancer cell lines, always predicting cell lines the model had not seen, after accounting for tissue type and growth medium. The hypotheses and the list of molecules were fixed before any model was run, and every result is compared with randomly chosen genes.
 
 ## How it works
 
@@ -25,16 +27,16 @@ flowchart TD
 
 ## Key figure
 
-![Per-metabolite gain in prediction from the metabolite's own network genes, against random gene sets](results/phase3/figures/fig1_dr2_m1_vs_nulls.png)
+![One dot per metabolite: gain from its own network genes (vertical) against the typical gain from random metabolic genes (horizontal)](results/phase3/figures/fig_readme_scatter.png)
 
-*Each row is one metabolite: the blue dot is how much its own network genes improve held-out prediction over a lineage-and-medium baseline, and the green and yellow bars are what randomly chosen genes achieve (outlined dots are the clear wins).*
+*Dots above the line: the metabolite's own network genes predict it better than random genes.*
 
-## What we found
+## What I found
 
 - **Network genes add information (H1).** Beyond lineage and medium, the median gain in held-out R² is 0.029, and 51 of 74 metabolites (69%) gain at least 0.02 (p = 7e-14).
 - **More than chance (H2).** 37 of 74 metabolites clearly beat randomly chosen metabolic genes of the same size; 39 exceed the 95th percentile of their own random sets, where about 3.7 would by chance.
-- **Larger than we predicted, so we checked it.** We wrote down 10–25% of metabolites beforehand and found 50%. Checks: a permuted-target control shows no signal, an independent re-implementation agrees to about 1e-15, and the result holds with variance-matched random sets, with gene sets from other pathways, and in four sensitivity analyses.
-- **One control failed, and we think we know why.** Kynurenine shows no signal (ΔR² = −0.001, p = 0.87). The most likely reason, untested here, is that the enzymes that control it (IDO1 and TDO2) sit one step outside its gene set, and they are expressed in only 18% and 30% of the cell lines.
+- **Larger than I predicted, so I checked it.** I wrote down 10–25% of metabolites beforehand and found 50%. Checks: a permuted-target control shows no signal, an independent re-implementation agrees to about 1e-15, and the result holds with variance-matched random sets, with gene sets from other pathways (post hoc), and in four sensitivity analyses.
+- **One control failed, and I think I know why.** Kynurenine shows no signal (ΔR² = −0.001, p = 0.87). The most likely reason, untested here, is that the enzymes that control it (IDO1 and TDO2) sit one step outside its gene set, and they are expressed in only 18% and 30% of the cell lines.
 
 ## Main limitations
 
@@ -50,7 +52,7 @@ flowchart TD
 - **First-neighbour gene set:** the genes of the enzymes and transporters in the reactions that directly make, use or move the metabolite, taken from the Human-GEM metabolic model.
 - **GPR (gene–protein–reaction rule):** the model's rule linking genes to a reaction (AND = a protein complex, OR = alternative enzymes).
 - **Cross-validation:** repeatedly hiding a fifth of the cell lines, fitting on the rest, and scoring on the hidden ones (here 5 folds × 10 repeats).
-- **Pre-registration:** hypotheses, target list and thresholds written down and frozen in a dated git commit before any model was fitted. They were not filed with an external registry.
+- **Pre-specification:** hypotheses, target list and thresholds written down and frozen in a dated git commit before any model was fitted. They were not filed with an external registry.
 
 ## Read more
 

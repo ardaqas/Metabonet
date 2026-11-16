@@ -153,6 +153,46 @@ def fig5_other_target_null() -> None:
     _save(fig, "fig5_posthoc_other_target_null")
 
 
+def fig_readme_scatter() -> None:
+    """Compact figure for the README: one dot per target, typical random-set gain (x) against own-gene gain (y)."""
+    import matplotlib as mpl
+    df = pd.read_csv(OUT / "per_target_main.csv")
+    t = df[df["role"] == "target"].copy()
+    with mpl.rc_context({"font.size": 13, "axes.titlesize": 14, "axes.labelsize": 13, "xtick.labelsize": 12,
+                         "ytick.labelsize": 12, "legend.fontsize": 11.5}):
+        fig, ax = plt.subplots(figsize=(7.0, 6.6))
+        lim = 0.33
+        ax.plot([-0.01, lim], [-0.01, lim], color=INK2, lw=1.4, zorder=1)
+        ax.text(0.205, 0.172, "y = x\n(no better than\nrandom genes)", fontsize=11.5, color=INK2, ha="left", va="top", rotation=0)
+        spec = t["network_specific_nmet"].to_numpy()
+        pc = t["positive_control"].to_numpy()
+        ax.scatter(t["nmet_median"][~spec & ~pc], t["dr2_m1"][~spec & ~pc], s=48, color=SURFACE, edgecolor=MUTED, lw=1.5, zorder=3)
+        ax.scatter(t["nmet_median"][spec & ~pc], t["dr2_m1"][spec & ~pc], s=58, color=BLUE, edgecolor=SURFACE, lw=0.8, zorder=4)
+        ax.scatter(t["nmet_median"][pc], t["dr2_m1"][pc], s=120, marker="D", color=ORANGE, edgecolor=INK, lw=1.1, zorder=5)
+        for r in t.nlargest(5, "dr2_m1").itertuples():
+            dx, dy, ha = {"2-deoxycytidine": (0.012, 0.0, "left"), "alpha-glycerophosphocholine": (0.012, 0.0, "left"),
+                          "2-deoxyadenosine": (0.012, 0.0, "left"), "creatine": (0.012, -0.004, "left"),
+                          "taurine": (0.012, -0.004, "left")}.get(r.feature, (0.012, 0.0, "left"))
+            name = {"alpha-glycerophosphocholine": "α-glycerophosphocholine"}.get(r.feature, r.feature)
+            ax.annotate(name, (r.nmet_median, r.dr2_m1), xytext=(r.nmet_median + dx, r.dr2_m1 + dy), fontsize=12, color=INK,
+                        va="center", ha=ha, zorder=6)
+        ax.set_xlim(-0.01, lim); ax.set_ylim(-0.01, lim)
+        ax.set_aspect("equal")
+        ax.set_xlabel("Typical gain from random metabolic genes\n(median ΔR² of 1,000 random sets)")
+        ax.set_ylabel("Gain from the metabolite's own network genes (ΔR²)")
+        ax.set_title("74 metabolites: own genes against random genes", loc="left", fontweight="bold")
+        n_blue, n_open, n_pc = int((spec & ~pc).sum()), int((~spec & ~pc).sum()), int(pc.sum())
+        n_pc_win = int((spec & pc).sum())
+        handles = [Line2D([], [], marker="o", color=BLUE, ls="", ms=8, markeredgecolor=SURFACE, label=f"clear win over random genes ({n_blue})"),
+                   Line2D([], [], marker="o", mfc=SURFACE, mec=MUTED, mew=1.5, ls="", ms=8, label=f"not a clear win ({n_open})"),
+                   Line2D([], [], marker="D", color=ORANGE, ls="", ms=9, markeredgecolor=INK,
+                          label=f"positive controls ({n_pc}; {n_pc_win} clear wins)")]
+        ax.legend(handles=handles, loc="lower right", borderaxespad=0.6, handletextpad=0.4)
+        FIG.mkdir(parents=True, exist_ok=True)
+        fig.savefig(FIG / "fig_readme_scatter.png", bbox_inches="tight")
+        plt.close(fig)
+
+
 def main() -> None:
     df = pd.read_csv(OUT / "per_target_main.csv")
     t = df[df["role"] == "target"].copy()
@@ -171,8 +211,14 @@ def main() -> None:
     if (OUT / "other_target_null.csv").exists():          # post hoc, D54
         fig5_other_target_null()
         n_extra = 1
-    print(f"wrote {4 + n_extra} figures to {FIG}")
+    fig_readme_scatter()
+    print(f"wrote {5 + n_extra} figures to {FIG}")
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "readme":      # only the README scatter (leaves the other figure files untouched)
+        fig_readme_scatter()
+        print(f"wrote {FIG / 'fig_readme_scatter.png'}")
+    else:
+        main()

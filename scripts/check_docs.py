@@ -2,6 +2,7 @@
 
     python scripts/check_docs.py links     # every relative link/image in README.md and docs/ resolves; README has no absolute URLs
     python scripts/check_docs.py paths     # no absolute personal paths, no file > 50 MB, large data/results excluded by .gitignore
+    python scripts/check_docs.py wording   # author lines, 'pre-specified' wording, first person singular, image sizes
     python scripts/check_docs.py numbers   # every number quoted in README.md is recomputed from the result files
     python scripts/check_docs.py all
 
@@ -19,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 HTML_SRC = re.compile(r"""(?:src|href)=["']([^"']+)["']""")
-ABS_PATH = re.compile(r"(/Users/[A-Za-z0-9_.-]+|/private/tmp|/home/[A-Za-z0-9_.-]+|[A-Za-z]:\\Users\\)")
+ABS_PATH = re.compile(r"(/Users/[A-Za-z0-9_.-]+|/private/t[m]p|/home/[A-Za-z0-9_.-]+|[A-Za-z]:\\Users\\)")
 MAX_BYTES = 50 * 1024 * 1024
 
 
@@ -74,6 +75,39 @@ def check_paths() -> list[str]:
             errors.append(f".gitignore does not exclude {p}")
     print(f"paths: {len(files)} tracked files; largest {biggest.relative_to(ROOT)} ({biggest.stat().st_size / 1e6:.1f} MB); "
           f"{len(errors)} problem(s)")
+    return errors
+
+
+# --------------------------------------------------------------------------------------------- wording / figures
+def check_wording() -> list[str]:
+    errors = []
+    readme, report = README.read_text(), (ROOT / "docs/report.md").read_text()
+    for name, text in (("README.md", readme), ("docs/report.md", report)):
+        if re.search(r"pre-regist", text, re.I):
+            errors.append(f"{name}: contains 'pre-registered/pre-registration' (use 'pre-specified')")
+        if not re.search(r"^\*\*Author:\*\* Arda Alpay$", text, re.M):
+            errors.append(f"{name}: author line missing")
+    m = re.findall(r"\b(we|our|us)\b", readme, re.I)
+    if m:
+        errors.append(f"README.md: first-person plural {sorted(set(x.lower() for x in m))} (use 'I')")
+    if "Pre-specification" not in readme:
+        errors.append("README.md: glossary entry 'Pre-specification' missing")
+    # images: README figures < 300 KB, every linked figure < 1 MB
+    n = 0
+    for f in [README, ROOT / "docs/report.md", ROOT / "docs/case_studies.md", ROOT / "docs/phase3_report.md"]:
+        for t in re.findall(r"!\[[^\]]*\]\(([^)\s]+)\)", f.read_text()):
+            path = (f.parent / t).resolve()
+            if not path.exists():
+                continue
+            n += 1
+            limit = 300 * 1024 if f == README else 1024 * 1024
+            if path.stat().st_size > limit:
+                errors.append(f"{f.relative_to(ROOT)}: image {t} is {path.stat().st_size / 1024:.0f} KB (limit {limit // 1024} KB)")
+    if "fig_readme_scatter.png" not in readme:
+        errors.append("README.md: key figure fig_readme_scatter.png not used")
+    if "fig1_dr2_m1_vs_nulls.png" not in report:
+        errors.append("docs/report.md: fig1 not used")
+    print(f"wording: author lines, 'pre-specified' wording, first-person singular, {n} linked images sized; {len(errors)} problem(s)")
     return errors
 
 
@@ -177,6 +211,7 @@ def check_numbers() -> list[str]:
     claim("cell lines", "735 CCLE solid-tumour cell lines", f"{f['n_lines']} CCLE solid-tumour cell lines")
     claim("sensitivity analyses (robust)", "four sensitivity analyses",
           ("four" if f["n_sens"] == 4 else str(f["n_sens"])) + " sensitivity analyses" if f["sens_robust"] else "NOT ROBUST")
+    claim("other-target check marked post hoc", "with gene sets from other pathways (post hoc)", "with gene sets from other pathways (post hoc)")
     claim("other-target check", "(33 of 33 judged)", f"({f['n_judged_exceed']} of {f['n_judged']} judged)")
     claim("pipeline diagram: targets", "74 target metabolites", f"{f['n_targets']} target metabolites")
     claim("pipeline diagram: cell lines", "735 solid-tumour cell lines", f"{f['n_lines']} solid-tumour cell lines")
@@ -213,7 +248,7 @@ def check_numbers() -> list[str]:
     # the one-line result must be present verbatim
     one_line = ("For 37 of 74 pre-specified polar metabolites in 735 CCLE solid-tumour cell lines, genes in the metabolite's "
                 "Human-GEM reaction neighbourhood improved held-out prediction beyond lineage and culture medium, more than "
-                "size-matched random metabolic genes (pre-registered; robust in four sensitivity analyses). A post hoc check "
+                "size-matched random metabolic genes (pre-specified, frozen in a dated git commit; robust in four sensitivity analyses). A post hoc check "
                 "showed these sets also beat non-overlapping gene sets from other metabolites (33 of 33 judged).")
     if one_line not in " ".join(text.split()):
         errors.append("the 'Result in one line' text is not present verbatim")
@@ -228,6 +263,8 @@ def main() -> int:
         errors += check_links()
     if what in ("paths", "all"):
         errors += check_paths()
+    if what in ("wording", "all"):
+        errors += check_wording()
     if what in ("numbers", "all"):
         errors += check_numbers()
     for e in errors:

@@ -1,5 +1,7 @@
 # Does a metabolite's metabolic neighbourhood predict its abundance? A controlled test in cancer cell lines
 
+**Author:** Arda Alpay
+
 **MetaboNet final report** · 2026-11-16 · code, data provenance and every decision: this repository (`README.md`).
 Detailed phase reports: [data audit](data_audit_report.md) · [network, mapping, targets](phase1_report.md) · [pipeline and controls](phase2_report.md) · [main results](phase3_report.md) · [case studies](case_studies.md) · [decision log](decision_log.md) · [pre-specified hypotheses](expectations.md).
 
@@ -20,7 +22,7 @@ I asked whether the expression of the genes in the reactions that **produce, con
 | Literature positive controls (H5) | **2 of 3 pass** (creatine, taurine); kynurenine fails, with a probable reason |
 | Largest effects | 2-deoxycytidine ΔR² = 0.30, α-glycerophosphocholine 0.26, 2-deoxyadenosine 0.25, creatine 0.20, taurine 0.19 |
 
-**What this means:** for metabolites with compact, annotated first-neighbour gene sets, the genes of a metabolite's own reactions carry predictive information that neither lineage, medium, nor equally sized random or pathway gene sets provide. **What it does not mean:** that metabolism in general is predictable from expression, that expression causes the metabolite levels, or that the result transfers to tumours. The effect is also strikingly uneven: it is strong for nucleosides, carnitines and a few single-transporter or single-enzyme cases, and absent for most essential amino acids (Section 4).
+**What this means:** the 74 targets are metabolites with compact, annotated first-neighbour gene sets, and for **37 of them** the genes of the metabolite's own reactions carry predictive information that neither lineage, medium nor equally sized random metabolic genes provide. The further comparison with gene sets from other metabolites' pathways was **post hoc** (added after seeing the results) and used only gene sets that share no genes with the target's own; it could be judged for 33 of the 37. **What it does not mean:** that metabolism in general is predictable from expression, that expression causes the metabolite levels, or that the result transfers to tumours. The effect is also strikingly uneven: it is strong for nucleosides, carnitines and a few single-transporter or single-enzyme cases, and absent for most essential amino acids (Section 4).
 
 ## 2. Question and design
 
@@ -81,7 +83,7 @@ Three targets were chosen by a rule fixed beforehand (`case_studies.md`): the to
 ## 6. How to read this result
 
 - **Why it is plausible.** The effect sits where biochemistry predicts it: a consuming enzyme and an importer with the signs expected, nucleoside and carnitine metabolism where a few enzymes control the pool, and a near-absence of signal for nutrients supplied in the medium. The pipeline manufactures no signal on permuted targets and recovers injected signal (200 of 200 simulations).
-- **Why it deserved extra scrutiny.** I had expected network-specific signal in 10–25% of targets; it was 50%. This outcome is also the one the pre-specified interpretation matrix flags as contradicting an earlier random-gene result [3]. Checks reported in `phase3_report.md` §5: an independent re-implementation with scikit-learn agrees to 1e-15, variance-matched nulls, the other-target null, the clustered reading and four sensitivity analyses. They exclude implementation error, leakage within the pipeline, variance and generic-module explanations; they do not exclude the limitations below.
+- **Why it deserved extra scrutiny.** I had expected network-specific signal in 10–25% of targets; it was 50%. This outcome is also the one the pre-specified interpretation matrix flags as contradicting an earlier random-gene result [3]. Checks reported in `phase3_report.md` §5: an independent re-implementation with scikit-learn agrees to 1e-15, variance-matched nulls, the other-target null, the clustered reading and four sensitivity analyses. They make implementation error, leakage within the pipeline, and variance and generic-module explanations unlikely; they do not address the limitations below.
 - **A negative or mixed result would have been informative too.** The design could distinguish all five rows of the interpretation matrix, from "expression adds nothing beyond lineage and medium" to "network locality is specific across many metabolites"; the controls show it can neither miss a planted signal nor create one.
 
 ## 7. Limitations
