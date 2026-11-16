@@ -1,7 +1,7 @@
 # Phase 2 Report: Pipeline and Controls
 
 **Project:** MetaboNet · **Date:** 2026-11-16 · **Scope:** Phase 2 only (`research_plan.md` §7–§9, §13; `expectations.md` §2).
-**No hypothesis was evaluated.** The main analysis (Phase 3) has not been run. The only real-target fit in this phase is the pre-designated timing target (S5), whose result arrays are stored and were not used for any decision.
+**No hypothesis was evaluated.** The main analysis (Phase 3) had not been run. The only real-target fits in this phase are the smoke test and the pre-designated timing target (S5), both on **2-deoxycytidine** with its **real** metabolite values (disclosed in Section 6 and in the deviation log); neither was used for any decision.
 **Reproduce:** `make phase2` (folds are frozen in `results/phase2/folds.csv` and are not regenerated if present). Unit tests: `tests/test_phase2.py` (11 tests; 82 in the whole suite).
 
 ---
@@ -92,7 +92,9 @@ The target with the median primary gene-set size (2-deoxycytidine, k = 11) was r
 | P | 0.06 |
 | **Total** | **65** |
 
-Scaling the null cost with each target's k gives a projected **1.7 h** for all 74 targets, far below the 8 h threshold, so **B stays at 1,000**. The timing was taken while the S1/S2 runs shared the CPU, so it is, if anything, an overestimate. The timing target's arrays are in `results/phase2/timing_target_2-deoxycytidine.npz`; the smoke test that preceded S5 printed its ΔR²(M1) to the console, which is disclosed here for completeness; no rule or threshold was touched afterwards.
+Scaling the null cost with each target's k gives a projected **1.7 h** for all 74 targets, far below the 8 h threshold, so **B stays at 1,000**. The timing was taken while the S1/S2 runs shared the CPU, so it is, if anything, an overestimate. The timing target's arrays are in `results/phase2/timing_target_2-deoxycytidine.npz`.
+
+**Smoke-test disclosure.** Before the formal S1/S2/S5 runs, a smoke test of the new pipeline code was run on **2-deoxycytidine** (the same target the median-gene-set-size rule later selected for S5) with its **real** metabolite values, not permuted data. It printed, to the console, the baseline R² for each of the 10 repeats (0.088–0.113) and the mean ΔR²(M1) = **0.3016**, and timed 20 random-set fits (their values were not printed). The target list, gene sets, rules and model had been frozen at commit `5ed608c` before this run and nothing was changed afterwards. The same value appears in the S5 arrays and, unchanged, in the Phase 3 results. This entry is also in the deviation log (`expectations.md` §8).
 
 ## 7. Outputs
 
@@ -110,3 +112,23 @@ Scaling the null cost with each target's k gives a projected **1.7 h** for all 7
 1. Run `run_target` for all 74 targets and the MNA diagnostic with B = 1,000; store every array; compute ΔR², empirical p-values, BH q-values, capture ratios, the global tests (full-target primary, clustered secondary, D37), sensitivity analyses 1–4 (D36 drops 7 targets from analysis 2), and the figures (research_plan §14).
 2. State the ~70% recovery (S2) as a limitation when interpreting ΔR² magnitudes.
 3. The Bone lineage is absent from 3 test folds; no action needed, noted for completeness.
+
+---
+
+## 9. Addendum (2026-11-16, after Phase 3): S2 rerun with 200 simulations
+
+**Status of the original S2.** The S2 that gated Phase 3 used **20 simulations**, each with a null of B = 200 random sets (Section 4). A version with **200 simulations** had **not** been run; the "200" in Section 1 is B, not the number of simulations. It was requested and run after Phase 3 (D53), as a post hoc strengthening of the S2 evidence. It does not replace the 20-simulation check, which passed before any Phase 3 result existed.
+
+**Design:** identical to Section 4 / D44 (lineage 0.30 + medium 0.05 + 5-gene linear signal 0.15 + noise 0.50; M1 on the full set; N-met with B = 200), with fresh seeds, cycling through all 64 targets that have at least 5 genes (200 simulations on 64 distinct gene sets, each used 3–4 times with different signals).
+
+| Statistic | 20 simulations (gating) | 200 simulations (rerun) |
+|---|---|---|
+| injected signal share (median) | 0.149 | 0.150 |
+| ΔR²(M1) (median) | 0.105 | 0.101 |
+| recovery ratio, median | 0.69 | 0.68 |
+| recovery ratio, 5th–95th percentile | min 0.50, max 0.89 | 0.44–0.99 |
+| median absolute error (criterion ≤ 0.05) | 0.045 | **0.047** |
+| simulations beating N-met at p < 0.05 (criterion ≥ 95%) | 20 / 20 | **200 / 200** |
+| **S2** | pass | **pass** |
+
+**Reading.** The detection result is unchanged: every one of 200 injected signals beats random metabolic genes. The magnitude result also passes but with less room: the median absolute error is 0.0475 against the 0.05 limit, and individual recoveries range from 44% to 99%, so the "about 70%" statement in Section 4 should be read as a typical value with a wide spread. This reinforces the Phase 3 caveat that ΔR² magnitudes are conservative and noisy. Files: `results/phase2/s2_200_synthetic.csv`, `s2_200_summary.json`; the original `s2_synthetic.csv` and `s2_summary.json` are unchanged.

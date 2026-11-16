@@ -276,3 +276,132 @@ The case-study panels are Phase 4.
 1. Case studies by the pre-specified rule (research_plan §11): the top target (2-deoxycytidine), a positive control (creatine or taurine) and one clear failure (kynurenine, with IDO1/TDO2 at distance 2 as the discussed reason). Show gene sets, ridge coefficients and their signs, and keep the interpretation associative.
 2. Write-up: report all 74 targets (Section 2), the limitations in Section 5, the Phase 0–2 limitations (no batch labels, MICE imputation, ~70% signal recovery, adherent vs mixed growth relative to Li et al. 2022) and what a negative or positive result means.
 3. Optional stretch goal, at most one (research_plan §12): second-neighbour gene sets (motivated by kynurenine). Not started.
+
+---
+
+## 9. Post hoc exploratory analysis: other-target null
+
+> **POST HOC. ADDED AFTER SEEING RESULTS. DOES NOT CHANGE ANY PRE-SPECIFIED CONCLUSION.**
+> Requested after the Phase 3 results and logged as a deviation (`expectations.md` §8) and as D54, with the rules fixed *before* the analysis was run. Sections 1–8 above are unchanged by it. It is exploratory and is not part of H1–H6 or the robustness call.
+
+### 9.1 Question
+
+The random-set nulls (N-met, N-all) show that network genes beat *random* genes. Venet et al. (2011) warn that gene sets which are *coherent* (co-expressed modules) can track cell-state axes such as proliferation and look predictive whatever their biology. Here the comparison set is made coherent: **gene sets of other targets**, which are real, curated pathway neighbourhoods. If network-specific targets still beat them, the signal belongs to the *specific* neighbourhood of the metabolite. If they do not, the signal could come from any coherent metabolic module.
+
+### 9.2 Method (fixed in advance, D54)
+
+1. **Eligible comparison sets for target *m*:** the frozen primary expressed gene sets of the other 73 targets (not the MNA diagnostic) that share **no gene** with *m*'s set and whose size is within **0.5× to 2×** of *k* = |G_m|.
+2. **Fit:** each eligible set is fitted to *m*'s own metabolite with `run_target()` (M1 step only, B = 0) on the frozen folds and the identical two-stage pipeline. As a check, the same code path reproduces the Phase 3 ΔR² of creatine and 2-deoxycytidine to 1e-12.
+3. **Statistic:** percentile rank of *m*'s own ΔR²(M1) among the comparison sets' ΔR²; "above the 95th percentile" means observed > `np.percentile(null, 95)`; the empirical p, (1 + #null ≥ observed)/(n + 1), is also given.
+4. **Too few to judge:** fewer than 10 eligible sets.
+5. **Reading rule, stated in advance:** among network-specific targets with ≥ 10 eligible sets, **> 50% above the 95th percentile → "specific neighbourhood"**; **< 50% → "coherent metabolic modules"**; exactly 50% → "mixed".
+6. **Groups:** nucleosides = cluster C01 (9 targets), carnitines = cluster C02 (6), amino acids = the 19 proteinogenic amino-acid targets (these include the three small amino-acid clusters of D37), others = the rest.
+
+The 74 targets together have 2,122 eligible (target, comparison set) pairs, with 2 to 50 comparison sets per target (median 31). Eligibility depends only on gene-set structure, not on any outcome.
+
+### 9.3 Results
+
+**Headline: 33 of the 33 network-specific targets that can be judged are above the 95th percentile of their other-target null** (4 of the 37 have fewer than 10 comparison sets and are not judged). Under the rule above, the outcome is **"specific neighbourhood"**.
+
+| Group | Network-specific | Judged (≥ 10 sets) | Above 95th percentile | Too few to judge | Median rank (pct) |
+|---|---|---|---|---|---|
+| nucleosides | 9 | 9 | 9 | 0 | 100 |
+| carnitines | 6 | 6 | 6 | 0 | 100 |
+| amino acids | 4 | 2 | 2 | 2 | 100 |
+| others | 18 | 16 | 16 | 2 | 100 |
+| **All** | 37 | 33 | 33 | 4 | 100 |
+
+Nucleosides 9/9 and carnitines 6/6, the two clusters whose members share many genes, are all above the 95th percentile of sets drawn from *unrelated* pathways. For comparison, 4 of the 32 judged targets that are **not** network-specific in the primary analysis also exceed this null's 95th percentile (aspartate, ornithine, threonine, thymine); they are not used for any conclusion.
+
+**All network-specific targets:**
+
+| Target | Group | n sets | ΔR² (own set) | Other sets: median | 95th pct | best | Rank (pct) | Empirical p | Verdict |
+|---|---|---:|---|---|---|---|---|---|---|
+| 2-deoxycytidine | nucleosides | 39 | 0.302 | 0.053 | 0.074 | 0.100 | 100 | 0.025 | **above 95th** |
+| alpha-glycerophosphocholine | others | 47 | 0.263 | 0.003 | 0.015 | 0.033 | 100 | 0.021 | **above 95th** |
+| 2-deoxyadenosine | nucleosides | 41 | 0.245 | 0.016 | 0.039 | 0.055 | 100 | 0.024 | **above 95th** |
+| creatine | others | 43 | 0.202 | 0.001 | 0.023 | 0.036 | 100 | 0.023 | **above 95th** |
+| taurine | others | 18 | 0.188 | -0.000 | 0.014 | 0.041 | 100 | 0.053 | **above 95th** |
+| cystathionine | others | 17 | 0.177 | 0.017 | 0.060 | 0.062 | 100 | 0.056 | **above 95th** |
+| cytidine | nucleosides | 40 | 0.161 | 0.024 | 0.038 | 0.050 | 100 | 0.024 | **above 95th** |
+| carnitine | carnitines | 36 | 0.135 | -0.000 | 0.017 | 0.025 | 100 | 0.027 | **above 95th** |
+| alpha-glycerophosphate | others | 44 | 0.133 | 0.006 | 0.023 | 0.025 | 100 | 0.022 | **above 95th** |
+| sorbitol | others | 42 | 0.118 | 0.055 | 0.090 | 0.118 | 100 | 0.023 | **above 95th** |
+| thymidine | nucleosides | 37 | 0.108 | 0.003 | 0.013 | 0.017 | 100 | 0.026 | **above 95th** |
+| palmitoylcarnitine | carnitines | 41 | 0.089 | 0.003 | 0.015 | 0.021 | 100 | 0.024 | **above 95th** |
+| glutathione oxidized | others | 37 | 0.088 | 0.028 | 0.054 | 0.064 | 100 | 0.026 | **above 95th** |
+| uracil | others | 32 | 0.085 | 0.011 | 0.029 | 0.037 | 100 | 0.03 | **above 95th** |
+| adenosine | nucleosides | 28 | 0.082 | 0.000 | 0.014 | 0.017 | 100 | 0.034 | **above 95th** |
+| uridine | nucleosides | 37 | 0.078 | -0.000 | 0.015 | 0.026 | 100 | 0.026 | **above 95th** |
+| acetylcarnitine | carnitines | 36 | 0.077 | 0.001 | 0.009 | 0.018 | 100 | 0.027 | **above 95th** |
+| stearoylcarnitine | carnitines | 41 | 0.075 | -0.000 | 0.011 | 0.019 | 100 | 0.024 | **above 95th** |
+| PEP | others | 38 | 0.051 | -0.000 | 0.007 | 0.033 | 100 | 0.026 | **above 95th** |
+| xanthosine | nucleosides | 37 | 0.048 | 0.012 | 0.025 | 0.035 | 100 | 0.026 | **above 95th** |
+| putrescine | others | 38 | 0.045 | 0.004 | 0.022 | 0.026 | 100 | 0.026 | **above 95th** |
+| inositol | others | 47 | 0.045 | -0.000 | 0.008 | 0.078 | 98 | 0.042 | **above 95th** |
+| propionylcarnitine | carnitines | 36 | 0.039 | -0.000 | 0.008 | 0.010 | 100 | 0.027 | **above 95th** |
+| inosine | nucleosides | 40 | 0.038 | 0.002 | 0.023 | 0.024 | 100 | 0.024 | **above 95th** |
+| lysine | amino acids | 17 | 0.035 | 0.019 | 0.029 | 0.031 | 100 | 0.056 | **above 95th** |
+| citrulline | others | 36 | 0.034 | 0.011 | 0.032 | 0.047 | 94 | 0.081 | **above 95th** |
+| phosphocreatine | others | 17 | 0.030 | 0.001 | 0.012 | 0.013 | 100 | 0.056 | **above 95th** |
+| malate | others | 43 | 0.029 | -0.000 | 0.020 | 0.037 | 95 | 0.068 | **above 95th** |
+| pantothenate | others | 29 | 0.028 | 0.004 | 0.017 | 0.018 | 100 | 0.033 | **above 95th** |
+| malonylcarnitine | carnitines | 36 | 0.028 | 0.005 | 0.023 | 0.031 | 97 | 0.054 | **above 95th** |
+| niacinamide | others | 27 | 0.027 | -0.000 | 0.011 | 0.024 | 100 | 0.036 | **above 95th** |
+| proline | amino acids | 15 | 0.024 | -0.000 | 0.017 | 0.022 | 100 | 0.062 | **above 95th** |
+| guanosine | nucleosides | 39 | 0.024 | 0.005 | 0.012 | 0.017 | 100 | 0.025 | **above 95th** |
+| glutathione reduced | others | 5 | 0.090 | 0.044 | 0.052 | 0.053 | 100 | 0.17 | too few to judge |
+| glutamate | amino acids | 2 | 0.071 | 0.025 | 0.028 | 0.028 | 100 | 0.33 | too few to judge |
+| alpha-ketoglutarate | others | 7 | 0.032 | 0.011 | 0.024 | 0.028 | 100 | 0.12 | too few to judge |
+| glutamine | amino acids | 8 | 0.027 | -0.000 | 0.002 | 0.002 | 100 | 0.11 | too few to judge |
+
+*Reading the table.* "best" is the highest ΔR² reached by any comparison set; "Rank" is the percentage of comparison sets that the own set beats.
+
+**Targets with fewer than 10 eligible sets (too few to judge).** Nine targets, four of them network-specific. Descriptively, all four network-specific ones have an own-set ΔR² above their best (few) comparison sets, but nothing can be concluded from 2–8 comparisons.
+
+| Target | Network-specific (primary) | n sets | ΔR² (own set) | Best other set |
+|---|---|---|---|---|
+| glutamate | yes | 2 | 0.071 | 0.028 |
+| glycine | no | 4 | 0.015 | 0.001 |
+| glutathione reduced | yes | 5 | 0.090 | 0.053 |
+| alanine | no | 6 | 0.019 | 0.007 |
+| alpha-ketoglutarate | yes | 7 | 0.032 | 0.028 |
+| 5-adenosylhomocysteine | no | 8 | 0.028 | 0.034 |
+| glutamine | yes | 8 | 0.027 | 0.002 |
+| serine | no | 8 | 0.007 | 0.024 |
+| methionine | no | 9 | 0.023 | 0.040 |
+
+### 9.4 How strong is this? Margins and resolution
+
+- **29 of the 33 judged targets beat every one of their comparison sets.** The median margin over the best comparator is 0.029 ΔR².
+- **Four judged targets fall below their best comparator** while still being above the 95th percentile, mostly with weak effects. Inositol (0.045 against a best comparator of 0.078) is the clearest case:
+
+| Target | n sets | ΔR² (own set) | Best other set | Empirical p |
+|---|---|---|---|---|
+| citrulline | 36 | 0.034 | 0.047 | 0.081 |
+| inositol | 47 | 0.045 | 0.078 | 0.042 |
+| malate | 43 | 0.029 | 0.037 | 0.068 |
+| malonylcarnitine | 36 | 0.028 | 0.031 | 0.054 |
+
+- **Resolution limit.** With *n* comparison sets the smallest possible empirical p is 1/(n + 1). Empirical p < 0.05 for 25 of the 33; for the other 8, five (cystathionine, lysine, phosphocreatine, proline, taurine) exceed *every* comparator but have only 15–18 sets, so p cannot go below 0.053–0.063; the remaining three (citrulline, malate, malonylcarnitine) are the weak cases just mentioned. This is why the pre-stated criterion was the 95th percentile and not a p-value.
+- **The typical comparison set is no better than random metabolic genes.** Median ΔR² of the comparison sets is 0.0056 (the N-met median is 0.0060), and the median per-target 95th percentile is 0.022. Coherent pathway sets do not generally carry more signal than random metabolic genes here.
+- **But some coherent sets do carry strong signal for particular metabolites.** The best individual comparisons are sorbitol predicted by the *arginine* set (ΔR² 0.118), 2-deoxycytidine by the *lactate* set (0.100), lactate by the *adenosine* set (0.097), and sorbitol by the *uridine* and *tryptophan* sets (0.093, 0.090). Sorbitol's own set (0.1184) only ties its best comparator (0.1179). Three network-specific targets have a high comparison median (2-deoxycytidine 0.053, sorbitol 0.055, reduced glutathione 0.044, the last with only 5 sets): their metabolites are predicted by many gene sets, which is what a shared cell-state axis would look like. Their own sets still lie above the 95th percentile, so the primary call stands for them too, but they are where a cell-state component is most plausible.
+
+### 9.5 How this refines the interpretation
+
+By the pre-stated rule (all 33 judged targets, 100% against the > 50% threshold) the evidence points to **"specific neighbourhood"** and not "coherent metabolic modules". The primary conclusion that network locality carries specific predictive information (H2) is refined, not changed: the gain for most network-specific targets is not what any equally coherent gene set of another metabolite's pathway would give, and the typical comparison set behaves like random metabolic genes.
+
+**What this does not show.**
+
+1. The comparison pool is the other 73 *targets'* sets: curated, but not exhaustive. A cell-state axis that none of them happens to capture (for example a proliferation signature) is not excluded.
+2. Disjoint gene sets can still be co-regulated, so some comparison sets may share biology with *m*; this makes the test conservative, not lenient.
+3. Four network-specific targets (α-ketoglutarate, glutamate, glutamine, reduced glutathione) cannot be judged. Only 4 of the 19 amino-acid targets are network-specific in the primary analysis (lysine and proline, judged; glutamate and glutamine, not judged), so this analysis says little about amino acids as a class.
+4. Comparison sets are drawn from the same 74 pre-selected targets; the test inherits the selection limits in Section 5.
+5. Eight judged targets are above the 95th percentile with an empirical p ≥ 0.05, and four sit below their best single comparator (§9.4). Individual calls for weak-effect targets (citrulline, malate, malonylcarnitine, inositol) should not be leaned on.
+6. Associations remain correlational.
+
+### 9.6 Outputs
+
+`results/phase3/other_target_null.csv` (per target), `other_target_null_sets.csv` (every one of the 2,122 comparison fits), `other_target_null_summary.json`, and `results/phase3/figures/fig5_posthoc_other_target_null.{png,svg}`. Code: `src/phase3/other_null.py`.
+
+![Post hoc other-target null](../results/phase3/figures/fig5_posthoc_other_target_null.png)

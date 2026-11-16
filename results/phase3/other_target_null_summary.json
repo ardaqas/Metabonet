@@ -1,0 +1,180 @@
+{
+  "label": "POST HOC, added after seeing results; does not change any pre-specified conclusion (D54)",
+  "n_targets": 74,
+  "n_network_specific": 37,
+  "eligible_sets_per_target": {
+    "min": 2,
+    "median": 31.0,
+    "max": 50
+  },
+  "n_targets_too_few": 9,
+  "network_specific_too_few": [
+    "alpha-ketoglutarate",
+    "glutamate",
+    "glutamine",
+    "glutathione reduced"
+  ],
+  "network_specific_judged": 33,
+  "network_specific_exceed_p95": 33,
+  "fraction_exceed_p95": 1.0,
+  "reading_rule_outcome": "specific neighbourhood",
+  "network_specific_not_exceeding": [],
+  "by_group": {
+    "nucleosides": {
+      "n_network_specific": 9,
+      "n_judged": 9,
+      "n_exceed_p95": 9,
+      "n_too_few": 0,
+      "median_percentile_rank": 100.0
+    },
+    "carnitines": {
+      "n_network_specific": 6,
+      "n_judged": 6,
+      "n_exceed_p95": 6,
+      "n_too_few": 0,
+      "median_percentile_rank": 100.0
+    },
+    "amino acids": {
+      "n_network_specific": 4,
+      "n_judged": 2,
+      "n_exceed_p95": 2,
+      "n_too_few": 2,
+      "median_percentile_rank": 100.0
+    },
+    "others": {
+      "n_network_specific": 18,
+      "n_judged": 16,
+      "n_exceed_p95": 16,
+      "n_too_few": 2,
+      "median_percentile_rank": 100.0
+    }
+  },
+  "all_targets_judged_exceed_p95": 37,
+  "all_targets_judged": 65,
+  "median_of_other_medians": 0.00557651201514758,
+  "median_of_nmet_medians": 0.006019885,
+  "median_other_p95": 0.02191179923484453,
+  "median_percentile_rank_network_specific": 100.0,
+  "n_non_network_specific_exceed_p95": 4,
+  "resolution": {
+    "n_emp_p_lt_0.05": 25,
+    "n_emp_p_ge_0.05": 8,
+    "emp_p_ge_0.05_at_resolution_floor_(exceed_every_comparator)": [
+      "cystathionine",
+      "lysine",
+      "phosphocreatine",
+      "proline",
+      "taurine"
+    ],
+    "emp_p_ge_0.05_not_at_floor": [
+      "citrulline",
+      "malate",
+      "malonylcarnitine"
+    ],
+    "n_rank_100": 29,
+    "below_best_comparator": [
+      {
+        "feature": "citrulline",
+        "n_eligible": 36,
+        "dr2_m1": 0.0337876,
+        "best_comparator": 0.047229131301125785,
+        "emp_p": 0.08108108108108109
+      },
+      {
+        "feature": "inositol",
+        "n_eligible": 47,
+        "dr2_m1": 0.0446849,
+        "best_comparator": 0.07757813519685045,
+        "emp_p": 0.041666666666666664
+      },
+      {
+        "feature": "malate",
+        "n_eligible": 43,
+        "dr2_m1": 0.0294287,
+        "best_comparator": 0.03657121910955299,
+        "emp_p": 0.06818181818181818
+      },
+      {
+        "feature": "malonylcarnitine",
+        "n_eligible": 36,
+        "dr2_m1": 0.0275799,
+        "best_comparator": 0.030692294221428072,
+        "emp_p": 0.05405405405405406
+      }
+    ],
+    "min_n_eligible_judged_network_specific": 15,
+    "median_margin_over_best_comparator": 0.028990984387559808
+  },
+  "pooled_other_target_fits": {
+    "n_fits": 2122,
+    "median": 0.006090999120536589,
+    "p95": 0.04840505752779843,
+    "p99": 0.07606160014759668,
+    "max": 0.11793990540416996,
+    "frac_ge_0.02": 0.2530631479736098,
+    "top5": [
+      {
+        "feature": "sorbitol",
+        "other_set_of": "arginine",
+        "k_other": 13,
+        "dr2": 0.1179
+      },
+      {
+        "feature": "2-deoxycytidine",
+        "other_set_of": "lactate",
+        "k_other": 16,
+        "dr2": 0.1
+      },
+      {
+        "feature": "lactate",
+        "other_set_of": "adenosine",
+        "k_other": 18,
+        "dr2": 0.0966
+      },
+      {
+        "feature": "2-deoxycytidine",
+        "other_set_of": "asparagine",
+        "k_other": 17,
+        "dr2": 0.093
+      },
+      {
+        "feature": "sorbitol",
+        "other_set_of": "uridine",
+        "k_other": 14,
+        "dr2": 0.0929
+      }
+    ]
+  },
+  "judged_not_network_specific_exceeding_p95": [
+    "aspartate",
+    "ornithine",
+    "threonine",
+    "thymine"
+  ],
+  "too_few_network_specific_descriptive": [
+    {
+      "feature": "alpha-ketoglutarate",
+      "n_eligible": 7,
+      "dr2_m1": 0.0316344,
+      "best_comparator": 0.028231861340553954
+    },
+    {
+      "feature": "glutamate",
+      "n_eligible": 2,
+      "dr2_m1": 0.0707205,
+      "best_comparator": 0.0277574080532312
+    },
+    {
+      "feature": "glutamine",
+      "n_eligible": 8,
+      "dr2_m1": 0.0273791,
+      "best_comparator": 0.00202164322933146
+    },
+    {
+      "feature": "glutathione reduced",
+      "n_eligible": 5,
+      "dr2_m1": 0.0902083,
+      "best_comparator": 0.053196609367310244
+    }
+  ]
+}

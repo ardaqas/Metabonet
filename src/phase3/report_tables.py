@@ -33,6 +33,35 @@ def _p(x):
     return f"{x:.2g}" if x >= 1e-4 else f"{x:.1e}"
 
 
+def other_target_tables() -> dict[str, str]:
+    """Tables for the POST HOC other-target null (D54)."""
+    d = pd.read_csv(OUT / "other_target_null.csv")
+    sm = json.loads((OUT / "other_target_null_summary.json").read_text())
+    ns = d[d["network_specific_nmet"]].copy()
+    ns["verdict"] = np.where(ns["too_few_to_judge"], "too few to judge", np.where(ns["exceeds_p95"], "**above 95th**", "not above"))
+    ns["_o"] = ns["too_few_to_judge"].astype(int)
+    ns = ns.sort_values(["_o", "dr2_m1"], ascending=[True, False])
+    tab = pd.DataFrame({
+        "Target": ns["feature"], "Group": ns["group"], "n sets": ns["n_eligible"], "ΔR² (own set)": ns["dr2_m1"].map(_f),
+        "Other sets: median": ns["other_median"].map(_f), "95th pct": ns["other_p95"].map(_f), "best": ns["other_max"].map(_f),
+        "Rank (pct)": ns["percentile_rank"].map(lambda x: f"{x:.0f}"), "Empirical p": ns["emp_p"].map(_p), "Verdict": ns["verdict"]})
+    groups = pd.DataFrame([{"Group": g, "Network-specific": v["n_network_specific"], "Judged (≥ 10 sets)": v["n_judged"],
+                            "Above 95th percentile": v["n_exceed_p95"], "Too few to judge": v["n_too_few"],
+                            "Median rank (pct)": "—" if v["median_percentile_rank"] is None else f"{v['median_percentile_rank']:.0f}"}
+                           for g, v in sm["by_group"].items()])
+    tot = {"Group": "**All**", "Network-specific": sm["n_network_specific"], "Judged (≥ 10 sets)": sm["network_specific_judged"],
+           "Above 95th percentile": sm["network_specific_exceed_p95"], "Too few to judge": sm["n_targets_too_few"] - sum(
+               1 for _ in [] ), "Median rank (pct)": f"{sm['median_percentile_rank_network_specific']:.0f}"}
+    tot["Too few to judge"] = len(sm["network_specific_too_few"])
+    groups = pd.concat([groups, pd.DataFrame([tot])], ignore_index=True)
+    toofew = d[d["too_few_to_judge"]].sort_values("n_eligible")
+    few = pd.DataFrame({"Target": toofew["feature"], "Network-specific (primary)": toofew["network_specific_nmet"].map(lambda v: "yes" if v else "no"),
+                        "n sets": toofew["n_eligible"], "ΔR² (own set)": toofew["dr2_m1"].map(_f), "Best other set": toofew["other_max"].map(_f)})
+    thin = pd.DataFrame([{"Target": r["feature"], "n sets": r["n_eligible"], "ΔR² (own set)": _f(r["dr2_m1"]),
+                          "Best other set": _f(r["best_comparator"]), "Empirical p": _p(r["emp_p"])} for r in sm["resolution"]["below_best_comparator"]])
+    return {"OTHER_GROUPS": _md(groups), "OTHER_TABLE": _md(tab, {"n sets": "r"}), "OTHER_TOOFEW": _md(few), "OTHER_THIN": _md(thin)}
+
+
 def tables() -> dict[str, str]:
     t = pd.read_csv(OUT / "per_target_main.csv")
     g = json.loads((OUT / "global_tests.json").read_text())
@@ -103,7 +132,8 @@ def tables() -> dict[str, str]:
              ("unchanged in all " if rb["robust"] else "changes in at least one of ") + f"{rb['n_analyses_available']} sensitivity analyses."
     s1 = g["S1_permuted_control"]
     S1 = f"median ΔR²(P) = {s1['median']:+.4f}, max = {s1['max']:+.4f}, targets above 0.02: {s1['n_above_0.02']} → **{'PASS' if s1['pass'] else 'FAIL'}**"
-    return {"PER_TARGET": _md(per, {"#": "r", "k": "r"}), "H1": H1, "H2": H2, "H2C": H2C, "H3": H3, "H4": H4, "H5": H5, "H6": H6,
+    extra = other_target_tables() if (OUT / "other_target_null.csv").exists() else {}
+    return {**extra, "PER_TARGET": _md(per, {"#": "r", "k": "r"}), "H1": H1, "H2": H2, "H2C": H2C, "H3": H3, "H4": H4, "H5": H5, "H6": H6,
             "DIAG": DIAG, "SENS": SENS, "ROBUST": ROBUST, "S1": S1}
 
 

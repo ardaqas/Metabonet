@@ -122,6 +122,37 @@ def fig4_permuted(t: pd.DataFrame) -> None:
     _save(fig, "fig4_permuted_control")
 
 
+def fig5_other_target_null() -> None:
+    """POST HOC (D54): network-specific targets against the other-target null (gene sets of other targets)."""
+    d = pd.read_csv(OUT / "other_target_null.csv")
+    det = pd.read_csv(OUT / "other_target_null_sets.csv")
+    d = d[d["network_specific_nmet"]].sort_values("dr2_m1").reset_index(drop=True)
+    n = len(d)
+    fig, ax = plt.subplots(figsize=(6.8, 0.2 * n + 1.5))
+    y = np.arange(n)
+    for i, r in d.iterrows():
+        v = det.loc[det["feature"] == r.feature, "dr2"].to_numpy()
+        ax.plot([v.min(), v.max()], [i, i], color=MUTED, lw=1.0, zorder=1)
+        ax.plot([np.median(v), np.percentile(v, 95)], [i, i], color=ORANGE, lw=3.0, solid_capstyle="butt", zorder=2)
+        ax.plot(np.percentile(v, 95), i, marker="|", color=ORANGE, ms=8, mew=1.6, zorder=3)
+    judged = ~d["too_few_to_judge"].to_numpy()
+    ax.scatter(d["dr2_m1"][judged], y[judged], s=30, color=BLUE, edgecolor=SURFACE, lw=0.8, zorder=4)
+    ax.scatter(d["dr2_m1"][~judged], y[~judged], s=34, facecolor=SURFACE, edgecolor=BLUE, lw=1.4, zorder=4)
+    ax.axvline(0, color=INK2, lw=0.8, zorder=0)
+    ax.set_yticks(y); ax.set_yticklabels([f"{f} (n={k})" for f, k in zip(d["feature"], d["n_eligible"])], fontsize=7)
+    ax.set_ylim(-0.8, n - 0.2); ax.grid(axis="y", visible=False)
+    ax.set_xlabel("ΔR² (out-of-fold, mean of 10 repeats)")
+    ax.set_title("Post hoc: network-specific targets against gene sets of other targets", loc="left", fontsize=10)
+    ax.legend(handles=[Line2D([], [], marker="o", color=BLUE, ls="", ms=5, label="target's own first-neighbour set"),
+                       Line2D([], [], marker="o", mfc=SURFACE, mec=BLUE, ls="", ms=6, label="own set; < 10 comparison sets (not judged)"),
+                       Line2D([], [], color=ORANGE, lw=3, label="other-target sets: median to 95th percentile"),
+                       Line2D([], [], color=MUTED, lw=1, label="other-target sets: full range")],
+              loc="lower right", fontsize=7.5)
+    ax.text(0.0, -0.075, "n = number of eligible other-target sets (disjoint from the target's genes, 0.5–2x its size)",
+            transform=ax.transAxes, fontsize=7, color=INK2, va="top")
+    _save(fig, "fig5_posthoc_other_target_null")
+
+
 def main() -> None:
     df = pd.read_csv(OUT / "per_target_main.csv")
     t = df[df["role"] == "target"].copy()
@@ -136,7 +167,11 @@ def main() -> None:
     fig2_m1_vs_m2(t)
     fig3_baseline(t)
     fig4_permuted(t)
-    print(f"wrote 4 figures to {FIG}")
+    n_extra = 0
+    if (OUT / "other_target_null.csv").exists():          # post hoc, D54
+        fig5_other_target_null()
+        n_extra = 1
+    print(f"wrote {4 + n_extra} figures to {FIG}")
 
 
 if __name__ == "__main__":

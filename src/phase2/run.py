@@ -176,6 +176,56 @@ def cmd_s2() -> None:
     print(json.dumps(res, indent=2))
 
 
+def cmd_s2_extended(n_sims: int = 200) -> None:
+    """S2 rerun with `n_sims` simulations (D53). Same design as D44 (signal share 0.15, 5 signal genes, B = 200),
+    fresh seeds, cycling through every target with >= 5 genes; written to separate files so the original
+    20-simulation result (s2_synthetic.csv) is untouched."""
+    inp, ev = get_evaluator()
+    rng0 = np.random.default_rng(20261117)
+    cands = sorted([f for f in inp.targets if len(inp.sets_primary[f]) >= S2_N_SIGNAL_GENES],
+                   key=lambda f: (len(inp.sets_primary[f]), f))
+    lin = pd.factorize(inp.cells["lineage_collapsed"])[0]
+    med = pd.factorize(inp.cells["medium_category"])[0]
+    Xz = (inp.X.astype(float) - inp.X.mean(0)) / np.where(inp.X.std(0) == 0, 1, inp.X.std(0))
+    rows = []
+    for i in range(n_sims):
+        name = cands[i % len(cands)]
+        rng = np.random.default_rng(rng0.integers(2**31))
+        g = inp.idx(inp.sets_primary[name])
+        sig = rng.choice(g, size=S2_N_SIGNAL_GENES, replace=False)
+        beta = rng.normal(size=S2_N_SIGNAL_GENES)
+        sgl = Xz[:, sig] @ beta; sgl *= np.sqrt(S2_SIGNAL_VAR) / sgl.std()
+        le = rng.normal(size=lin.max() + 1)[lin]; le *= np.sqrt(0.30) / le.std()
+        mde = rng.normal(size=med.max() + 1)[med]; mde *= np.sqrt(0.05) / mde.std()
+        eps = rng.normal(size=len(sgl)); eps *= np.sqrt(0.50) / eps.std()
+        y = le + mde + sgl + eps
+        true_delta = sgl.var() / y.var()
+        tf = ev.target_folds(y)
+        d1 = ev.evaluate(y, tf, g).delta(tf)
+        pool = np.setdiff1d(inp.idx(inp.met_pool), g)
+        dn, _ = ev.null_draws(y, tf, pool, len(g), S2_B, np.random.default_rng(rng.integers(2**31)))
+        p = (1 + (dn.mean(axis=1) >= d1.mean()).sum()) / (S2_B + 1)
+        rows.append({"sim": i, "gene_set_of": name, "k": len(g), "true_delta_r2": true_delta, "r2_m0": tf.r2_m0.mean(),
+                     "delta_r2_m1": d1.mean(), "recovery_ratio": d1.mean() / true_delta,
+                     "nmet_median_delta": float(np.median(dn.mean(axis=1))), "p_vs_nmet": p, "beats_nmet": p < 0.05})
+        if (i + 1) % 20 == 0:
+            print(f"  {i + 1}/{n_sims} sims; beat N-met so far {np.mean([r['beats_nmet'] for r in rows]):.3f}", flush=True)
+    df = pd.DataFrame(rows)
+    df.to_csv(OUT / "s2_200_synthetic.csv", index=False, float_format="%.6g", lineterminator="\n")
+    err = (df["delta_r2_m1"] - df["true_delta_r2"]).abs()
+    res = {"n_sims": len(df), "n_distinct_gene_sets": int(df["gene_set_of"].nunique()), "B_nmet": S2_B,
+           "median_true_delta": float(df["true_delta_r2"].median()), "median_delta_m1": float(df["delta_r2_m1"].median()),
+           "median_recovery_ratio": float(df["recovery_ratio"].median()),
+           "recovery_ratio_p05_p95": [float(df["recovery_ratio"].quantile(.05)), float(df["recovery_ratio"].quantile(.95))],
+           "median_abs_error": float(err.median()), "frac_beats_nmet": float(df["beats_nmet"].mean()),
+           "n_fail_beats_nmet": int((~df["beats_nmet"]).sum()),
+           "pass_beats_nmet_ge_95pct": bool(df["beats_nmet"].mean() >= 0.95),
+           "pass_close_abs_error_le_0.05": bool(err.median() <= 0.05)}
+    res["S2_200_pass"] = res["pass_beats_nmet_ge_95pct"] and res["pass_close_abs_error_le_0.05"]
+    (OUT / "s2_200_summary.json").write_text(json.dumps(res, indent=2) + "\n")
+    print(json.dumps(res, indent=2))
+
+
 def cmd_s5(B: int = B_DEFAULT) -> None:
     """Time one complete target (D45): the target with the median primary gene-set size."""
     inp, ev = get_evaluator()
@@ -203,7 +253,7 @@ def cmd_s5(B: int = B_DEFAULT) -> None:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["folds", "s1", "s2", "s5", "all"])
+    ap.add_argument("cmd", choices=["folds", "s1", "s2", "s2x", "s5", "all"])
     ap.add_argument("--B", type=int, default=B_DEFAULT)
     a = ap.parse_args(argv)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -213,6 +263,8 @@ def main(argv=None) -> int:
         cmd_s1()
     if a.cmd in ("s2", "all"):
         cmd_s2()
+    if a.cmd == "s2x":
+        cmd_s2_extended()
     if a.cmd in ("s5", "all"):
         cmd_s5(a.B)
     return 0

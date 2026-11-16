@@ -1,0 +1,18 @@
+{
+  "n_sims": 200,
+  "n_distinct_gene_sets": 64,
+  "B_nmet": 200,
+  "median_true_delta": 0.15001121493287775,
+  "median_delta_m1": 0.1012848476572929,
+  "median_recovery_ratio": 0.6766983675671971,
+  "recovery_ratio_p05_p95": [
+    0.440059617314204,
+    0.9871969559037989
+  ],
+  "median_abs_error": 0.047468706735395536,
+  "frac_beats_nmet": 1.0,
+  "n_fail_beats_nmet": 0,
+  "pass_beats_nmet_ge_95pct": true,
+  "pass_close_abs_error_le_0.05": true,
+  "S2_200_pass": true
+}

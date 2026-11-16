@@ -17,3 +17,6 @@ results/phase3/sens2/*.npz
 results/phase3/sens3/*.npz
 results/phase3/sens4/*.npz
 results/phase3/logs/
+
+# run logs
+results/phase2/*.log
