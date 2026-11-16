@@ -113,10 +113,6 @@ Raw data and the large result arrays are not committed; every stage can be regen
 
 </details>
 
-## How this was built
-
-*To be written by the author: what I decided myself (question, hypotheses, design choices, what to do when results surprised me) and what was implemented with AI assistance.*
-
 ## Licence and data
 
 The code is released under the [MIT licence](LICENSE). The data are **not** covered by it: CCLE and DepMap data, the Human-GEM model and Cellosaurus records remain under their providers' original terms, and the raw files are not redistributed here. Tables in `data/processed/` and `results/` that are derived from those sources stay subject to the same terms. See [data sources](docs/data_sources.md).
