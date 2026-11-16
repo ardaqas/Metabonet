@@ -183,7 +183,7 @@ def fig_readme_scatter() -> None:
         ax.set_title("74 metabolites: own genes against random genes", loc="left", fontweight="bold")
         n_blue, n_open, n_pc = int((spec & ~pc).sum()), int((~spec & ~pc).sum()), int(pc.sum())
         n_pc_win = int((spec & pc).sum())
-        handles = [Line2D([], [], marker="o", color=BLUE, ls="", ms=8, markeredgecolor=SURFACE, label=f"clear win over random genes ({n_blue})"),
+        handles = [Line2D([], [], marker="o", color=BLUE, ls="", ms=8, markeredgecolor=SURFACE, label=f"clear win over random genes ({n_blue + n_pc_win}, incl. {n_pc_win} controls)"),
                    Line2D([], [], marker="o", mfc=SURFACE, mec=MUTED, mew=1.5, ls="", ms=8, label=f"not a clear win ({n_open})"),
                    Line2D([], [], marker="D", color=ORANGE, ls="", ms=9, markeredgecolor=INK,
                           label=f"positive controls ({n_pc}; {n_pc_win} clear wins)")]

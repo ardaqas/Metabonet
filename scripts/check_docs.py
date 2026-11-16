@@ -1,6 +1,6 @@
 """Documentation and repository checks.
 
-    python scripts/check_docs.py links     # every relative link/image in README.md and docs/ resolves; README has no absolute URLs
+    python scripts/check_docs.py links     # every relative link/image in README.md and docs/ resolves; README has no absolute URLs except doi.org links
     python scripts/check_docs.py paths     # no absolute personal paths, no file > 50 MB, large data/results excluded by .gitignore
     python scripts/check_docs.py wording   # author lines, 'pre-specified' wording, first person singular, image sizes
     python scripts/check_docs.py numbers   # every number quoted in README.md is recomputed from the result files
@@ -41,7 +41,7 @@ def check_links() -> list[str]:
             if t.startswith(("mailto:", "#")):
                 continue
             if t.startswith(("http://", "https://")):
-                if f == README:
+                if f == README and not t.startswith("https://doi.org/"):   # DOI links to the cited papers are the only external URLs allowed
                     errors.append(f"{f.relative_to(ROOT)}: absolute URL not allowed in README: {t}")
                 continue
             n += 1

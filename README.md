@@ -12,6 +12,16 @@ For 37 of 74 pre-specified polar metabolites in 735 CCLE solid-tumour cell lines
 
 Every small molecule in a cell is made, used up or moved by a few enzymes and transporters, and each one is encoded by a known gene. If those genes are more active in a cell line, you might expect more (or less) of the molecule there. I tested this for 74 molecules in 735 cancer cell lines, always predicting cell lines the model had not seen, after accounting for tissue type and growth medium. The hypotheses and the list of molecules were fixed before any model was run, and every result is compared with randomly chosen genes.
 
+## Why this question
+
+Three earlier studies used the same CCLE data and reached different conclusions:
+
+- **Li et al. 2022 (FASEB J)** ([doi](https://doi.org/10.1096/fj.202101921RR)): gene expression is a poor predictor; for most metabolites the held-out R² was near zero.
+- **Cavicchioli et al. 2022 (Int J Mol Sci)** ([doi](https://doi.org/10.3390/ijms23073867)): metabolites can be predicted (mean correlation about 0.42), but lineage and culture medium were not controlled for.
+- **Schildcrout et al. 2024 (Recon8D, bioRxiv** ([doi](https://doi.org/10.1101/2024.08.17.608400)); **published as Metab8D, Commun Biol 2026** ([doi](https://doi.org/10.1038/s42003-026-10409-3))**):** 2,000 random genes predicted about as well as 2,000 metabolic genes, suggesting that much of the signal is general cell state rather than metabolism. The numbers are from the preprint.
+
+None of them asked, for each metabolite, whether the few genes of its own reactions beat equally sized random genes once lineage and medium are accounted for. That narrower question is what this project tests. It complements rather than contradicts the Recon8D result, which compared large gene pools, not metabolite-specific neighbourhoods.
+
 ## How it works
 
 ```mermaid

@@ -63,7 +63,7 @@ Network-specific calls against N-met and N-all agree: 37 targets in both, 1 only
 {{H5}}
 
 - **Creatine** (GAMT, SLC6A8) and **taurine** (SLC6A6) pass. Both are retained when the lineage/medium stage is removed (unadjusted columns), so the baseline is not what creates the signal.
-- **Kynurenine** (AFMID, KYNU) **fails**: ΔR² = −0.001, p = 0.87, and its baseline R² is also ≈ 0. The literature drivers IDO1 and TDO2 are at network distance 2 and are **not** in the set (D34). This is the pre-registered motivation for stretch goal 2 (second-neighbour sets), not a result about second-neighbour sets.
+- **Kynurenine** (AFMID, KYNU) **fails**: ΔR² = −0.001, p = 0.87, and its baseline R² is also ≈ 0. The literature drivers IDO1 and TDO2 are at network distance 2 and are **not** in the set (D34). This is the pre-specified motivation for stretch goal 2 (second-neighbour sets), not a result about second-neighbour sets.
 
 **Pipeline diagnostic (not a target; outside H1–H4; D34).** Fitted exactly like a target:
 

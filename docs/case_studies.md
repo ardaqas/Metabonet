@@ -102,7 +102,7 @@ Three targets were chosen by a rule fixed before any coefficient was computed (d
 
 1. **The literature.** The CCLE paper links kynurenine to IDO1/IDO2/TDO2 expression (`literature_review.md` §2), and Benedetti et al. found IDO1 associated with kynurenine in CCLE while **AFMID, the next enzyme, was not** (§4.2). Here AFMID has essentially no weight (−0.0007) and little variation (mean 4.98, SD 0.72), as that predicts.
 2. **The expression pattern.** IDO1 has a mean log2(TPM+1) of 0.58 and is above 1 in only 18% of lines; TDO2 has 0.91 and 30%; IDO2 0.04 and 1%. They are strongly on in a minority of lines and off in most, so a minority of lines could carry the kynurenine variation while the rest sit at baseline. That is a pattern a compact, constitutive enzyme set cannot mirror.
-3. **The pre-registered note** (D34): kynurenine is the motivation for stretch goal 2 (second-neighbour sets).
+3. **The pre-specified note** (D34): kynurenine is the motivation for stretch goal 2 (second-neighbour sets).
 
 **An important consequence for stretch goal 2.** Under the pre-specified expressed-gene filter (mean log2(TPM+1) ≥ 1 over the 735 lines), **IDO1 (0.58) and TDO2 (0.91) would be removed even from a second-neighbour set.** The filter was designed to be outcome-blind and to remove noise, but it also removes strongly inducible genes that are on in a minority of lines, which is the very pattern described above. Testing the hypothesis would therefore need a pre-specified change to the filter (for example, a fraction-of-lines criterion), logged before it is used.
 
