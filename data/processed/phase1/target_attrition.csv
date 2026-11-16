@@ -1,0 +1,7 @@
+step,n_strict,n_if_review_accepted
+CCLE metabolomics features (all assays),225,225
+Rule 1: measured by HILIC (polar),136,136
+Rule 2: 1:1 confident mapping,107,112
+Rule 3: 3-60 expressed genes (primary gene set),85,88
+Rule 4a: <= 20% missing before imputation,74,74
+Rule 4b: SD >= 0.05 log10 units,74,74

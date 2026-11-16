@@ -1,0 +1,115 @@
+feature	class	class_rationale
+2-aminoadipate	synthesised	not a component of RPMI-1640 or DMEM base media
+3-phosphoglycerate	synthesised	not a component of RPMI-1640 or DMEM base media
+alpha-glycerophosphate	synthesised	not a component of RPMI-1640 or DMEM base media
+4-pyridoxate	synthesised	not a component of RPMI-1640 or DMEM base media
+aconitate	synthesised	not a component of RPMI-1640 or DMEM base media
+adenine	synthesised	not a component of RPMI-1640 or DMEM base media
+adipate	synthesised	not a component of RPMI-1640 or DMEM base media
+alpha-ketoglutarate	synthesised	not a component of RPMI-1640 or DMEM base media
+AMP	synthesised	not a component of RPMI-1640 or DMEM base media
+citrate	synthesised	not a component of RPMI-1640 or DMEM base media
+isocitrate	synthesised	not a component of RPMI-1640 or DMEM base media
+CMP	synthesised	not a component of RPMI-1640 or DMEM base media
+cystathionine	synthesised	not a component of RPMI-1640 or DMEM base media
+cytidine	synthesised	not a component of RPMI-1640 or DMEM base media
+dCMP	synthesised	not a component of RPMI-1640 or DMEM base media
+erythrose-4-phosphate	synthesised	not a component of RPMI-1640 or DMEM base media
+glucuronate	synthesised	not a component of RPMI-1640 or DMEM base media
+glutathione oxidized	synthesised	not a component of RPMI-1640 or DMEM base media
+glutathione reduced	mixed	in RPMI-1640 base medium; synthesised (GCLC/GCLM, GSS); RPMI-1640 contains 1 mg/L GSH
+GMP	synthesised	not a component of RPMI-1640 or DMEM base media
+guanosine	synthesised	not a component of RPMI-1640 or DMEM base media
+hippurate	synthesised	not a component of RPMI-1640 or DMEM base media
+hypoxanthine	synthesised	not a component of RPMI-1640 or DMEM base media; present in F12-based media (DMEM:F12, 59 primary lines)
+inosine	synthesised	not a component of RPMI-1640 or DMEM base media
+kynurenine	synthesised	not a component of RPMI-1640 or DMEM base media
+lactate	synthesised	not a component of RPMI-1640 or DMEM base media
+lactose	synthesised	not a component of RPMI-1640 or DMEM base media
+malate	synthesised	not a component of RPMI-1640 or DMEM base media
+NAD	synthesised	not a component of RPMI-1640 or DMEM base media
+NADP	synthesised	not a component of RPMI-1640 or DMEM base media
+oxalate	synthesised	not a component of RPMI-1640 or DMEM base media
+pantothenate	medium-supplied	in RPMI-1640 and DMEM base medium; vitamin B5 (not synthesised by human cells)
+PEP	synthesised	not a component of RPMI-1640 or DMEM base media
+sorbitol	synthesised	not a component of RPMI-1640 or DMEM base media
+sucrose	synthesised	not a component of RPMI-1640 or DMEM base media
+thymine	synthesised	not a component of RPMI-1640 or DMEM base media
+UMP	synthesised	not a component of RPMI-1640 or DMEM base media
+uracil	synthesised	not a component of RPMI-1640 or DMEM base media
+urate	synthesised	not a component of RPMI-1640 or DMEM base media
+uridine	synthesised	not a component of RPMI-1640 or DMEM base media
+xanthine	synthesised	not a component of RPMI-1640 or DMEM base media
+taurocholate	synthesised	not a component of RPMI-1640 or DMEM base media
+phosphocreatine	synthesised	not a component of RPMI-1640 or DMEM base media
+6-phosphogluconate	synthesised	not a component of RPMI-1640 or DMEM base media
+alpha-hydroxybutyrate	synthesised	not a component of RPMI-1640 or DMEM base media
+inositol	mixed	in RPMI-1640 and DMEM base medium; synthesised from glucose-6-P (ISYNA1)
+malondialdehyde	synthesised	not a component of RPMI-1640 or DMEM base media
+glycine	mixed	in RPMI-1640 and DMEM base medium; synthesised from serine (SHMT)
+alanine	synthesised	not a component of RPMI-1640 or DMEM base media; present in F12-based media (DMEM:F12, 59 primary lines)
+serine	mixed	in RPMI-1640 and DMEM base medium; synthesised (PHGDH/PSAT1/PSPH)
+threonine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+methionine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+aspartate	mixed	in RPMI-1640 base medium; synthesised (GOT)
+glutamate	mixed	in RPMI-1640 base medium; synthesised
+asparagine	mixed	in RPMI-1640 base medium; synthesised (ASNS)
+glutamine	mixed	in RPMI-1640 and DMEM base medium; synthesised (GLUL)
+histidine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+arginine	mixed	in RPMI-1640 and DMEM base medium; synthesised from citrulline (ASS1/ASL)
+lysine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+valine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+leucine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+isoleucine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+phenylalanine	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+tyrosine	mixed	in RPMI-1640 and DMEM base medium; synthesised from phenylalanine (PAH; mainly hepatic)
+tryptophan	medium-supplied	in RPMI-1640 and DMEM base medium; essential amino acid
+proline	mixed	in RPMI-1640 base medium; synthesised (PYCR)
+ornithine	synthesised	not a component of RPMI-1640 or DMEM base media
+citrulline	synthesised	not a component of RPMI-1640 or DMEM base media
+taurine	synthesised	not a component of RPMI-1640 or DMEM base media
+5-HIAA	synthesised	not a component of RPMI-1640 or DMEM base media
+serotonin	synthesised	not a component of RPMI-1640 or DMEM base media
+GABA	synthesised	not a component of RPMI-1640 or DMEM base media
+acetylglycine	synthesised	not a component of RPMI-1640 or DMEM base media
+dimethylglycine	synthesised	not a component of RPMI-1640 or DMEM base media
+homocysteine	synthesised	not a component of RPMI-1640 or DMEM base media
+allantoin	synthesised	not a component of RPMI-1640 or DMEM base media
+anthranilic acid	synthesised	not a component of RPMI-1640 or DMEM base media
+kynurenic acid	synthesised	not a component of RPMI-1640 or DMEM base media
+5-adenosylhomocysteine	synthesised	not a component of RPMI-1640 or DMEM base media
+carnosine	synthesised	not a component of RPMI-1640 or DMEM base media
+N-carbamoyl-beta-alanine	synthesised	not a component of RPMI-1640 or DMEM base media
+thiamine	medium-supplied	in RPMI-1640 and DMEM base medium; vitamin B1 (not synthesised by human cells)
+niacinamide	mixed	in RPMI-1640 and DMEM base medium; released by NAD+-consuming enzymes (PARPs, sirtuins, CD38)
+betaine	synthesised	not a component of RPMI-1640 or DMEM base media
+choline	medium-supplied	in RPMI-1640 and DMEM base medium; required nutrient; de novo synthesis (PEMT) is essentially hepatic
+alpha-glycerophosphocholine	synthesised	not a component of RPMI-1640 or DMEM base media
+acetylcholine	synthesised	not a component of RPMI-1640 or DMEM base media
+creatine	synthesised	not a component of RPMI-1640 or DMEM base media
+creatinine	synthesised	not a component of RPMI-1640 or DMEM base media
+thyroxine	synthesised	not a component of RPMI-1640 or DMEM base media
+trimethylamine-N-oxide	synthesised	not a component of RPMI-1640 or DMEM base media
+adenosine	synthesised	not a component of RPMI-1640 or DMEM base media
+thymidine	synthesised	not a component of RPMI-1640 or DMEM base media; present in F12-based media (DMEM:F12, 59 primary lines)
+xanthosine	synthesised	not a component of RPMI-1640 or DMEM base media
+2-deoxyadenosine	synthesised	not a component of RPMI-1640 or DMEM base media
+2-deoxycytidine	synthesised	not a component of RPMI-1640 or DMEM base media
+cAMP	synthesised	not a component of RPMI-1640 or DMEM base media
+pipecolic acid	synthesised	not a component of RPMI-1640 or DMEM base media
+pyroglutamic acid	synthesised	not a component of RPMI-1640 or DMEM base media
+1-methylnicotinamide	synthesised	not a component of RPMI-1640 or DMEM base media
+butyrobetaine	synthesised	not a component of RPMI-1640 or DMEM base media
+putrescine	synthesised	not a component of RPMI-1640 or DMEM base media; present in F12-based media (DMEM:F12, 59 primary lines)
+carnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+acetylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+propionylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+malonylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+hexanoylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+lauroylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+myristoylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+palmitoylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+stearoylcarnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+arachidonyl_carnitine	synthesised	not a component of RPMI-1640 or DMEM base media
+sarcosine	synthesised	not a component of RPMI-1640 or DMEM base media
+beta-alanine	synthesised	not a component of RPMI-1640 or DMEM base media

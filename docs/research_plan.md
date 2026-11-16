@@ -81,7 +81,7 @@ What to exclude, and why, is in Section 12.
 |---|---|---|
 | **Compartment-specific metabolite copies** (e.g., the same metabolite in cytosol, mitochondria, extracellular space) | CCLE measures whole-cell extracts, not compartments | Collapse all compartment copies of a metabolite to one node; take the union of their reactions |
 | **Transport reactions** | After collapsing, transport looks like X → X; but transporters are biologically relevant (e.g., SLC6A8–creatine, SLC6A6–taurine) | **Primary:** include transporter genes. **Sensitivity:** enzymatic reactions only |
-| **Exchange / sink / demand / biomass / pseudo-reactions** | Modelling artefacts, not biology | Exclude |
+| **Exchange / sink / demand / biomass / pseudo-reactions** | Modelling artefacts, not biology | Exclude. *Phase 1 (D23, D33): implemented as boundary reactions plus the subsystems Exchange/demand, Artificial, Pool and **Protein degradation** (lumped plasma-protein hydrolysis)* |
 | **GPR logic (AND = complex subunits; OR = isozymes)** | Feature-set construction ignores logic; large complexes inflate sets | Take the union of all genes in the GPR. Report set sizes. Reaction-level scores (min over AND, max over OR) are **out of scope** for the primary analysis |
 | **Reactions without GPR** (spontaneous or orphan) | Contribute no genes | Allowed; record how many reactions per target lack genes |
 | **Promiscuous genes** (generic transporters, broad-specificity enzymes) | Same genes appear in many targets' sets; targets are not independent | Report pairwise overlap (Jaccard) between target sets; interpret the global test with this in mind |
@@ -277,7 +277,7 @@ Interpretation must stay associative. Coefficient signs in correlated ridge mode
 
 ### Stretch goals (only after all core deliverables exist; pick at most one)
 1. Leave-one-lineage-out evaluation.
-2. Second-neighbour gene sets (distance 2, after removing currency metabolites by a stated list).
+2. Second-neighbour gene sets (distance 2, after removing currency metabolites by a stated list). *Motivation from Phase 1 (D34): kynurenine's literature genes IDO1/TDO2 are at distance 2 in Human-GEM.*
 3. Gene-set stability across Human-GEM v1.19 vs v2.0 and its effect on ΔR².
 
 ---

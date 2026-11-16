@@ -1,0 +1,113 @@
+feature,hg_metsNoComp,hg_name,compartments,n_reactions_all,n_excluded,excluded_by,n_retained,n_transport,n_enzymatic,n_retained_no_gpr,n_enzymatic_no_gpr,k_hg_primary,k_mapped_primary,k_expressed_primary,frac_lost_unmapped_primary,k_hg_enzymatic,k_mapped_enzymatic,k_expressed_enzymatic,frac_lost_unmapped_enzymatic
+2-aminoadipate,MAM02322,L-2-aminoadipate,cem,8,1,"{""boundary (exchange/sink/demand)"": 1}",7,3,4,2,0,3,3,2,0,2,2,2,0
+3-phosphoglycerate,MAM00913,3-phospho-D-glycerate,cem,12,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",10,2,8,2,0,13,13,9,0,13,13,9,0
+alpha-glycerophosphate,MAM02914,sn-glycerol-3-phosphate,cemx,79,1,"{""boundary (exchange/sink/demand)"": 1}",78,4,74,6,2,15,15,11,0,15,15,11,0
+4-pyridoxate,MAM01033,4-pyridoxate,ce,3,1,"{""boundary (exchange/sink/demand)"": 1}",2,1,1,1,0,1,1,1,0,1,1,1,0
+aconitate,MAM01580,cis-aconitate,cem,16,1,"{""boundary (exchange/sink/demand)"": 1}",15,12,3,2,0,3,3,2,0,2,2,1,0
+adenine,MAM01279,adenine,cel,9,1,"{""boundary (exchange/sink/demand)"": 1}",8,2,6,1,1,5,5,5,0,3,3,3,0
+adipate,MAM03408,Adipic Acid,cex,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,2,2,3,1,1,1,1,0,1,1,1,0
+alpha-ketoglutarate,MAM01306,AKG,cemrx,102,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",100,38,62,4,0,58,58,47,0,41,41,36,0
+AMP,MAM01334,AMP,ceglmnrx,342,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",340,11,329,47,42,327,326,280,0.0030581,326,325,279,0.00306748
+citrate,MAM01587,citrate,cem,23,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",21,17,4,2,0,8,8,6,0,4,4,4,0
+isocitrate,MAM02183,isocitrate,cemx,22,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",20,14,6,3,0,9,9,9,0,7,7,7,0
+CMP,MAM01590,CMP,ceglmnr,106,1,"{""boundary (exchange/sink/demand)"": 1}",105,5,100,7,4,47,47,36,0,45,45,34,0
+cystathionine,MAM02349,L-cystathionine,cem,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,2,3,2,0,3,3,3,0,3,3,3,0
+cytidine,MAM01630,cytidine,celmn,17,1,"{""boundary (exchange/sink/demand)"": 1}",16,7,9,2,1,19,19,12,0,14,14,9,0
+dCMP,MAM01644,dCMP,celmn,29,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",27,4,23,4,1,20,20,16,0,19,19,15,0
+erythrose-4-phosphate,MAM01785,erythrose-4-phosphate,c,3,0,{},3,0,3,0,0,6,6,3,0,6,6,3,0
+glucuronate,MAM01973,glucuronate,celr,40,1,"{""boundary (exchange/sink/demand)"": 1}",39,3,36,22,20,5,5,3,0,4,4,2,0
+glutathione oxidized,MAM02027,GSSG,cemr,21,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",19,2,17,5,3,21,21,18,0,21,21,18,0
+glutathione reduced,MAM02026,GSH,cemrx,174,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",172,55,117,10,5,77,77,53,0,69,69,49,0
+GMP,MAM02016,GMP,ceglmn,24,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",22,5,17,5,2,51,51,34,0,49,49,32,0
+guanosine,MAM02038,guanosine,celm,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,6,6,2,2,16,16,11,0,11,11,8,0
+hippurate,MAM02123,hippurate,cem,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,2,2,3,1,2,2,2,0,2,2,2,0
+hypoxanthine,MAM02159,hypoxanthine,celx,11,1,"{""boundary (exchange/sink/demand)"": 1}",10,3,7,2,1,5,5,5,0,3,3,3,0
+inosine,MAM02170,inosine,celm,14,1,"{""boundary (exchange/sink/demand)"": 1}",13,7,6,3,2,15,15,9,0,10,10,6,0
+kynurenine,MAM02319,kynurenine,cem,10,1,"{""boundary (exchange/sink/demand)"": 1}",9,3,6,2,1,8,8,7,0,6,6,5,0
+lactate,MAM02403,L-lactate,cemx,30,1,"{""boundary (exchange/sink/demand)"": 1}",29,23,6,8,0,23,23,16,0,14,14,10,0
+malate,MAM02439,malate,cemx,26,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",24,15,9,4,1,12,12,11,0,9,9,8,0
+NAD,MAM02552,NAD+,cemnrx,623,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",621,9,612,76,72,268,268,227,0,267,267,226,0
+NADP,MAM02554,NADP+,cegilmnrx,945,3,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 2}",942,2,940,112,110,277,277,197,0,277,277,197,0
+oxalate,MAM02661,oxalate,cemx,16,1,"{""boundary (exchange/sink/demand)"": 1}",15,11,4,4,2,12,12,6,0,6,6,1,0
+pantothenate,MAM02680,pantothenate,cem,10,1,"{""boundary (exchange/sink/demand)"": 1}",9,5,4,2,1,6,6,4,0,5,5,3,0
+PEP,MAM02696,PEP,cem,17,1,"{""boundary (exchange/sink/demand)"": 1}",16,4,12,1,0,9,9,7,0,8,8,6,0
+sorbitol,MAM01682,D-glucitol,cegl,8,1,"{""boundary (exchange/sink/demand)"": 1}",7,3,4,1,1,7,7,7,0,3,3,3,0
+sucrose,MAM02945,sucrose,e,2,1,"{""boundary (exchange/sink/demand)"": 1}",1,0,1,0,0,3,3,1,0,3,3,1,0
+thymine,MAM02997,thymine,cem,7,1,"{""boundary (exchange/sink/demand)"": 1}",6,2,4,1,0,3,3,3,0,2,2,2,0
+UMP,MAM03114,UMP,ceglmnr,52,1,"{""boundary (exchange/sink/demand)"": 1}",51,16,35,8,1,38,38,32,0,33,33,27,0
+uracil,MAM03118,uracil,ce,9,1,"{""boundary (exchange/sink/demand)"": 1}",8,1,7,2,2,6,6,5,0,5,5,4,0
+urate,MAM03120,urate,cenx,19,1,"{""boundary (exchange/sink/demand)"": 1}",18,6,12,8,5,9,9,5,0,6,6,3,0
+uridine,MAM03123,uridine,celmn,19,1,"{""boundary (exchange/sink/demand)"": 1}",18,7,11,1,0,22,22,14,0,16,16,11,0
+xanthine,MAM03148,xanthine,cex,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,2,10,2,0,4,4,4,0,4,4,4,0
+taurocholate,MAM02963,taurocholate,cex,21,1,"{""boundary (exchange/sink/demand)"": 1}",20,13,7,8,4,15,15,5,0,2,2,0,0
+phosphocreatine,MAM01620,creatine-phosphate,cem,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,2,3,3,1,5,5,3,0,5,5,3,0
+6-phosphogluconate,MAM01169,6-phospho-D-gluconate,cr,6,0,{},6,1,5,2,1,4,4,4,0,4,4,4,0
+alpha-hydroxybutyrate,MAM00648,2-hydroxybutyrate,ce,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,11,1,0,0,11,11,7,0,4,4,1,0
+inositol,MAM02171,inositol,cegr,16,1,"{""boundary (exchange/sink/demand)"": 1}",15,5,10,1,0,10,10,8,0,7,7,6,0
+malondialdehyde,MAM02441,malonic-dialdehyde,ce,4,2,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 1}",2,1,1,1,0,1,1,1,0,1,1,1,0
+glycine,MAM01986,glycine,celmrx,193,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",152,69,83,45,36,65,65,38,0,43,43,27,0
+alanine,MAM01307,alanine,celmx,153,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",112,66,46,27,23,59,59,36,0,34,34,22,0
+serine,MAM02896,serine,ceglmrx,143,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",102,65,37,26,20,41,41,29,0,16,16,14,0
+threonine,MAM02993,threonine,celm,132,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",91,57,34,46,31,22,22,15,0,4,4,3,0
+methionine,MAM02471,methionine,celm,135,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",94,56,38,33,29,37,37,26,0,18,18,14,0
+aspartate,MAM01370,aspartate,celm,90,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",49,7,42,29,27,25,25,17,0,17,17,12,0
+glutamate,MAM01974,glutamate,celmr,205,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",164,13,151,43,40,79,79,58,0,61,61,50,0
+asparagine,MAM01369,asparagine,celm,129,40,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 34}",89,57,32,36,26,27,27,17,0,7,7,4,0
+glutamine,MAM01975,glutamine,celm,145,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",104,64,40,29,26,37,37,30,0,17,17,17,0
+histidine,MAM02125,histidine,celm,145,39,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 33}",106,55,51,44,44,25,25,14,0,6,6,2,0
+arginine,MAM01365,arginine,celm,175,40,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 34}",135,60,75,69,67,24,24,13,0,9,9,6,0
+lysine,MAM02426,lysine,celmnx,159,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",118,51,67,59,57,21,21,16,0,7,7,7,0
+valine,MAM03135,valine,celm,124,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",83,53,30,42,27,18,18,12,0,3,3,3,0
+leucine,MAM02360,leucine,celm,150,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",109,64,45,46,33,33,33,16,0,15,15,5,0
+isoleucine,MAM02184,isoleucine,celm,121,38,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 32}",83,57,26,28,19,19,19,12,0,4,4,3,0
+phenylalanine,MAM02724,phenylalanine,celm,155,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",114,60,54,57,44,27,27,15,0,10,10,5,0
+tyrosine,MAM03101,tyrosine,celm,154,40,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 34}",114,57,57,57,43,27,27,15,0,12,12,7,0
+tryptophan,MAM03089,tryptophan,cel,160,39,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 33}",121,58,63,62,58,23,23,12,0,7,7,2,0
+proline,MAM02770,proline,celmr,151,41,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 5, ""subsystem 'Protein degradation'"": 35}",110,62,48,60,36,30,30,20,0,11,11,9,0
+ornithine,MAM02658,ornithine,cem,57,1,"{""boundary (exchange/sink/demand)"": 1}",56,48,8,1,0,17,17,10,0,7,7,5,0
+citrulline,MAM01588,citrulline,cegm,53,1,"{""boundary (exchange/sink/demand)"": 1}",52,45,7,5,2,13,13,7,0,6,6,3,0
+taurine,MAM02961,taurine,cex,30,1,"{""boundary (exchange/sink/demand)"": 1}",29,7,22,12,11,5,5,3,0,3,3,1,0
+5-HIAA,MAM01103,5-hydroxyindoleacetate,cem,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,1,4,0,0,8,8,6,0,7,7,6,0
+serotonin,MAM02897,serotonin,ce,15,1,"{""boundary (exchange/sink/demand)"": 1}",14,8,6,2,1,14,14,4,0,7,7,2,0
+GABA,MAM00970,4-aminobutyrate,celmn,18,1,"{""boundary (exchange/sink/demand)"": 1}",17,10,7,2,0,17,17,9,0,11,11,8,0
+acetylglycine,MAM03397,Acetyl-Glycine,cem,4,1,"{""boundary (exchange/sink/demand)"": 1}",3,2,1,3,1,0,0,0,,0,0,0,
+dimethylglycine,MAM01708,dimethylglycine,cem,7,1,"{""boundary (exchange/sink/demand)"": 1}",6,2,4,2,0,5,5,1,0,5,5,1,0
+homocysteine,MAM02133,homocysteine,ce,8,1,"{""boundary (exchange/sink/demand)"": 1}",7,1,6,2,1,9,9,6,0,9,9,6,0
+allantoin,MAM01313,allantoin,ce,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,1,3,3,2,1,1,0,0,1,1,0,0
+anthranilic acid,MAM01342,anthranilate,ce,4,1,"{""boundary (exchange/sink/demand)"": 1}",3,1,2,1,0,2,2,2,0,2,2,2,0
+kynurenic acid,MAM00990,4-hydroxy-2-quinolinecarboxylic acid,cem,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,2,2,1,0,5,5,3,0,3,3,3,0
+5-adenosylhomocysteine,MAM02871,SAH,cemnr,114,1,"{""boundary (exchange/sink/demand)"": 1}",113,5,108,35,31,72,72,59,0,71,71,58,0
+carnosine,MAM01423,carnosine,cel,7,1,"{""boundary (exchange/sink/demand)"": 1}",6,3,3,1,0,7,7,4,0,4,4,2,0
+N-carbamoyl-beta-alanine,MAM00923,3-ureidopropionate,ce,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,3,2,3,0,2,2,0,0,2,2,0,0
+thiamine,MAM02982,thiamin,cem,8,1,"{""boundary (exchange/sink/demand)"": 1}",7,5,2,4,1,3,3,2,0,1,1,1,0
+niacinamide,MAM02583,nicotinamide,cen,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,1,11,1,0,30,30,24,0,30,30,24,0
+betaine,MAM01393,betaine,cem,9,1,"{""boundary (exchange/sink/demand)"": 1}",8,4,4,1,0,4,4,1,0,3,3,1,0
+choline,MAM01513,choline,cegmnr,24,1,"{""boundary (exchange/sink/demand)"": 1}",23,7,16,5,1,21,21,15,0,12,12,9,0
+alpha-glycerophosphocholine,MAM02912,sn-glycerol-3-PC,ce,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,1,4,1,0,12,12,8,0,12,12,8,0
+acetylcholine,MAM01260,acetylcholine,cen,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,8,4,1,0,9,9,2,0,3,3,1,0
+creatine,MAM01619,creatine,cem,7,1,"{""boundary (exchange/sink/demand)"": 1}",6,3,3,1,0,8,8,6,0,6,6,4,0
+creatinine,MAM01621,creatinine,ce,4,1,"{""boundary (exchange/sink/demand)"": 1}",3,2,1,1,1,3,3,1,0,0,0,0,
+thyroxine,MAM02998,thyroxine,cer,12,1,"{""boundary (exchange/sink/demand)"": 1}",11,6,5,0,0,30,28,7,0.0666667,23,21,3,0.0869565
+trimethylamine-N-oxide,MAM03054,trimethylamine-N-oxide,c,1,0,{},1,0,1,0,0,5,5,2,0,5,5,2,0
+adenosine,MAM01280,adenosine,celm,22,1,"{""boundary (exchange/sink/demand)"": 1}",21,7,14,3,2,25,25,18,0,18,18,14,0
+thymidine,MAM02996,thymidine,celm,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,6,6,0,0,18,18,13,0,13,13,10,0
+xanthosine,MAM03149,xanthosine,ce,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,1,3,2,1,9,9,6,0,9,9,6,0
+2-deoxyadenosine,MAM01666,deoxyadenosine,cel,10,1,"{""boundary (exchange/sink/demand)"": 1}",9,3,6,1,1,16,16,10,0,12,12,8,0
+2-deoxycytidine,MAM01668,deoxycytidine,celmn,14,1,"{""boundary (exchange/sink/demand)"": 1}",13,5,8,0,0,17,17,11,0,13,13,9,0
+cAMP,MAM01419,cAMP,ceg,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,2,3,1,0,35,35,19,0,32,32,17,0
+pipecolic acid,MAM02413,L-pipecolate,cex,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,2,2,3,1,1,1,0,0,1,1,0,0
+1-methylnicotinamide,MAM00536,1-methylnicotinamide,ce,6,1,"{""boundary (exchange/sink/demand)"": 1}",5,2,3,1,0,4,4,2,0,2,2,2,0
+butyrobetaine,MAM01922,gamma-butyrobetaine,ce,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,2,2,2,0,2,2,1,0,2,2,1,0
+putrescine,MAM02812,putrescine,cemx,13,1,"{""boundary (exchange/sink/demand)"": 1}",12,3,9,2,0,12,12,10,0,10,10,8,0
+carnitine,MAM02348,L-carnitine,cemrx,394,3,"{""boundary (exchange/sink/demand)"": 1, ""subsystem 'Artificial reactions'"": 2}",391,144,247,22,4,18,18,13,0,7,7,6,0
+acetylcarnitine,MAM02634,O-acetylcarnitine,cemrx,12,1,"{""boundary (exchange/sink/demand)"": 1}",11,7,4,1,0,7,7,7,0,5,5,5,0
+propionylcarnitine,MAM02657,O-propanoylcarnitine,cemx,10,1,"{""boundary (exchange/sink/demand)"": 1}",9,6,3,2,0,7,7,7,0,5,5,5,0
+malonylcarnitine,MAM02443,malonyl-carnitine,cemrx,9,1,"{""boundary (exchange/sink/demand)"": 1}",8,4,4,2,0,8,8,7,0,5,5,5,0
+hexanoylcarnitine,MAM03498,Hexanoyl Carnitine,cex,5,1,"{""boundary (exchange/sink/demand)"": 1}",4,2,2,1,0,5,5,5,0,4,4,4,0
+lauroylcarnitine,MAM01729,dodecanoylcarnitine,cemr,7,1,"{""boundary (exchange/sink/demand)"": 1}",6,3,3,1,0,8,8,8,0,5,5,5,0
+myristoylcarnitine,MAM02973,tetradecanoylcarnitine,cmr,5,0,{},5,2,3,0,0,9,9,8,0,5,5,5,0
+palmitoylcarnitine,MAM02411,L-palmitoylcarnitine,cemrx,11,1,"{""boundary (exchange/sink/demand)"": 1}",10,6,4,2,0,9,9,8,0,5,5,5,0
+stearoylcarnitine,MAM02940,stearoylcarnitine,cemr,9,1,"{""boundary (exchange/sink/demand)"": 1}",8,5,3,1,0,8,8,8,0,5,5,5,0
+arachidonyl_carnitine,MAM01363,arachidonyl-carnitine,cmrx,8,0,{},8,4,4,1,0,9,9,8,0,5,5,5,0
+sarcosine,MAM02880,sarcosine,cemx,11,1,"{""boundary (exchange/sink/demand)"": 1}",10,3,7,3,0,6,6,2,0,6,6,2,0
+beta-alanine,MAM01383,beta-alanine,cem,16,1,"{""boundary (exchange/sink/demand)"": 1}",15,7,8,2,0,16,16,9,0,11,11,7,0

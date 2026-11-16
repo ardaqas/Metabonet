@@ -1,0 +1,56 @@
+{
+  "gene_mapping": {
+    "by_ensembl": 2827,
+    "by_symbol": 18,
+    "mapping_rate": 0.9989466292134831,
+    "n_expressed_genes_primary": 15106,
+    "n_hg_genes": 2848,
+    "n_mapped": 2845,
+    "n_mapped_expressed_primary": 2123,
+    "n_unmapped": 3
+  },
+  "humangem": {
+    "commit": "635f533152dc5f7290ce04d12700eaa882273c3e",
+    "n_genes": 2848,
+    "n_metabolites": 8461,
+    "n_reactions": 12931,
+    "tag": "v2.0.0"
+  },
+  "metabolite_mapping": {
+    "1:1 confident": 107,
+    "1:1 confident (provisional)": 5,
+    "ambiguous": 19,
+    "n_needs_review": 0,
+    "unmapped": 5
+  },
+  "overlap": {
+    "median_jaccard": 0.0,
+    "n_pairs": 2701,
+    "n_pairs_any_shared": 497,
+    "n_pairs_jaccard_gt_0.5": 33
+  },
+  "targets": {
+    "class_counts": {
+      "medium-supplied": 11,
+      "mixed": 12,
+      "synthesised": 51
+    },
+    "dropped_from_sensitivity2": [
+      "carnosine",
+      "glucuronate",
+      "histidine",
+      "oxalate",
+      "taurine",
+      "thymine",
+      "tryptophan"
+    ],
+    "gate_min_targets": 15,
+    "gate_pass": true,
+    "n_clusters_jaccard_gt_0.5": 56,
+    "n_if_review_accepted": 74,
+    "n_in_sensitivity2_enzymatic": 67,
+    "n_multi_target_clusters": 5,
+    "n_pipeline_diagnostics": 1,
+    "n_targets": 74
+  }
+}

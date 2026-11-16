@@ -16,6 +16,19 @@ MANIFEST = RAW / "MANIFEST.tsv"
 
 BROAD_CCLE = "https://data.broadinstitute.org/ccle/"
 
+# Human-GEM pinned release (decision D7): tag -> commit resolved via the GitHub API on 2026-11-16
+HUMANGEM_TAG = "v2.0.0"
+HUMANGEM_COMMIT = "635f533152dc5f7290ce04d12700eaa882273c3e"
+# git blob SHA-1 of each file at that commit (GitHub contents API); verified after download
+HUMANGEM_BLOBS = {
+    "Human-GEM.xml": "031da3f40c50c294510bff9f11b6f0393b735855",
+    "metabolites.tsv": "230968f43ba8526040716b174b3de6d06edebfc2",
+    "genes.tsv": "bb28a3a40fdd2dc9495d950122cd6aeadc1683d7",
+    "reactions.tsv": "436ec5a5eea01344fb945d24291a137e341e0ad5",
+    "README.md": "bb117f119911bd7f5aebb90234fcac0cbe418fd4",
+    "dependencies.txt": "46f150c8fe5b4d8d109ea9a4356870fe20ca7f30",
+}
+
 
 @dataclass(frozen=True)
 class Source:
@@ -89,6 +102,29 @@ SOURCES: dict[str, Source] = {
                 "scrape it; the file must be downloaded manually."
             ),
         ),
+        Source(
+            key="gencode_v19_gtf",
+            group="ccle2019",
+            filename="gencode.v19.genes.v7_model.patched_contigs.gtf.gz",
+            url=BROAD_CCLE + "gencode.v19.genes.v7_model.patched_contigs.gtf.gz",
+            release="CCLE 2019 gene model (GENCODE v19) used for the RSEM expression",
+            host="Broad Institute CCLE data server (data.broadinstitute.org/ccle)",
+            citation="Ghandi M et al. Nature 2019;569:503-508",
+            note="Annotation of the CCLE 2019 expression file (gene_name, gene_type); needed for the HGNC-symbol fallback.",
+        ),
+        *[
+            Source(
+                key=f"humangem_{fn.split('.')[0].replace('-', '_').lower()}_{fn.split('.')[-1]}",
+                group="humangem",
+                filename=fn,
+                url=f"https://raw.githubusercontent.com/SysBioChalmers/Human-GEM/{HUMANGEM_COMMIT}/model/{fn}",
+                release=f"Human-GEM {HUMANGEM_TAG} (commit {HUMANGEM_COMMIT})",
+                host="GitHub SysBioChalmers/Human-GEM (raw.githubusercontent.com, pinned commit)",
+                citation="Robinson JL et al. Sci Signal 2020; Luo J et al. PNAS 2026 (v2.0.0)",
+                note=f"git blob sha1 {HUMANGEM_BLOBS[fn]}",
+            )
+            for fn in HUMANGEM_BLOBS
+        ],
         Source(
             key="model_readme",
             group="depmap",

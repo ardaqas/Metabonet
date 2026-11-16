@@ -1,0 +1,137 @@
+feature	species	kegg	chebi	hmdb	lcms_note	lcms_concern	kegg_name_ok	hg_name_alias	review_flag
+2-aminoadipate	L-2-aminoadipate	C00956				no			
+3-phosphoglycerate	3-phospho-D-glycerate	C00197			2-phosphoglycerate (C00631) is isobaric; not listed as a separate feature	yes			
+alpha-glycerophosphate	sn-glycerol 3-phosphate	C00093			glycerol 2-phosphate (C02979) is isobaric; name implies the alpha (1/3) form	yes			
+4-pyridoxate	4-pyridoxate	C00847				no			
+aconitate	cis-aconitate	C00417			name is generic; trans-aconitate (C02341) not resolved by name	no			
+adenine	adenine	C00147				no			
+adipate	adipate	C06104				no			
+alpha-ketoglutarate	2-oxoglutarate	C00026				no			
+AMP	AMP	C00020				no			
+citrate	citrate	C00158			listed separately from isocitrate (chromatographically resolved)	no			
+isocitrate	isocitrate	C00311				no			
+CMP	CMP	C00055				no			
+cystathionine	L-cystathionine	C02291				no			
+cytidine	cytidine	C00475				no			
+dCMP	dCMP	C00239				no			
+DHAP/glyceraldehyde 3P	glycerone phosphate|D-glyceraldehyde 3-phosphate	C00111|C00118			summed feature (two species)	no			
+erythrose-4-phosphate	D-erythrose 4-phosphate	C00279				no			
+F1P/F6P/G1P/G6P	D-fructose 1-phosphate|D-fructose 6-phosphate|D-glucose 1-phosphate|D-glucose 6-phosphate	C01094|C00085|C00103|C00092			summed hexose-monophosphate feature	no			
+hexoses (HILIC neg)	D-glucose|D-fructose|D-galactose|D-mannose	C00031|C00095|C00124|C00159			generic hexose feature	no			
+fumarate/maleate/alpha-ketoisovalerate	fumarate|maleate|3-methyl-2-oxobutanoate	C00122|C01384|C00141			summed feature (three species)	no			
+glucuronate	D-glucuronate	C00191				no			
+glutathione oxidized	glutathione disulfide	C00127				no			
+glutathione reduced	glutathione	C00051				no			
+GMP	GMP	C00144				no			
+guanosine	guanosine	C00387				no			
+hippurate	hippurate	C01586				no			
+hypoxanthine	hypoxanthine	C00262				no			
+inosine	inosine	C00294				no			
+kynurenine	L-kynurenine	C00328				no			
+lactate	(S)-lactate	C00186			LC-MS does not resolve L/D enantiomers	no			
+lactose	lactose	C00243			isobaric with other disaccharides (e.g. sucrose listed separately)	yes			
+malate	(S)-malate	C00149			LC-MS does not resolve L/D enantiomers	no			
+NAD	NAD+	C00003				no			Human-GEM also contains alpha-NAD(+) (MAM20063), an anomer of NAD+ (MAM02552)
+NADP	NADP+	C00006				no			
+oxalate	oxalate	C00209				no			
+pantothenate	(R)-pantothenate	C00864				no			
+PEP	phosphoenolpyruvate	C00074				no			
+ribose-5-P/ribulose5-P	D-ribose 5-phosphate|D-ribulose 5-phosphate	C00117|C00199			summed feature (two species)	no			
+sorbitol	D-sorbitol	C00794			isobaric with other hexitols (mannitol, galactitol)	yes			
+succinate/methylmalonate	succinate|methylmalonate	C00042|C02170			summed feature (two species)	no			
+sucrose	sucrose	C00089				no			
+thymine	thymine	C00178				no			
+UMP	UMP	C00105				no			
+UDP-galactose/UDP-glucose	UDP-alpha-D-galactose|UDP-alpha-D-glucose	C00052|C00029			summed feature (two species)	no			
+uracil	uracil	C00106				no			
+urate	urate	C00366				no			
+uridine	uridine	C00299				no			
+xanthine	xanthine	C00385				no			
+taurocholate	taurocholate	C05122				no			
+glycodeoxycholate/glycochenodeoxycholate	glycodeoxycholate|glycochenodeoxycholate	C05464|C05466			summed feature (two species)	no			
+taurodeoxycholate/taurochenodeoxycholate	taurodeoxycholate|taurochenodeoxycholate	C05463|C05465			summed feature (two species)	no			
+phosphocreatine	phosphocreatine	C02305				no			
+3-methyladipate/pimelate	3-methyladipate|pimelate	|C02656	CHEBI:68503|	HMDB0000555|	summed feature (two species)	no			
+6-phosphogluconate	6-phospho-D-gluconate	C00345				no			
+alpha-hydroxybutyrate	2-hydroxybutanoate	C05984			LC-MS does not resolve R/S; isobaric with 3-hydroxybutyrate (separation not documented)	yes			
+2-hydroxyglutarate	(S)-2-hydroxyglutarate|(R)-2-hydroxyglutarate	C03196|C01087			LC-MS does not resolve D/L-2HG; both enantiomers biologically distinct	no			
+inositol	myo-inositol	C00137			isobaric with other hexoses/inositols	no			
+malondialdehyde	malondialdehyde	C19440				no			
+glycine	glycine	C00037				no			
+alanine	L-alanine	C00041			LC-MS does not resolve L/D; beta-alanine and sarcosine (isobaric) are separate features	no			
+serine	L-serine	C00065			LC-MS does not resolve L/D	no			
+threonine	L-threonine	C00188			isobaric with homoserine (not listed)	no			
+methionine	L-methionine	C00073				no			
+aspartate	L-aspartate	C00049			LC-MS does not resolve L/D	no			
+glutamate	L-glutamate	C00025				no			
+asparagine	L-asparagine	C00152				no			
+glutamine	L-glutamine	C00064				no			
+histidine	L-histidine	C00135				no			
+arginine	L-arginine	C00062				no			
+lysine	L-lysine	C00047				no			
+valine	L-valine	C00183				no			
+leucine	L-leucine	C00123			leucine and isoleucine listed separately (resolved)	no			
+isoleucine	L-isoleucine	C00407				no			
+phenylalanine	L-phenylalanine	C00079				no			
+tyrosine	L-tyrosine	C00082				no			
+tryptophan	L-tryptophan	C00078				no			
+proline	L-proline	C00148				no			
+cis/trans-hydroxyproline	trans-4-hydroxy-L-proline|cis-4-hydroxy-L-proline	C01157|C01015			summed feature (two isomers)	no			
+ornithine	L-ornithine	C00077				no			
+citrulline	L-citrulline	C00327				no			
+taurine	taurine	C00245				no			
+5-HIAA	5-hydroxyindoleacetate	C05635				no			
+serotonin	serotonin	C00780				no			
+GABA	4-aminobutanoate	C00334				no			
+acetylglycine	N-acetylglycine		CHEBI:40410	HMDB0000532		no			
+dimethylglycine	N,N-dimethylglycine	C01026				no			
+homocysteine	L-homocysteine	C00155				no			
+SDMA/ADMA	symmetric dimethylarginine|asymmetric dimethylarginine	|C03626	CHEBI:25682|	HMDB0003334|	summed feature (two species)	no	KEGG C03626 = NG,NG-dimethyl-L-arginine = ADMA		
+NMMA	NG-monomethyl-L-arginine	C03884				no			
+allantoin	(S)-allantoin	C02350				no			curated (S)-allantoin (C02350); Human-GEM allantoin is the unspecified/racemic form (C01551, CHEBI:15676)
+anthranilic acid	anthranilate	C00108				no			
+kynurenic acid	kynurenate	C01717				no			
+5-adenosylhomocysteine	S-adenosyl-L-homocysteine	C00021			feature name '5-adenosylhomocysteine' read as S-adenosylhomocysteine	no			
+carnosine	carnosine	C00386				no			
+N-carbamoyl-beta-alanine	3-ureidopropanoate	C02642				no			
+thiamine	thiamine	C00378				no			
+niacinamide	nicotinamide	C00153				no			
+betaine	betaine	C00719				no			
+choline	choline	C00114				no			
+alpha-glycerophosphocholine	sn-glycero-3-phosphocholine	C00670				no			
+acetylcholine	acetylcholine	C01996				no			
+creatine	creatine	C00300				no			
+creatinine	creatinine	C00791				no			
+thyroxine	L-thyroxine	C01829				no			
+trimethylamine-N-oxide	trimethylamine N-oxide	C01104				no			
+hexoses (HILIC pos)	D-glucose|D-fructose|D-galactose|D-mannose	C00031|C00095|C00124|C00159			generic hexose feature	no			
+adenosine	adenosine	C00212			isobaric with deoxyguanosine (not listed)	no			
+thymidine	thymidine	C00214				no			
+xanthosine	xanthosine	C01762				no			
+2-deoxyadenosine	2'-deoxyadenosine	C00559				no			
+2-deoxycytidine	2'-deoxycytidine	C00881				no			
+cAMP	3',5'-cyclic AMP	C00575				no			
+cotinine	cotinine		CHEBI:68641		xenobiotic (nicotine metabolite); KEGG has no free-cotinine entry	no			
+pipecolic acid	L-pipecolate	C00408			LC-MS does not resolve L/D	no			
+pyroglutamic acid	5-oxo-L-proline	C01879			can form in-source/ex vivo by cyclisation of glutamine/glutamate	yes			
+1-methylnicotinamide	1-methylnicotinamide	C02918				no			
+butyrobetaine	4-trimethylammoniobutanoate	C01181				no			
+putrescine	putrescine	C00134				no			
+methionine sulfoxide	L-methionine S-oxide	C02989			methionine sulfoxide diastereomers (S/R at sulfur) not resolved	no			
+carnitine	L-carnitine	C00318				no			
+acetylcarnitine	O-acetyl-L-carnitine	C02571				no			
+propionylcarnitine	O-propanoyl-L-carnitine	C03017				no	KEGG C03017 names it O-Propanoylcarnitine/O-Propionylcarnitine (same compound)		
+malonylcarnitine	O-malonyl-L-carnitine		CHEBI:73028	HMDB0002095		no			
+butyrylcarnitine/isobutyrylcarnitine	O-butanoyl-L-carnitine|O-isobutyryl-L-carnitine	|	CHEBI:21949|CHEBI:84838	HMDB0002013|HMDB0000736	summed feature (two isomers)	no			
+valerylcarnitine/isovalerylcarnitine/2-methylbutyroylcarnitine	O-valeryl-L-carnitine|O-isovaleryl-L-carnitine|O-2-methylbutyryl-L-carnitine	|C20826|	CHEBI:86050||CHEBI:73026	HMDB0013128|HMDB0000688|HMDB0000378	summed feature (three isomers)	no			
+hexanoylcarnitine	O-hexanoyl-L-carnitine		CHEBI:84834	HMDB0000705		no			
+heptanoylcarnitine	O-heptanoyl-L-carnitine		CHEBI:74303	HMDB0013238		no			
+lauroylcarnitine	O-dodecanoyl-L-carnitine		CHEBI:73054	HMDB0002250		no			
+myristoylcarnitine	O-tetradecanoyl-L-carnitine		CHEBI:73061	HMDB0005066		no			
+palmitoylcarnitine	O-palmitoyl-L-carnitine	C02990				no	KEGG C02990 names it L-Palmitoylcarnitine (same compound)		
+stearoylcarnitine	O-stearoyl-L-carnitine		CHEBI:73074	HMDB0000848		no			
+oleylcarnitine	O-oleoyl-L-carnitine		CHEBI:72689	HMDB0005065		no		L-oleoylcarnitine	Human-GEM has five C18:1 acylcarnitines: L-oleoylcarnitine (MAM02410, no IDs), octadecenoylcarnitine(5) (MAM02639, HMDB0005065), (7) (MAM02640), (11) (MAM02638), (9E) (MAM00126); the LC-MS transition measures C18:1-carnitine regardless of double-bond position
+arachidonyl_carnitine	O-arachidonoyl-L-carnitine		CHEBI:73082	HMDB0006455		no			
+sarcosine	sarcosine	C00213			isobaric with alanine and beta-alanine (listed separately)	no			
+beta-alanine	beta-alanine	C00099			isobaric with alanine and sarcosine (listed separately)	no			
+anserine	anserine	C01262				no			

@@ -1,0 +1,5 @@
+feature,version,hg_gene,symbol,ccle_gene_id,mapped,expressed
+1-methylnicotinamide,primary,ENSG00000112499,SLC22A2,ENSG00000112499.8,True,False
+1-methylnicotinamide,primary,ENSG00000138356,AOX1,ENSG00000138356.9,True,True
+1-methylnicotinamide,primary,ENSG00000166741,NNMT,ENSG00000166741.3,True,True
+1-methylnicotinamide,primary,ENSG00000175003,SLC22A1,ENSG00000175003.8,True,False

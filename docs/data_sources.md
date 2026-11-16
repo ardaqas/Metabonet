@@ -14,6 +14,23 @@ The machine-readable record is `data/raw/MANIFEST.tsv`. It is written by `src/ph
 | model_readme | `depmap/README.txt` | DepMap portal, manual browser download (release notes) | header `# DepMap Public 26Q3` | 48,405 | `5672d9e04f18320e9ca1d25747427275dcabb44bffe45eba34d196f1b44dd3ec` | `bcd481c01f79aa280d5d2e2a6234797e` |
 | cellosaurus | `cellosaurus/batch_000.txt` … `batch_018.txt`, `query_meta.json` | Cellosaurus API, https://api.cellosaurus.org/search/cell-line | **Cellosaurus 57.0** (updated 2026-10-22); queried 2026-11-16T12:58Z; 927 RRIDs | — | listed per file in MANIFEST.tsv | — |
 
+### Added in Phase 1 (2026-11-16)
+
+| Key | File (under `data/raw/`) | Source / host | Release | Bytes | SHA-256 |
+|---|---|---|---|---:|---|
+| humangem_human_gem_xml | `humangem/Human-GEM.xml` (SBML) | https://raw.githubusercontent.com/SysBioChalmers/Human-GEM/635f533…/model/Human-GEM.xml | **Human-GEM v2.0.0**, tag commit `635f533152dc5f7290ce04d12700eaa882273c3e` | 43,115,559 | `cc5a4383c6116b0c91f4db089cc640f29aec7e840249b573b74d3792c9ca4a7a` |
+| humangem_metabolites_tsv | `humangem/metabolites.tsv` | same commit | v2.0.0 | 674,780 | `9d58bb3a9cd217c47dc0d54ea9517b0a23e0603bbb60d5428551e0449af1eab3` |
+| humangem_genes_tsv | `humangem/genes.tsv` | same commit | v2.0.0 | 1,132,077 | `2a6058a157b3b9f3c958ba753e71d7a702d2716742972741d2ef36535ae9dff6` |
+| humangem_reactions_tsv | `humangem/reactions.tsv` | same commit | v2.0.0 | 886,012 | `1436dd90e959714366270a9904fd6a5108044a2f7f1d7f8360bf7a195fc9e28f` |
+| humangem_readme_md, humangem_dependencies_txt | `humangem/README.md`, `dependencies.txt` | same commit | v2.0.0 (built with RAVEN 2.11.0, libSBML 5.20.2) | — | in MANIFEST |
+| gencode_v19_gtf | `ccle2019/gencode.v19.genes.v7_model.patched_contigs.gtf.gz` | https://data.broadinstitute.org/ccle/ | CCLE 2019 gene model (GENCODE v19) | 7,509,840 | `225017a79843a51d3428810bc9656e6353dcce570c816acf02ead8f7d23e8956` |
+| idlookup_kegg / idlookup_chebi | `idlookup/kegg/*.txt` (141), `idlookup/chebi/*.json` (420), `query_meta.json` | KEGG REST `rest.kegg.jp/get/`, ChEBI backend API | live APIs, queried 2026-11-16T13:59Z | — | one row per file in MANIFEST |
+
+- **Human-GEM integrity.** The tag was resolved to its commit through the GitHub API, and the files were downloaded from that commit, not from a branch. On every download and `make verify`, each file's **git blob SHA-1** is recomputed and compared with the blob SHA that GitHub lists for the commit (`src/phase0/sources.py::HUMANGEM_BLOBS`). All six match. Human-GEM v2.0.1, v2.1.0 and v2.1.1 also exist (Sept–Oct 2026) but are not used (D30).
+- **COBRApy 0.32.1** is used only to parse the SBML. No solver or FBA is called.
+- **GENCODE v19 GTF.** This is the gene annotation of the CCLE 2019 expression file. It supplies the `gene_name`/`gene_type` needed for the HGNC-symbol fallback (D26). It is not a new dataset. It lacks about 2.7% of the expression matrix's gene IDs, which matters only for the symbol fallback and the gene-type labels.
+- **ID verification.** KEGG and ChEBI responses are cached so the mapping can be reproduced offline. **HMDB (hmdb.ca) returns a Cloudflare challenge (HTTP 403)** to scripts. PubChem no longer resolves HMDB accessions as synonyms, so HMDB IDs cannot be checked against HMDB directly; see D28.
+
 Li et al. 2019 Supplementary Table 1 sheets used: `1-cell line annotations` (culture medium), `1-clean data`, `1-raw data` (missingness before imputation), `1-CV`, `1-lineage effects`, `1-LC-MS parameters (polar)` and `1-LC-MS parameters (lipid)` (assay class).
 
 ## Access notes and blockers

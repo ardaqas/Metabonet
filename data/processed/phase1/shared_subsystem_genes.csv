@@ -1,0 +1,10 @@
+subsystem,hg_gene,symbol,n_targets,targets
+Transport reactions,ENSG00000123643,SLC36A1,20,GABA; alanine; asparagine; aspartate; glutamate; glutamine; glycine; histidine; isoleucine; leucine; lysine; methionine; phenylalanine; proline; serine; taurine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000103257,SLC7A5,19,alanine; arginine; asparagine; citrulline; glutamine; glycine; histidine; isoleucine; leucine; lysine; methionine; ornithine; phenylalanine; proline; serine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000103064,SLC7A6,19,alanine; arginine; asparagine; citrulline; glutamine; glycine; histidine; isoleucine; leucine; lysine; methionine; ornithine; phenylalanine; proline; serine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000168003,SLC3A2,18,alanine; arginine; asparagine; glutamate; glutamine; glycine; histidine; isoleucine; leucine; lysine; methionine; phenylalanine; putrescine; serine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000155465,SLC7A7,17,alanine; arginine; asparagine; glutamine; histidine; isoleucine; leucine; lysine; methionine; phenylalanine; proline; putrescine; serine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000092068,SLC7A8,16,alanine; asparagine; glutamine; glycine; histidine; isoleucine; kynurenine; leucine; methionine; phenylalanine; proline; serine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000149150,SLC43A1,14,asparagine; glutamine; glycine; isoleucine; kynurenine; leucine; methionine; phenylalanine; proline; serine; threonine; tryptophan; tyrosine; valine
+Transport reactions,ENSG00000174669,SLC29A2,11,2-deoxyadenosine; 2-deoxycytidine; adenosine; cytidine; guanosine; hypoxanthine; inosine; thymidine; thymine; uracil; uridine
+Transport reactions,ENSG00000134294,SLC38A2,11,alanine; asparagine; glutamine; glycine; histidine; leucine; methionine; phenylalanine; proline; serine; threonine

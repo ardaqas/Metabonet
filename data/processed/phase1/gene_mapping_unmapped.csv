@@ -1,0 +1,4 @@
+hg_gene,hg_symbol,ccle_gene_id,ccle_gene_name,ccle_gene_type,method,reason,mapped,n_hg_genes_sharing_ccle_gene
+ENSG00000273841,TAF9,,,,,"symbol TAF9 -> ENSG00000085231.9, which is already the direct Ensembl match of another Human-GEM gene",False,
+ENSG00000288702,UGT1A3,,,,,Ensembl ID absent from GENCODE v19 and symbol 'UGT1A3' not a v19 gene_name,False,
+ENSG00000288705,UGT1A5,,,,,Ensembl ID absent from GENCODE v19 and symbol 'UGT1A5' not a v19 gene_name,False,

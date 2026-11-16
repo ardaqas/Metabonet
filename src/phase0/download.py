@@ -19,7 +19,7 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from .sources import MANIFEST, MODEL_RELEASE_FILE, REPO, SOURCES, Source
+from .sources import HUMANGEM_BLOBS, MANIFEST, MODEL_RELEASE_FILE, REPO, SOURCES, Source
 
 USER_AGENT = "metabonet-phase0-audit/0.1 (research data audit; python-requests)"
 MANIFEST_COLS = [
@@ -36,6 +36,12 @@ def hash_file(path: Path) -> tuple[str, str, int]:
             md5.update(chunk)
             n += len(chunk)
     return sha.hexdigest(), md5.hexdigest(), n
+
+
+def git_blob_sha1(path: Path) -> str:
+    """SHA-1 as computed by git for a blob (lets us check files against the pinned commit)."""
+    data = path.read_bytes()
+    return hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 
 def load_manifest() -> pd.DataFrame:
@@ -66,7 +72,8 @@ def fetch(src: Source) -> dict:
         with open(tmp, "wb") as fh:
             for chunk in r.iter_content(1 << 20):
                 fh.write(chunk)
-        expected = r.headers.get("Content-Length")
+        # Content-Length is the *encoded* size when the server compresses (e.g. GitHub raw); skip then
+        expected = None if r.headers.get("Content-Encoding") else r.headers.get("Content-Length")
         info = {
             "http_last_modified": r.headers.get("Last-Modified", ""),
             "http_etag": r.headers.get("ETag", "").strip('"'),
@@ -154,6 +161,12 @@ def main(argv: list[str] | None = None) -> int:
         elif args.force or not src.path.exists():
             info = fetch(src)
         sha, md5, n = hash_file(src.path)
+        if src.group == "humangem":
+            blob = git_blob_sha1(src.path)
+            if blob != HUMANGEM_BLOBS[src.filename]:
+                problems.append(f"git blob sha1 mismatch for {rel}: {blob} != {HUMANGEM_BLOBS[src.filename]}")
+            else:
+                print(f"  git blob sha1 verified ({blob[:12]})")
         if prev_row and prev_row.get("sha256") and prev_row["sha256"] != sha:
             msg = f"CHECKSUM CHANGED for {rel}: manifest {prev_row['sha256'][:12]} vs file {sha[:12]}"
             if args.verify:

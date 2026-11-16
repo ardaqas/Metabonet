@@ -1,0 +1,6 @@
+feature,literature_genes,literature_genes_status,h5_in_set_genes,h5_in_set_genes_status,mapping_status,k_expressed_primary,selected,selection_result,role
+1-methylnicotinamide,NNMT,NNMT:expressed,NNMT,NNMT:expressed,1:1 confident,2,False,gene set 2 expressed genes (< 3),pipeline diagnostic (not a target)
+kynurenine,"IDO1, TDO2","IDO1:NOT in set, TDO2:NOT in set","AFMID, KYNU","AFMID:expressed, KYNU:expressed",1:1 confident,7,True,passes,target + H5 control
+creatine,"SLC6A8, GATM","SLC6A8:expressed, GATM:NOT in set","GAMT, SLC6A8","GAMT:expressed, SLC6A8:expressed",1:1 confident,6,True,passes,target + H5 control
+N-carbamoyl-beta-alanine,DPYD,DPYD:NOT in set,"DPYS, UPB1","DPYS:in set, not expressed, UPB1:in set, not expressed",1:1 confident,0,False,gene set 0 expressed genes (< 3),excluded by rule 3
+taurine,SLC6A6,SLC6A6:expressed,SLC6A6,SLC6A6:expressed,1:1 confident,3,True,passes,target + H5 control

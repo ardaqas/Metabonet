@@ -1,0 +1,24 @@
+feature	decision	final_status	rationale	decided_on	ref
+alanine	accept	1:1 confident	Enantiomer rule (D31): LC-MS does not resolve L/D; D-amino acids are trace in cultured human cancer cells. Mapped to the L-form (MAM01307); D-alanine (MAM01638) reactions are not added to the gene set.	2026-11-16	D31
+serine	accept	1:1 confident	Enantiomer rule (D31). Mapped to L-serine (MAM02896); D-serine (MAM01744, made by SRR) reactions not added.	2026-11-16	D31
+aspartate	accept	1:1 confident	Enantiomer rule (D31). Mapped to L-aspartate (MAM01370); D-aspartate (MAM01641) reactions not added.	2026-11-16	D31
+arginine	accept	1:1 confident	Enantiomer rule (D31). Mapped to L-arginine (MAM01365); D-arginine (MAM01640) reactions not added.	2026-11-16	D31
+proline	accept	1:1 confident	Enantiomer rule (D31). Mapped to L-proline (MAM02770); D-proline (MAM01742) reactions not added.	2026-11-16	D31
+ornithine	accept	1:1 confident	Enantiomer rule (D31). Mapped to L-ornithine (MAM02658); D-ornithine (MAM01740) reactions not added.	2026-11-16	D31
+lactate	accept	1:1 confident	Enantiomer rule (D31). D-lactate (methylglyoxal pathway) is typically <1% of cellular lactate. Mapped to L-lactate (MAM02403); D-lactate (MAM01716) reactions not added.	2026-11-16	D31
+3-phosphoglycerate	accept	1:1 confident	3-PG is the dominant phosphoglycerate pool and Li et al. assigned the feature with a 3-PG standard. 2-PG is isobaric and may co-elute, but PGAM1 (interconverts 3-PG and 2-PG) is already in the gene set, so the set covers the sum of both species.	2026-11-16	D31
+alpha-glycerophosphate	accept	1:1 confident	'alpha' names the 1/3 isomer; glycerol 2-phosphate is a minor cellular species. Mapped to sn-glycerol 3-phosphate (MAM02914).	2026-11-16	D31
+sorbitol	accept	1:1 confident	Sorbitol (AKR1B1/SORD polyol pathway) is the hexitol human cells make; mannitol is not synthesised by human cells. Caveat: the 12 primary lines in Leibovitz L-15 are grown on galactose, where galactitol (AKR1B1 product, isobaric) is possible.	2026-11-16	D31
+hexanoylcarnitine	accept	1:1 confident	Name match to Human-GEM 'Hexanoyl Carnitine' (MAM03498, which carries no external IDs); formula consistent; no competing candidate (D32 rule).	2026-11-16	D31
+stearoylcarnitine	accept	1:1 confident	Name match to Human-GEM 'stearoylcarnitine' (MAM02940, no external IDs); formula consistent; no competing candidate (D32 rule).	2026-11-16	D31
+malonylcarnitine	accept	1:1 confident	Name match to Human-GEM 'malonyl-carnitine' (MAM02443) and shared HMDB0002095; formula consistent; no competing candidate (D32 rule).	2026-11-16	D31
+lactose	exclude	ambiguous	Lactose is synthesised only by lactating mammary epithelium (LALBA/B4GALT1); an intracellular signal in cancer lines more plausibly reflects FBS carry-over or an unresolved isobaric disaccharide. A first-neighbour gene set for lactose is not biologically meaningful here.	2026-11-16	D31
+pyroglutamic acid	exclude	ambiguous	5-oxoproline forms non-enzymatically and in the ion source by cyclisation of glutamine and glutamate, so the measured signal is partly an artefact of much larger pools.	2026-11-16	D31
+NAD	moot	1:1 confident (provisional)	Not decided: fails rule 3 (227 expressed genes) regardless. alpha-NAD+ (MAM20063) is a minor anomer.	2026-11-16	D31
+alpha-hydroxybutyrate	moot	1:1 confident (provisional)	Not decided: fails rule 4 (37% missing) regardless.	2026-11-16	D31
+acetylglycine	moot	1:1 confident (provisional)	Not decided: fails rule 3 (0 expressed genes) regardless.	2026-11-16	D31
+allantoin	moot	1:1 confident (provisional)	Not decided: fails rule 3 (0 expressed genes) regardless; humans lack uricase.	2026-11-16	D31
+lauroylcarnitine	moot	1:1 confident (provisional)	Not decided: fails rule 4 (22% missing) regardless.	2026-11-16	D31
+myristoylcarnitine	moot	1:1 confident (provisional)	Not decided: fails rule 4 (21% missing) regardless.	2026-11-16	D31
+arachidonyl_carnitine	moot	1:1 confident (provisional)	Not decided: fails rule 4 (32% missing) regardless.	2026-11-16	D31
+oleylcarnitine	keep_ambiguous	ambiguous	Five C18:1-carnitine species in Human-GEM; the LC-MS transition does not distinguish double-bond position.	2026-11-16	D31
