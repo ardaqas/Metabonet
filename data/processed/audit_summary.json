@@ -1,0 +1,180 @@
+{
+  "expression_format": {
+    "colsum_max": 1000006.0,
+    "colsum_median": 1000000.125,
+    "colsum_min": 999994.5625,
+    "duplicate_line_columns": 0,
+    "frac_zero": 0.54381317,
+    "max_value": 225730.0,
+    "n_duplicate_ids_after_version_strip": 0,
+    "n_ensg_versioned_ids": 57773,
+    "n_ensgr_all_zero_all_lines": 47,
+    "n_ensgr_par_y_ids": 47,
+    "n_ensgr_with_ensg_counterpart": 47,
+    "n_genes": 57820,
+    "n_genes_after_dropping_ensgr": 57773,
+    "n_genes_all_zero_primary": 8769,
+    "n_genes_mean_log2tpm1_ge1_primary": 15106,
+    "n_lines": 1019,
+    "n_nan": 0,
+    "n_negative": 0,
+    "n_other_ids": 0,
+    "n_primary_lines": 735
+  },
+  "gates": {
+    "gate_medium_coverage_pass": true,
+    "gate_min_medium_coverage": 0.9,
+    "gate_min_primary_lines": 400,
+    "gate_primary_lines_pass": true,
+    "medium_agreement_frac": 0.99450549,
+    "medium_agreement_n_both": 546,
+    "medium_coverage": 1.0,
+    "medium_coverage_from_anno2019_only": 0.74285714,
+    "medium_coverage_from_li2019_only": 1.0,
+    "n_matched_solid_lines_before_medium": 735,
+    "n_primary_lines": 735
+  },
+  "issue_counts": {
+    "ccle_name_changed_in_model_csv": 4,
+    "cellosaurus_problematic": 51,
+    "depmap_id_missing_in_metabolomics": 1,
+    "depmap_id_retired_alias": 1,
+    "duplicate_cell_line": 1,
+    "duplicate_rrid": 2,
+    "haematopoietic_flag_discordant": 1,
+    "li2019_name_differs[annotations]": 15,
+    "no_ccle2019_rnaseq": 15,
+    "non_cancerous_model": 16,
+    "shared_donor_group": 41
+  },
+  "metabolite_inventory": {
+    "assay_class_counts": {
+      "lipid (RPLC)": 89,
+      "polar (HILIC)": 136
+    },
+    "missingness_rule_max_frac": 0.2,
+    "n_lipid_rows_in_sheet": 89,
+    "n_names_with_slash": 13,
+    "n_polar_carnitines": 14,
+    "n_polar_transitions_in_sheet": 137,
+    "polar_ion_mode_counts": {
+      "negative": 59,
+      "positive": 77
+    },
+    "polar_n_pass_missingness_rule": 115,
+    "polar_n_raw_missing_primary_gt_20pct": 21,
+    "polar_raw_missing_frac_primary_median": 0.01972789,
+    "polar_sheet_names_unused": []
+  },
+  "metabolomics_format": {
+    "clean_sheet_shape": [
+      928,
+      225
+    ],
+    "cols_matched_csv_vs_clean": 225,
+    "csv_shape": [
+      928,
+      225
+    ],
+    "iqr_slope": [
+      0.68120587,
+      0.86299004
+    ],
+    "max_abs_diff_csv_vs_clean": 0.0,
+    "median_corr_clean_vs_linear_raw": 0.72588869,
+    "median_corr_clean_vs_log10raw": 0.89844907,
+    "median_slope_clean_on_log10raw": 0.76879502,
+    "min_corr_clean_vs_log10raw": 0.25806071,
+    "n_metabolites_corr_computed": 225,
+    "raw_missing_cells": 19185,
+    "raw_missing_filled_in_csv": 19185,
+    "raw_missing_frac": 0.09188218,
+    "raw_rows_matched": 928,
+    "rows_matched_csv_vs_clean": 928,
+    "value_max": 9.0989016,
+    "value_median": 5.8839763,
+    "value_min": 2.9760308,
+    "value_p01": 4.78354014,
+    "value_p99": 6.94161753
+  },
+  "model_release": "DepMap Public 26Q3 (from depmap/README.txt header; Model.csv schema matches README)",
+  "primary_set": {
+    "growth_pattern_counts": {
+      "Adherent": 633,
+      "Mixed": 55,
+      "Suspension": 44,
+      "Unknown": 3
+    },
+    "lineage_collapsed_counts": {
+      "Bladder/Urinary Tract": 25,
+      "Bone": 15,
+      "Bowel": 56,
+      "Breast": 48,
+      "CNS/Brain": 49,
+      "Esophagus/Stomach": 63,
+      "Head and Neck": 33,
+      "Kidney": 27,
+      "Liver": 24,
+      "Lung": 169,
+      "Other": 45,
+      "Ovary/Fallopian Tube": 45,
+      "Pancreas": 41,
+      "Peripheral Nervous System": 16,
+      "Skin": 49,
+      "Uterus": 30
+    },
+    "lineage_counts": {
+      "Ampulla of Vater": 2,
+      "Biliary Tract": 6,
+      "Bladder/Urinary Tract": 25,
+      "Bone": 15,
+      "Bowel": 56,
+      "Breast": 48,
+      "CNS/Brain": 49,
+      "Cervix": 1,
+      "Esophagus/Stomach": 63,
+      "Head and Neck": 33,
+      "Kidney": 27,
+      "Liver": 24,
+      "Lung": 169,
+      "Ovary/Fallopian Tube": 45,
+      "Pancreas": 41,
+      "Peripheral Nervous System": 16,
+      "Pleura": 9,
+      "Prostate": 7,
+      "Skin": 49,
+      "Soft Tissue": 10,
+      "Thyroid": 10,
+      "Uterus": 30
+    },
+    "medium_base_counts": {
+      "DMEM": 114,
+      "DMEM:F12": 59,
+      "EMEM/MEM": 95,
+      "Ham's F10": 6,
+      "Ham's F12": 9,
+      "Ham's F12K": 4,
+      "IMDM": 11,
+      "Leibovitz L-15": 12,
+      "McCoy's 5A": 26,
+      "RPMI-1640": 375,
+      "Waymouth's MB 752/1": 5,
+      "Williams' E": 4,
+      "alpha-MEM": 1,
+      "mixture": 14
+    },
+    "medium_category_counts": {
+      "DMEM": 114,
+      "DMEM:F12": 59,
+      "EMEM/MEM": 95,
+      "McCoy's 5A": 26,
+      "RPMI-1640": 375,
+      "other": 66
+    },
+    "n_adherent": 633,
+    "n_in_multi_line_donor_groups": 22,
+    "n_multi_line_donor_groups": 11,
+    "n_problematic": 26,
+    "n_sensitivity_excl_problematic": 709
+  }
+}

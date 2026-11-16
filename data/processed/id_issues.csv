@@ -1,0 +1,149 @@
+CCLE_ID,DepMap_ID,issue,detail,action
+HCC1588_LUNG,ACH-001078,ccle_name_changed_in_model_csv,Model.csv CCLEName='LS513_LARGE_INTESTINE' (different cell line name),kept (DepMap ID consistent); lineage from Model.csv
+KE97_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000167,ccle_name_changed_in_model_csv,Model.csv CCLEName='KE97_STOMACH' (tissue suffix only),kept (DepMap ID consistent); lineage from Model.csv
+NCIH1339_LUNG,ACH-000921,ccle_name_changed_in_model_csv,Model.csv CCLEName='NCIH157DM_LUNG' (different cell line name),kept (DepMap ID consistent); lineage from Model.csv
+NCIH684_LIVER,ACH-000089,ccle_name_changed_in_model_csv,Model.csv CCLEName='NCIH684_LARGE_INTESTINE' (tissue suffix only),kept (DepMap ID consistent); lineage from Model.csv
+A673_BONE,ACH-000052,cellosaurus_problematic,Misclassified. Originally thought to be a rhabdomyosarcoma cell line but shown to be from an Ewing sarcoma (PubMed=10379870; PubMed=12606131; PubMed=14697648).,flagged; kept (see decision log)
+BICR18_UPPER_AERODIGESTIVE_TRACT,ACH-000992,cellosaurus_problematic,"Partially contaminated. The ICLC stock (now discontinued) was found to be contaminated, probably by U-251MG (Cellosaurus=CVCL_0021).",flagged; kept (see decision log)
+CAKI2_KIDNEY,ACH-000234,cellosaurus_problematic,Misclassified. Originally thought to be a clear cell renal cell carcinoma but shown to be from a papillary renal cell carcinoma (PubMed=17409424; PubMed=27993170).,flagged; kept (see decision log)
+CGTHW1_THYROID,ACH-001023,cellosaurus_problematic,Contaminated. Shown to be a SW579 derivative (PubMed=25877200; DSMZ). Originally thought to originate from a thyroid gland follicular carcinoma metastasizing to the sternum of a 70 year old Chinese female patient.,flagged; kept (see decision log)
+COLO741_SKIN,ACH-000582,cellosaurus_problematic,Misclassified. Originally thought to be a colon adenocarcinoma cell line but shown to be from a melanoma (PubMed=25926053).,flagged; kept (see decision log)
+COV434_OVARY,ACH-000123,cellosaurus_problematic,"Misclassified. Originally thought to be an ovarian granulosa cell tumor but seems to be a small cell carcinoma of the ovary, hypercalcemic type (SCCOHT) (PubMed=33328126).",flagged; kept (see decision log)
+EHEB_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000038,cellosaurus_problematic,Probably misclassified. Originally thought to be a leukemia cell line but is probably a B-lymphoblastoid cell line (PubMed=12592342).,flagged; kept (see decision log)
+ES2_OVARY,ACH-000906,cellosaurus_problematic,Probably misclassified. It is dubious that this cell line originates from an African American 47 year old patient diagnosed with an ovarian clear cell adenocarcinoma. Immunohistochemical and qPCR analysis as well as its mutational profile support an ovarian serous adenocarcinoma origin (PubMed=25049,flagged; kept (see decision log)
+G401_SOFT_TISSUE,ACH-000096,cellosaurus_problematic,Misclassified. Originally thought to be a Wilms tumor cell line but is a kidney rhabdoid tumor cell line (PubMed=8382007; PubMed=30924592).,flagged; kept (see decision log)
+GOS3_CENTRAL_NERVOUS_SYSTEM,ACH-000027,cellosaurus_problematic,Contaminated. Shown to be a U-343MGa derivative (PubMed=22570425). Originally thought to originate from the brain of a 55 year old patient with a mixed astro-oligodendroglioma (grade II/III).,flagged; kept (see decision log)
+HCC56_LARGE_INTESTINE,ACH-000467,cellosaurus_problematic,Contaminated. Shown to be a HSC-57 derivative (JCRB=JCRB1037). Originally thought to originate from a colon adenocarcinoma.,flagged; kept (see decision log)
+HDMYZ_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000190,cellosaurus_problematic,"Misclassified. Originally thought to be a Hodgkin lymphoma cell line, but seems to be an acute myeloid leukemia cell line (PubMed=29533902).",flagged; kept (see decision log)
+HEPG2_LIVER,ACH-000739,cellosaurus_problematic,Misclassified. Originally thought to be a hepatocellular carcinoma cell line but shown to be from an hepatoblastoma (PubMed=19751877).,flagged; kept (see decision log)
+HLFA_FIBROBLAST,ACH-000797,cellosaurus_problematic,Misclassified. Originally thought to be a lung squamous cell carcinoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000797).,flagged; kept (see decision log)
+HS229T_FIBROBLAST,ACH-000131,cellosaurus_problematic,Misclassified. Originally thought to be a lung adenocarcinoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000131).,flagged; kept (see decision log)
+HS606T_FIBROBLAST,ACH-000540,cellosaurus_problematic,Misclassified. Originally thought to be a breast carcinoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000540).,flagged; kept (see decision log)
+HS618T_FIBROBLAST,ACH-000539,cellosaurus_problematic,Misclassified. Originally thought to be a lung adenocarcinoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000539).,flagged; kept (see decision log)
+HS688AT_FIBROBLAST,ACH-000306,cellosaurus_problematic,Misclassified. Originally thought to be a melanoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000306).,flagged; kept (see decision log)
+HS698T_FIBROBLAST,ACH-000850,cellosaurus_problematic,Misclassified. Originally thought to be a colorectal carcinoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000850).,flagged; kept (see decision log)
+HS821T_FIBROBLAST,ACH-000526,cellosaurus_problematic,Misclassified. Originally thought to be a giant cell tumor of bone cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000526).,flagged; kept (see decision log)
+HS839T_FIBROBLAST,ACH-000180,cellosaurus_problematic,Misclassified. Originally thought to be a melanoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000180).,flagged; kept (see decision log)
+HS863T_FIBROBLAST,ACH-000119,cellosaurus_problematic,Misclassified. Originally thought to be a Ewing sarcoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000119).,flagged; kept (see decision log)
+HS870T_FIBROBLAST,ACH-000340,cellosaurus_problematic,Misclassified. Originally thought to be a osteosarcoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000340).,flagged; kept (see decision log)
+HS934T_FIBROBLAST,ACH-000194,cellosaurus_problematic,Misclassified. Originally thought to be a melanoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000194).,flagged; kept (see decision log)
+HUNS1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000829,cellosaurus_problematic,Misclassified. Grand-parent cell line (GM01500) was originally thought to be a myeloma cell line but is a B-lymphoblastoid cell line.,flagged; kept (see decision log)
+ISHIKAWAHERAKLIO02ER_ENDOMETRIUM,ACH-000961,cellosaurus_problematic,Probably misclassified/misidentified. ECACC has discontinued this cell line because it displays STR profile from HEC-50B cells (Cellosaurus=CVCL_2929).,flagged; kept (see decision log)
+JHH1_LIVER,ACH-000620,cellosaurus_problematic,"Partially contaminated. Some JCRB stocks were found to be from mouse (PubMed=20143388). Stock bought in 2013 was shown to be human by exome sequencing (personal communication of Rebouissou, Sandra).",flagged; kept (see decision log)
+KE97_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000167,cellosaurus_problematic,Misclassified. Originally thought to be a mucinous gastric adenocarcinoma cell line from a 52 year old male patient but is a B-lymphoblastoid cell line (DSMZ; PubMed=30285677).,flagged; kept (see decision log)
+KMS21BM_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000598,cellosaurus_problematic,Misclassified. Originally thought to be a myeloma cell line and to be a sister line to KMS-21-PE (Cellosaurus=CVCL_A445) but this does not seem to be the case (PubMed=12592342; PubMed=20143388).,flagged; kept (see decision log)
+KPL1_BREAST,ACH-000028,cellosaurus_problematic,Contaminated. Shown to be a MCF-7 derivative (PubMed=18304946; PubMed=20143388).,flagged; kept (see decision log)
+KYM1_SOFT_TISSUE,ACH-000607,cellosaurus_problematic,Possibly misclassified. It is not certain that this cell line originate from a alveolar rhabdomyosarcoma (ARMS). It lacks the PAXA3-FOXO1 gene fusion characteristics of ARMS. Many papers classify it as an embryonal rhabdomyosarcoma (ERMS) and we accordingly describe it as such.,flagged; kept (see decision log)
+MDAMB435S_SKIN,ACH-000884,cellosaurus_problematic,Contaminated. Parent cell line (MDA-MB-435) has been shown to be a M14 derivative.,flagged; kept (see decision log)
+MELHO_SKIN,ACH-000450,cellosaurus_problematic,Misidentified/contaminated. Shown to be identical to MEL-Wei. This cell line was reported to be isogenic with LCL-Ho (Cellosaurus=CVCL_1868) but it does not have the same STR profile (PubMed=10508494; PubMed=20143388). According to DSMZ ACC-62 it is a human female cell line.,flagged; kept (see decision log)
+NCIH1339_LUNG,ACH-000921,cellosaurus_problematic,Contaminated. NCI-H157 and NCI-H1264 have been shown to be identical.,flagged; kept (see decision log)
+OC315_OVARY,ACH-001144,cellosaurus_problematic,Possibly contaminated. May be identical to OC 314 (Cellosaurus=CVCL_1616) according to STR profiling done at ICLC and to MSI data (PubMed=15677628).,flagged; kept (see decision log)
+OC316_OVARY,ACH-001145,cellosaurus_problematic,"Contaminated. Identical to OC 314 according to STR profiling done at ICLC, to MSI data (PubMed=15677628) and to omic data (DepMap). Originally thought to originate from a 60 year old patient with a FIGO stage IV ovarian cancer.",flagged; kept (see decision log)
+ONCODG1_OVARY,ACH-000013,cellosaurus_problematic,Contaminated. Shown to be a OVCAR-3 derivative (PubMed=20143388). Originally thought to originate from a 49 year old female patient with a thyroid gland papillary carcinoma.,flagged; kept (see decision log)
+OVCAR5_OVARY,ACH-001151,cellosaurus_problematic,Possibly misclassified. Originally thought to be a high grade ovarian serous adenocarcinoma but suspected to have a upper gastrointestinal origin (PubMed=27353327).,flagged; kept (see decision log)
+PANC0504_PANCREAS,ACH-000093,cellosaurus_problematic,Partially contaminated. Some stocks of this cell line such as the one used by Sanger cell line project were contaminated with a OCUG-1 derivative as shown by STR profile and SNP fingerprinting analysis (DepMap).,flagged; kept (see decision log)
+PC14_LUNG,ACH-000030,cellosaurus_problematic,Contaminated. Shown to be a PC-9 derivative (RCB=RCB0446).,flagged; kept (see decision log)
+SF268_CENTRAL_NERVOUS_SYSTEM,ACH-000655,cellosaurus_problematic,Possibly misidentified. Presence of a Y chromosome in cell line that was thought to be of female origin (STR profile).,flagged; kept (see decision log)
+SHSY5Y_AUTONOMIC_GANGLIA,ACH-001188,cellosaurus_problematic,Partially contaminated. Some laboratories that are redistributing this cell line are in fact redistributing a contaminated cell line of mouse origin (PubMed=25182563).,flagged; kept (see decision log)
+SKHEP1_LIVER,ACH-000361,cellosaurus_problematic,Misclassified. Originally described as originating from an adenocarcinoma of liver and thus classified as hepatocellular carcinoma. Later studies show that it most probably has arisen from endothelial cells (PubMed=1371504; PubMed=31938418).,flagged; kept (see decision log)
+SKNMC_BONE,ACH-000039,cellosaurus_problematic,Misclassified. Originally thought to be a neuroblastoma cell line but shown to be from an Askin tumor (PubMed=20143388).,flagged; kept (see decision log)
+SNGM_ENDOMETRIUM,ACH-000974,cellosaurus_problematic,Possibly contaminated. HHUA (distributed by RCB) and SNG-M (distributed by JCRB) share similar STR profiles and have been established by the same research group. While HHUA was described in 1984 and SNG-M in 1977 it has not been possible to establish which of the two cell lines are derived from each,flagged; kept (see decision log)
+T173_FIBROBLAST,ACH-000529,cellosaurus_problematic,Misclassified. Originally thought to be a osteosarcoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000529).,flagged; kept (see decision log)
+TE125T_FIBROBLAST,ACH-000079,cellosaurus_problematic,Misclassified. Originally thought to be a rhabdomyosarcoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000079).,flagged; kept (see decision log)
+TO175T_FIBROBLAST,ACH-000125,cellosaurus_problematic,Misclassified. Originally thought to be a Hodgkin lymphoma cell line but using a variety of omics methods was shown to be a fibroblastic cell line (DOI=10.1101/166199; DepMap=ACH-000125).,flagged; kept (see decision log)
+U118MG_CENTRAL_NERVOUS_SYSTEM,ACH-000040,cellosaurus_problematic,Contaminated. Shown to be a U-138MG derivative (PubMed=20143388).,flagged; kept (see decision log)
+U87MG_CENTRAL_NERVOUS_SYSTEM,ACH-000075,cellosaurus_problematic,Misidentified. This cell line is not the original glioblastoma cell line established in 1968 at the University of Uppsala. As described in PubMed=27582061 it is most probably also a glioblastoma cell line but whose origin is unknow. See U-87MG Uppsala (Cellosaurus=CVCL_GP63) for the original U-87MG ,flagged; kept (see decision log)
+U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000406,cellosaurus_problematic,Partially contaminated. Some ATCC stocks were cross-contaminated by K-562 initially (PubMed=7759961). The problem was corrected and subsequent stocks have been confirmed to carry only U-937.,flagged; kept (see decision log)
+OC315_OVARY,ACH-001144,depmap_id_missing_in_metabolomics,filled from 2019 annotation: ACH-001144,filled
+HCC1588_LUNG,ACH-001078,depmap_id_retired_alias,ACH-001078 is listed as ModelIDAlias of ACH-000007 in current Model.csv,mapped to current ModelID
+HCC1588_LUNG,ACH-001078,duplicate_cell_line,same current DepMap model (ACH-000007) as metabolomics line LS513_LARGE_INTESTINE,excluded from primary set; canonical line LS513_LARGE_INTESTINE kept
+HCC1588_LUNG,,duplicate_rrid,"CVCL_1386 shared by ['HCC1588_LUNG', 'LS513_LARGE_INTESTINE']",same donor group
+LS513_LARGE_INTESTINE,,duplicate_rrid,"CVCL_1386 shared by ['HCC1588_LUNG', 'LS513_LARGE_INTESTINE']",same donor group
+TO175T_FIBROBLAST,ACH-000125,haematopoietic_flag_discordant,Model.csv lineage=Fibroblast; 2019 Site_Primary=haematopoietic_and_lymphoid_tissue,Model.csv lineage used
+HLFA_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HLFA_LUNG' vs CCLE 2019 'HLFA_FIBROBLAST',matched by cell line name (unique)
+HS229T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS229T_LUNG' vs CCLE 2019 'HS229T_FIBROBLAST',matched by cell line name (unique)
+HS606T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS606T_BREAST' vs CCLE 2019 'HS606T_FIBROBLAST',matched by cell line name (unique)
+HS618T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS618T_LUNG' vs CCLE 2019 'HS618T_FIBROBLAST',matched by cell line name (unique)
+HS688AT_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS688AT_SKIN' vs CCLE 2019 'HS688AT_FIBROBLAST',matched by cell line name (unique)
+HS698T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS698T_LARGE_INTESTINE' vs CCLE 2019 'HS698T_FIBROBLAST',matched by cell line name (unique)
+HS821T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS821T_BONE' vs CCLE 2019 'HS821T_FIBROBLAST',matched by cell line name (unique)
+HS839T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS839T_SKIN' vs CCLE 2019 'HS839T_FIBROBLAST',matched by cell line name (unique)
+HS863T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS863T_BONE' vs CCLE 2019 'HS863T_FIBROBLAST',matched by cell line name (unique)
+HS870T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS870T_BONE' vs CCLE 2019 'HS870T_FIBROBLAST',matched by cell line name (unique)
+HS934T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'HS934T_SKIN' vs CCLE 2019 'HS934T_FIBROBLAST',matched by cell line name (unique)
+S117_THYROID,,li2019_name_differs[annotations],Li et al. name 'S117_SOFT_TISSUE' vs CCLE 2019 'S117_THYROID',matched by cell line name (unique)
+T173_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'T173_BONE' vs CCLE 2019 'T173_FIBROBLAST',matched by cell line name (unique)
+TE125T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'TE125T_SOFT_TISSUE' vs CCLE 2019 'TE125T_FIBROBLAST',matched by cell line name (unique)
+TO175T_FIBROBLAST,,li2019_name_differs[annotations],Li et al. name 'TO175T_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE' vs CCLE 2019 'TO175T_FIBROBLAST',matched by cell line name (unique)
+BECKER_CENTRAL_NERVOUS_SYSTEM,ACH-001016,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+CGTHW1_THYROID,ACH-001023,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+CHL1_SKIN,ACH-001024,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+CMK115_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-001036,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+COLO704_OVARY,ACH-001042,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+DOV13_OVARY,ACH-001063,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+MOTN1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-001130,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+NCIH2141_LUNG,ACH-001138,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+OC315_OVARY,ACH-001144,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+OC316_OVARY,ACH-001145,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+OUMS27_BONE,ACH-001150,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+OVCAR5_OVARY,ACH-001151,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+SHSY5Y_AUTONOMIC_GANGLIA,ACH-001188,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+SKMEL2_SKIN,ACH-001190,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+TK10_KIDNEY,ACH-001208,no_ccle2019_rnaseq,CCLE_ID absent from RSEM TPM columns (no alias match),excluded
+EHEB_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000038,non_cancerous_model,lineage=Lymphoid; disease=Non-Cancerous; type=ZTRABL,excluded from solid-tumour set
+HLFA_FIBROBLAST,ACH-000797,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBLUN,excluded from solid-tumour set
+HS229T_FIBROBLAST,ACH-000131,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBLUN,excluded from solid-tumour set
+HS606T_FIBROBLAST,ACH-000540,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBBRE,excluded from solid-tumour set
+HS618T_FIBROBLAST,ACH-000539,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBLUN,excluded from solid-tumour set
+HS688AT_FIBROBLAST,ACH-000306,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBSKI,excluded from solid-tumour set
+HS698T_FIBROBLAST,ACH-000850,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBCOL,excluded from solid-tumour set
+HS729_SOFT_TISSUE,ACH-000133,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIB,excluded from solid-tumour set
+HS821T_FIBROBLAST,ACH-000526,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBBON,excluded from solid-tumour set
+HS839T_FIBROBLAST,ACH-000180,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBSKI,excluded from solid-tumour set
+HS863T_FIBROBLAST,ACH-000119,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBBON,excluded from solid-tumour set
+HS870T_FIBROBLAST,ACH-000340,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBBON,excluded from solid-tumour set
+HS934T_FIBROBLAST,ACH-000194,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBSKI,excluded from solid-tumour set
+T173_FIBROBLAST,ACH-000529,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBBON,excluded from solid-tumour set
+TE125T_FIBROBLAST,ACH-000079,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBSOF,excluded from solid-tumour set
+TO175T_FIBROBLAST,ACH-000125,non_cancerous_model,lineage=Fibroblast; disease=Non-Cancerous; type=ZFIBLYM,excluded from solid-tumour set
+253JBV_URINARY_TRACT,ACH-000026,shared_donor_group,"DG001: ['253J_URINARY_TRACT', '253JBV_URINARY_TRACT'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+253J_URINARY_TRACT,ACH-000011,shared_donor_group,"DG001: ['253J_URINARY_TRACT', '253JBV_URINARY_TRACT'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+A101D_SKIN,ACH-000008,shared_donor_group,"DG002: ['A101D_SKIN', 'HS294T_SKIN'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+AU565_BREAST,ACH-000248,shared_donor_group,"DG003: ['AU565_BREAST', 'SKBR3_BREAST'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+CGTHW1_THYROID,ACH-001023,shared_donor_group,"DG004: ['CGTHW1_THYROID', 'SW579_THYROID'] (Cellosaurus HI (derived from); Cellosaurus problematic: shown to be derivative; same DepMap PatientID)",keep in same CV fold
+CHL1_SKIN,ACH-001024,shared_donor_group,"DG005: ['CHL1_SKIN', 'HMCB_SKIN'] (same DepMap PatientID)",keep in same CV fold
+CMK115_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-001036,shared_donor_group,"DG006: ['CMK115_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', 'CMK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE'] (same DepMap PatientID)",keep in same CV fold
+CMK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000641,shared_donor_group,"DG006: ['CMK115_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', 'CMK_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE'] (same DepMap PatientID)",keep in same CV fold
+COLO684_ENDOMETRIUM,ACH-000864,shared_donor_group,"DG007: ['COLO684_ENDOMETRIUM', 'COLO704_OVARY'] (same DepMap PatientID)",keep in same CV fold
+COLO704_OVARY,ACH-001042,shared_donor_group,"DG007: ['COLO684_ENDOMETRIUM', 'COLO704_OVARY'] (same DepMap PatientID)",keep in same CV fold
+FTC133_THYROID,ACH-000903,shared_donor_group,"DG008: ['FTC238_THYROID', 'FTC133_THYROID'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+FTC238_THYROID,ACH-000897,shared_donor_group,"DG008: ['FTC238_THYROID', 'FTC133_THYROID'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+HCC1588_LUNG,ACH-001078,shared_donor_group,"DG009: ['HCC1588_LUNG', 'LS513_LARGE_INTESTINE'] (same DepMap PatientID; same RRID)",keep in same CV fold
+HEC1A_ENDOMETRIUM,ACH-000954,shared_donor_group,"DG010: ['HEC1B_ENDOMETRIUM', 'HEC1A_ENDOMETRIUM'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+HEC1B_ENDOMETRIUM,ACH-000941,shared_donor_group,"DG010: ['HEC1B_ENDOMETRIUM', 'HEC1A_ENDOMETRIUM'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+HEL9217_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000005,shared_donor_group,"DG011: ['HEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', 'HEL9217_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+HEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000004,shared_donor_group,"DG011: ['HEL_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', 'HEL9217_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+HMCB_SKIN,ACH-000931,shared_donor_group,"DG005: ['CHL1_SKIN', 'HMCB_SKIN'] (same DepMap PatientID)",keep in same CV fold
+HS294T_SKIN,ACH-000014,shared_donor_group,"DG002: ['A101D_SKIN', 'HS294T_SKIN'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+IGR37_SKIN,ACH-000650,shared_donor_group,"DG012: ['IGR39_SKIN', 'IGR37_SKIN'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+IGR39_SKIN,ACH-000550,shared_donor_group,"DG012: ['IGR39_SKIN', 'IGR37_SKIN'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+KPL1_BREAST,ACH-000028,shared_donor_group,"DG013: ['KPL1_BREAST', 'MCF7_BREAST'] (Cellosaurus HI (derived from); Cellosaurus problematic: shown to be derivative; same DepMap PatientID)",keep in same CV fold
+LS513_LARGE_INTESTINE,ACH-000007,shared_donor_group,"DG009: ['HCC1588_LUNG', 'LS513_LARGE_INTESTINE'] (same DepMap PatientID; same RRID)",keep in same CV fold
+MCF7_BREAST,ACH-000019,shared_donor_group,"DG013: ['KPL1_BREAST', 'MCF7_BREAST'] (Cellosaurus HI (derived from); Cellosaurus problematic: shown to be derivative; same DepMap PatientID)",keep in same CV fold
+MONOMAC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-001129,shared_donor_group,"DG014: ['MONOMAC6_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', 'MONOMAC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+MONOMAC6_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE,ACH-000006,shared_donor_group,"DG014: ['MONOMAC6_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', 'MONOMAC1_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+NIHOVCAR3_OVARY,ACH-000001,shared_donor_group,"DG015: ['NIHOVCAR3_OVARY', 'ONCODG1_OVARY'] (Cellosaurus HI (derived from); Cellosaurus problematic: shown to be derivative; same DepMap PatientID)",keep in same CV fold
+OC314_OVARY,ACH-000962,shared_donor_group,"DG016: ['OC316_OVARY', 'OC315_OVARY', 'OC314_OVARY'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+OC315_OVARY,ACH-001144,shared_donor_group,"DG016: ['OC316_OVARY', 'OC315_OVARY', 'OC314_OVARY'] (same DepMap PatientID)",keep in same CV fold
+OC316_OVARY,ACH-001145,shared_donor_group,"DG016: ['OC316_OVARY', 'OC315_OVARY', 'OC314_OVARY'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+ONCODG1_OVARY,ACH-000013,shared_donor_group,"DG015: ['NIHOVCAR3_OVARY', 'ONCODG1_OVARY'] (Cellosaurus HI (derived from); Cellosaurus problematic: shown to be derivative; same DepMap PatientID)",keep in same CV fold
+PATU8988S_PANCREAS,ACH-000022,shared_donor_group,"DG017: ['PATU8988S_PANCREAS', 'PATU8988T_PANCREAS'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+PATU8988T_PANCREAS,ACH-000023,shared_donor_group,"DG017: ['PATU8988S_PANCREAS', 'PATU8988T_PANCREAS'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+SHSY5Y_AUTONOMIC_GANGLIA,ACH-001188,shared_donor_group,"DG018: ['SHSY5Y_AUTONOMIC_GANGLIA', 'SKNSH_AUTONOMIC_GANGLIA'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+SKBR3_BREAST,ACH-000017,shared_donor_group,"DG003: ['AU565_BREAST', 'SKBR3_BREAST'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+SKNSH_AUTONOMIC_GANGLIA,ACH-000149,shared_donor_group,"DG018: ['SHSY5Y_AUTONOMIC_GANGLIA', 'SKNSH_AUTONOMIC_GANGLIA'] (Cellosaurus HI (derived from); same DepMap PatientID)",keep in same CV fold
+SW480_LARGE_INTESTINE,ACH-000842,shared_donor_group,"DG019: ['SW480_LARGE_INTESTINE', 'SW620_LARGE_INTESTINE'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+SW579_THYROID,ACH-000163,shared_donor_group,"DG004: ['CGTHW1_THYROID', 'SW579_THYROID'] (Cellosaurus HI (derived from); Cellosaurus problematic: shown to be derivative; same DepMap PatientID)",keep in same CV fold
+SW620_LARGE_INTESTINE,ACH-000651,shared_donor_group,"DG019: ['SW480_LARGE_INTESTINE', 'SW620_LARGE_INTESTINE'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+WM115_SKIN,ACH-000304,shared_donor_group,"DG020: ['WM115_SKIN', 'WM2664_SKIN'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold
+WM2664_SKIN,ACH-001239,shared_donor_group,"DG020: ['WM115_SKIN', 'WM2664_SKIN'] (Cellosaurus OI (same individual); same DepMap PatientID)",keep in same CV fold

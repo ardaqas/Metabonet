@@ -1,0 +1,11 @@
+# Raw downloaded data is never committed (see docs/data_sources.md for provenance and checksums)
+data/raw/*
+!data/raw/MANIFEST.tsv
+!data/raw/.gitkeep
+data/interim/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store

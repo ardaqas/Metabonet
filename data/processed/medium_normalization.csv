@@ -1,0 +1,259 @@
+source,raw_string,n_lines,medium_base,components,rule,serum_pct,medium_category_primary,n_lines_primary
+anno2019_growth_medium,ACL-4,1,ACL-4,ACL-4,single component: ACL-4,,(not in primary set),1
+anno2019_growth_medium,DMEM+10% FBS,18,DMEM,DMEM,single component: DMEM,10,DMEM,17
+anno2019_growth_medium,DMEM + 10% FBS,13,DMEM,DMEM,single component: DMEM,10,DMEM,12
+anno2019_growth_medium,DMEM +10%FBS,10,DMEM,DMEM,single component: DMEM,10,DMEM,10
+anno2019_growth_medium,DMEM +10 %FBS,7,DMEM,DMEM,single component: DMEM,10,DMEM,2
+anno2019_growth_medium,DMEM+10%FBS,7,DMEM,DMEM,single component: DMEM,10,DMEM,6
+anno2019_growth_medium,DMEM + 10%FBS,6,DMEM,DMEM,single component: DMEM,10,DMEM,5
+anno2019_growth_medium,DMEM+20% FBS,5,DMEM,DMEM,single component: DMEM,20,DMEM,5
+anno2019_growth_medium,DMEM+15%FBS,3,DMEM,DMEM,single component: DMEM,15,DMEM,3
+anno2019_growth_medium,DMEM+5% FBS,2,DMEM,DMEM,single component: DMEM,5,DMEM,2
+anno2019_growth_medium,DMEM+ 10% FBS,2,DMEM,DMEM,single component: DMEM,10,DMEM,2
+anno2019_growth_medium,90% Dulbecco's MEM (4.5g/L glucose) + 10% h.i. FBS,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,DMEM + 15% FBS,1,DMEM,DMEM,single component: DMEM,15,DMEM,1
+anno2019_growth_medium,DMEM +5%FBS,1,DMEM,DMEM,single component: DMEM,5,DMEM,1
+anno2019_growth_medium,Dulbecco's modified Eagle's medium with 10% fetal bovine serum,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,90% Dulbecco's MEM +10% h.i. FBS,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,Dulbecco's modified Eagle's medium with 10% fetal calf serum,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,90% Dulbecco's MEM(4.5 g/L glucose) +10% h.i.FBS,1,DMEM,DMEM,single component: DMEM,10,DMEM,0
+anno2019_growth_medium,85% Dulbecco's MEM +15% h.i.FBS,1,DMEM,DMEM,single component: DMEM,15,DMEM,1
+anno2019_growth_medium,DMEM +15%FBS,1,DMEM,DMEM,single component: DMEM,15,DMEM,1
+anno2019_growth_medium,80% Dulbecco's MEM(4.5g/L glucose) +20% h.i.FBS,1,DMEM,DMEM,single component: DMEM,20,DMEM,1
+anno2019_growth_medium,90% Dulbecco'sMEM(4.5g/l glucose) +10% h.i.FBS,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,80% Dulbecco's MEM +20% h.i. FBS +0.5% human serum (+0.005 lu/ml TSH +5ug/ml human insulin-cells grow also without these latter supplements),1,DMEM,DMEM,single component: DMEM,20,DMEM,1
+anno2019_growth_medium,DMEM+20%FBS,1,DMEM,DMEM,single component: DMEM,20,DMEM,1
+anno2019_growth_medium,90% Dulbecco's MEM + 10% h.i. FBS,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,Dulbecco's modified Eagle's medium with 5% fetal bovine serum,1,DMEM,DMEM,single component: DMEM,5,DMEM,1
+anno2019_growth_medium,DEMEM+10%FBS,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,Dulbecco's modified Eagle's medium with 10% fetal bovine serum. Refer cancer Res. 42:3858 (1982) for other medium with low serum concentration.,1,DMEM,DMEM,single component: DMEM,10,DMEM,1
+anno2019_growth_medium,DMEM:HAM's F12  1:1  +5% FBS,5,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,5
+anno2019_growth_medium,DMEM:F12,4,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,,DMEM:F12,4
+anno2019_growth_medium,DMEM:F12 (1:1) + 10% FBS,3,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,3
+anno2019_growth_medium,DMEM/F12(1:1) +10 % FBS,3,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,3
+anno2019_growth_medium,DMEM:F12+10% FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,2
+anno2019_growth_medium,DMEM:F12 (1:1)+5%FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,2
+anno2019_growth_medium,DMEM:HAM's F12  1:1 + 5 % FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,2
+anno2019_growth_medium,DMEM:HAM's F12  1:1  +10% FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,2
+anno2019_growth_medium,DMEM:F12+5% FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,2
+anno2019_growth_medium,DMEM:F12(1:1) + 10%FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,2
+anno2019_growth_medium,DMEM:HAM's F12  1:1  +20% FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,20,DMEM:F12,2
+anno2019_growth_medium,DMEM:F12 +10% FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,1
+anno2019_growth_medium,DMEM:F12 + 10% FBS,2,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,2
+anno2019_growth_medium,DMEM:HAM's F12  1:1 + 5% FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,0
+anno2019_growth_medium,DMEM:F:12 (1:1) +10 %FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,1
+anno2019_growth_medium,DMEM:HAM's F12  1:1 (ATCC catalog # 30-2006) + 5%  FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,1
+anno2019_growth_medium,DMEM:HAM's F12  1:1  + 5%  FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,1
+anno2019_growth_medium,DMEM:F12 (1:1) + 5% FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,1
+anno2019_growth_medium,80% mixture of Ham's F12 + Dulbecco's MEM (at 1:1) +20% h.i FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,20,DMEM:F12,1
+anno2019_growth_medium,80% mixture of Dulbecco's MEM + Ham's F 12 at 1:1 + 20% h.i. FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,20,DMEM:F12,1
+anno2019_growth_medium,DMEM:F12(1:1) +15%FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,15,DMEM:F12,1
+anno2019_growth_medium,DMEM:F12 + 5% FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,1
+anno2019_growth_medium,(DMEM: HamF12=1:1) +10%FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,1
+anno2019_growth_medium,(DMEM:HamF12=1:1) + 10%FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,1
+anno2019_growth_medium,(DMEM:HamF12=1:1) +10%FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,1
+anno2019_growth_medium,EMEM+10%FBS,17,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,15
+anno2019_growth_medium,EMEM +10%FBS,9,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,9
+anno2019_growth_medium,EMEM + 10% FBS,9,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,9
+anno2019_growth_medium,EMEM+10% FBS,7,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,7
+anno2019_growth_medium,Eagle's minimal essential medium with 15%  fetal calf serum,3,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,15,EMEM/MEM,3
+anno2019_growth_medium,MEM+10%FBS,3,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,3
+anno2019_growth_medium,Eagle's minimal essential medium with 15%  fetal bovine serum,2,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,15,EMEM/MEM,2
+anno2019_growth_medium,EMEM +10 % FBS,2,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,2
+anno2019_growth_medium,MEM+10% FBS,2,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,2
+anno2019_growth_medium,MEM + 10% FBS,2,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,MEM + 10 % FBS,2,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,2
+anno2019_growth_medium,EMEM + 20% FBS,2,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,20,EMEM/MEM,2
+anno2019_growth_medium,MEM + 20% FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,20,EMEM/MEM,0
+anno2019_growth_medium,EMEM +10% FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,MEM +10%FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,EMEM+ 10% FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,Eagle's minimal essential medium with 10% fetal bovine serum,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,Eagle's minimal essential with 20% heat inactivated fetal bovine serum,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,20,EMEM/MEM,1
+anno2019_growth_medium,Eagle,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,,EMEM/MEM,1
+anno2019_growth_medium,Eagle's minimal essential medium with 10% fetal calf serum,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,Eagle's minimal essential medium with 15% fetal calf serum,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,15,EMEM/MEM,1
+anno2019_growth_medium,EMEM+20%FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,20,EMEM/MEM,1
+anno2019_growth_medium,EMEM +20%FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,20,EMEM/MEM,1
+anno2019_growth_medium,EMEM + 5% FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,5,EMEM/MEM,1
+anno2019_growth_medium,Eagle's minimal essential medium with 10% calf serum (FCS can be used),1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,1
+anno2019_growth_medium,HamF10 +10% FBS,2,Ham's F10,Ham's F10,single component: Ham's F10,10,other,2
+anno2019_growth_medium,HAMSF10+ 10% FBS,2,Ham's F10,Ham's F10,single component: Ham's F10,10,other,2
+anno2019_growth_medium,Hams F10+10% FBS,1,Ham's F10,Ham's F10,single component: Ham's F10,10,other,1
+anno2019_growth_medium,F-12 +10%FBS,2,Ham's F12,Ham's F12,single component: Ham's F12,10,other,2
+anno2019_growth_medium,Han's F12 medium 90% with 10% fetal bovine serum,1,Ham's F12,Ham's F12,single component: Ham's F12,10,other,1
+anno2019_growth_medium,Ham's F12 medium with 20% fetal bovine serum,1,Ham's F12,Ham's F12,single component: Ham's F12,20,other,1
+anno2019_growth_medium,HamF12+10%FBS,1,Ham's F12,Ham's F12,single component: Ham's F12,10,other,1
+anno2019_growth_medium,HAMS F12 +20% FBS,1,Ham's F12,Ham's F12,single component: Ham's F12,20,other,1
+anno2019_growth_medium,Ham's F12 +10% FBS,1,Ham's F12,Ham's F12,single component: Ham's F12,10,other,1
+anno2019_growth_medium,F-12K  ATCC  + 10% FBS,1,Ham's F12K,Ham's F12K,single component: Ham's F12K,10,other,1
+anno2019_growth_medium,IMDM+10% FBS,2,IMDM,IMDM,single component: IMDM,10,other,1
+anno2019_growth_medium,IMDM+10%FBS,2,IMDM,IMDM,single component: IMDM,10,other,1
+anno2019_growth_medium,80% Iscove's MDM + 20% h.i. FBS,1,IMDM,IMDM,single component: IMDM,20,other,0
+anno2019_growth_medium,80-90% Iscove's MDM +10-20% h.i. FBS,1,IMDM,IMDM,single component: IMDM,10,other,0
+anno2019_growth_medium,IMDM +20% FBS,1,IMDM,IMDM,single component: IMDM,20,other,1
+anno2019_growth_medium,IMDM+ 20% FBS,1,IMDM,IMDM,single component: IMDM,20,other,0
+anno2019_growth_medium,IMDM+10%fbs,1,IMDM,IMDM,single component: IMDM,10,other,1
+anno2019_growth_medium,IMDM+5%FBS,1,IMDM,IMDM,single component: IMDM,5,other,0
+anno2019_growth_medium,IMDM + 20% FBS,1,IMDM,IMDM,single component: IMDM,20,other,0
+anno2019_growth_medium,90% Iscove's MDM +10% h. i. FBS,1,IMDM,IMDM,single component: IMDM,10,other,0
+anno2019_growth_medium,IMDM+20 % FBS,1,IMDM,IMDM,single component: IMDM,20,other,0
+anno2019_growth_medium,IMDM + 20%FBS,1,IMDM,IMDM,single component: IMDM,20,other,1
+anno2019_growth_medium,IMDM+20%FBS,1,IMDM,IMDM,single component: IMDM,20,other,0
+anno2019_growth_medium,L15+10%FBS,5,Leibovitz L-15,Leibovitz L-15,single component: Leibovitz L-15,10,other,5
+anno2019_growth_medium,Leibovitz's L-15 Medium + 10%FBS,1,Leibovitz L-15,Leibovitz L-15,single component: Leibovitz L-15,10,other,1
+anno2019_growth_medium,L15 + 10% FBS,1,Leibovitz L-15,Leibovitz L-15,single component: Leibovitz L-15,10,other,1
+anno2019_growth_medium,L15+20%FBS,1,Leibovitz L-15,Leibovitz L-15,single component: Leibovitz L-15,20,other,1
+anno2019_growth_medium,McCoy's 5A +10%FBS,3,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,10,McCoy's 5A,3
+anno2019_growth_medium,McCoy 5A+15%FBS,2,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,15,McCoy's 5A,2
+anno2019_growth_medium,McCoy's 5A +10%,2,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,,McCoy's 5A,2
+anno2019_growth_medium,McCoy's 5A +15%FBS,1,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,15,McCoy's 5A,1
+anno2019_growth_medium,McCOY'S5A + 10%FBS,1,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,10,McCoy's 5A,1
+anno2019_growth_medium,McCoy's 5A + 10% FBS,1,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,10,McCoy's 5A,1
+anno2019_growth_medium,McCoy's 5A +10% FBS,1,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,10,McCoy's 5A,1
+anno2019_growth_medium,McCoy's 5A + 10%FBS,1,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,10,McCoy's 5A,1
+anno2019_growth_medium,RPMI-1640+10% FBS,50,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,44
+anno2019_growth_medium,"RPMI 1640  with L-glutamine (300mg/L), 90%; heat inactivated fetal bovine serum (FBS),10%",47,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,46
+anno2019_growth_medium,RPMI+10%FBS,35,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,32
+anno2019_growth_medium,RPMI-1640 + 10% FBS,30,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,22
+anno2019_growth_medium,RPMI-1640+10%FBS,30,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,27
+anno2019_growth_medium,RPMI1640+10%FBS,18,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,12
+anno2019_growth_medium,RPMI 1640 +10%FBS,18,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,16
+anno2019_growth_medium,RPMI 1640+10%FBS,12,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,11
+anno2019_growth_medium,90% RPMI 1640 +10% h.i. FBS,10,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640 +10% FBS,10,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,10
+anno2019_growth_medium,RPMI-1640+ 5% FBS,10,RPMI-1640,RPMI-1640,single component: RPMI-1640,5,RPMI-1640,7
+anno2019_growth_medium,RPMI + 10 % FBS,10,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,3
+anno2019_growth_medium,RPMI-1640+20% FBS,9,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,2
+anno2019_growth_medium,90% RPMI 1640 +10% h. i. FBS,6,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,RPMI-1640 + 20% FBS,5,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,3
+anno2019_growth_medium,80% RPMI 1640 + 20% h. i. FBS,5,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640+ 10% FBS,5,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640 + 10%FBS,5,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,5
+anno2019_growth_medium,RPMI+20%FBS,4,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,3
+anno2019_growth_medium,RPMI-1640+20%FBS,4,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,90% RPMI 1640 +10% h.i.FBS,4,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI +10%FBS,4,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,RPMI-10% FBS,4,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,3
+anno2019_growth_medium,RPMI1640+20%FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640 medium with 10% fetal bovine serum,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,3
+anno2019_growth_medium,RPMI 1640 medium with 10% fetal bovine serum.,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,80% RPMI 1640 +20% h.i. FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,1
+anno2019_growth_medium,RPMI1640+15%FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640 +10% FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,80-90% RPMI 1640 +10-20% h.i. FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,RPMI-1640+ 20% FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,80-90% RPMI 1640 +10-20% h. i. FBS,3,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,80% RPMI 1640 +20% h.i.FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640 medium with 10% fetal calf serum.,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640+20%FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,"RPMI 1640  with L-glutamine (300mg/L), 90%; heat inactivated fetal bovine serum (FBs),10%",2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,RPMI-1640 +20% FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,90% RPMI 1640 + 10% h. i. FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,90% RPMI 1640 + 10% h.i. FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,RPMI-1640+ 10%FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,RPMI-1640 + 5% FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,5,RPMI-1640,2
+anno2019_growth_medium,RPMI 1640 + 10% FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,90% RPMI 1640 + 10% h.i.FBS,2,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,2
+anno2019_growth_medium,RPMI-1640  +10 % FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640  +10% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI1640+5%FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,5,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640   + 5% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,5,RPMI-1640,1
+anno2019_growth_medium,90% rPMI 1640 + 10% h. i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,RPMI-1640 +20%FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,RPMI 1640 medium with 10% fetal calf serum,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,90-95% RPMI 1640 +5-10 h.i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,5,RPMI-1640,1
+anno2019_growth_medium,"RPMI 1640 with L-glutamine(300mg/L), 90%; heat inactivatedfetal bovine serum (FBS), 10%",1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,85% RPMI 1640 +15% h.i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,0
+anno2019_growth_medium,RPMI1640 + 10%FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,"90% RPMI 1640 +10% h,i, FBS",1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,80-85% RPMI 1640 +15-20% h.i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,1
+anno2019_growth_medium,80-90% RPMI 1640+ 10-20% h. i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,85% RPMI 1640 +15% h. i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,0
+anno2019_growth_medium,80% RPMI 1640 +20% h.i. FBs,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,RPMI + 10% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640+15% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640 +10 FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,80% RPMI 1640 +20% h. i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,RPMI 1640 medium with fetal calf serum,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,,RPMI-1640,0
+anno2019_growth_medium,RPMI 1640 medium with 10% heat inactivated fetal bovine serum,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,90%RPMI 1640+ 10% h.i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,80% RPMI 1640 + 20% h.i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,RPI-1640+10% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,90% RPMI + 10% h.i.FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,80% RPMI 1640 + 10% h.i.FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,RPMI-1640 10% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,80-90% RPHI 1640+10-20% h.i.FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,RPMI-1640 10% FBS +1 mM Sodium pyruvate,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI +20% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,RPMI-1640 + 10%FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI 1640 medium wiyh10% fetal bovine serum,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640+ 15% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,0
+anno2019_growth_medium,90% RPMI 1640 +10%  h. i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,RPMI-20% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,1
+anno2019_growth_medium,RPMI-1640 + 15% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,1
+anno2019_growth_medium,90%RPMI 1640+10% h.i FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,1
+anno2019_growth_medium,90% RPMI1640 +10%h.i. FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,0
+anno2019_growth_medium,80%RPMI-1640+20% FBS,1,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,0
+anno2019_growth_medium,Waymouth MB 7521 medium+10%FBS,2,Waymouth's MB 752/1,Waymouth's MB 752/1,single component: Waymouth's MB 752/1,10,other,2
+anno2019_growth_medium,Waymouth's +10%FBS,2,Waymouth's MB 752/1,Waymouth's MB 752/1,single component: Waymouth's MB 752/1,10,other,2
+anno2019_growth_medium,Williams E Medium + 10%FBS,3,Williams' E,Williams' E,single component: Williams' E,10,other,3
+anno2019_growth_medium,alpha-MEM with 10% fetal calf serum,1,alpha-MEM,alpha-MEM,single component: alpha-MEM,10,other,1
+anno2019_growth_medium,80% alpha-MEM + 20% h. i. FBS,1,alpha-MEM,alpha-MEM,single component: alpha-MEM,20,other,0
+anno2019_growth_medium,70% alpha-MEM + 20% h. i. FBS,1,alpha-MEM,alpha-MEM,single component: alpha-MEM,20,other,0
+anno2019_growth_medium,alphaMEM+20%FBS,1,alpha-MEM,alpha-MEM,single component: alpha-MEM,20,other,0
+anno2019_growth_medium,90 % Iscove's MDMD or RPMI 1640 + 10% h.i. FBS,1,ambiguous,IMDM+RPMI-1640,alternatives given ('or'),10,unknown,0
+anno2019_growth_medium,RPMI 1640(or DM-160AU) +10%FBS,1,ambiguous,DMEM+RPMI-1640,alternatives given ('or'),10,unknown,1
+anno2019_growth_medium,80-90% Iscove's MDM or RPMI 1640 +10-20% h. i. FBS,1,ambiguous,IMDM+RPMI-1640,alternatives given ('or'),10,unknown,0
+anno2019_growth_medium,RPMI:F12 1:1+10% FBS,1,mixture,Ham's F12+RPMI-1640,two or more base media,10,other,1
+anno2019_growth_medium,MCDB 105 (1:1)Medium 199 +15%FBS,1,mixture,MCDB 105+Medium 199,two or more base media,15,other,1
+anno2019_growth_medium,MCDB 105 1:1 Media 199 +10%FBS,1,mixture,MCDB 105+Medium 199,two or more base media,10,other,1
+anno2019_growth_medium,MCDB 105:MEDIUM 199 (1:1) +15% FBS,1,mixture,MCDB 105+Medium 199,two or more base media,15,other,1
+anno2019_growth_medium,RPM:MEM +20% FBS,1,mixture,EMEM/MEM+RPMI-1640,two or more base media,20,other,1
+anno2019_growth_medium,RPMI:EMEM (1:1) +20 % FBS,1,mixture,EMEM/MEM+RPMI-1640,two or more base media,20,other,1
+anno2019_growth_medium,RPMI:Ham F12 +5%FBS,1,mixture,Ham's F12+RPMI-1640,two or more base media,5,other,1
+anno2019_growth_medium,40% Dulbecco's MEM +40% Iscove's MDM + 20% h.i. FBS,1,mixture,DMEM+IMDM,two or more base media,20,other,0
+anno2019_growth_medium,2/3 DMEM:1/3 RPMI+10%FBS,1,mixture,DMEM+RPMI-1640,two or more base media,10,other,1
+anno2019_growth_medium,<missing>,224,unknown,,missing,,unknown,188
+li2019_supp1,DMEM + 10% FBS,108,DMEM,DMEM,single component: DMEM,10,DMEM,93
+li2019_supp1,DMEM + 20% FBS,10,DMEM,DMEM,single component: DMEM,20,DMEM,9
+li2019_supp1,DMEM + 15% FBS,7,DMEM,DMEM,single component: DMEM,15,DMEM,7
+li2019_supp1,DMEM + 5% FBS,5,DMEM,DMEM,single component: DMEM,5,DMEM,5
+li2019_supp1,DMEM:F12 = 1:1 + 10% FBS,35,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,10,DMEM:F12,34
+li2019_supp1,DMEM:F12 = 1:1 + 5% FBS,21,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,5,DMEM:F12,20
+li2019_supp1,DMEM:F12 = 1:1 + 20% FBS,4,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,20,DMEM:F12,4
+li2019_supp1,DMEM:F12 = 1:1 + 15% FBS,1,DMEM:F12,DMEM+Ham's F12,DMEM + Ham's F12 -> DMEM:F12,15,DMEM:F12,1
+li2019_supp1,EMEM + 10% FBS,68,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,64
+li2019_supp1,MEM + 10% FBS,15,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,10,EMEM/MEM,14
+li2019_supp1,EMEM + 15% FBS,8,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,15,EMEM/MEM,8
+li2019_supp1,EMEM + 20% FBS,7,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,20,EMEM/MEM,7
+li2019_supp1,MEM + 15% FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,15,EMEM/MEM,1
+li2019_supp1,EMEM + 5% FBS,1,EMEM/MEM,EMEM/MEM,single component: EMEM/MEM,5,EMEM/MEM,1
+li2019_supp1,F10 + 10% FBS,6,Ham's F10,Ham's F10,single component: Ham's F10,10,other,6
+li2019_supp1,F12 + 10% FBS,6,Ham's F12,Ham's F12,single component: Ham's F12,10,other,6
+li2019_supp1,F12 + 20% FBS,3,Ham's F12,Ham's F12,single component: Ham's F12,20,other,3
+li2019_supp1,F12K + 10% FBS,4,Ham's F12K,Ham's F12K,single component: Ham's F12K,10,other,4
+li2019_supp1,IMDM + 20% FBS,13,IMDM,IMDM,single component: IMDM,20,other,4
+li2019_supp1,IMDM + 10% FBS,11,IMDM,IMDM,single component: IMDM,10,other,7
+li2019_supp1,IMDM + 5% FBS,1,IMDM,IMDM,single component: IMDM,5,other,0
+li2019_supp1,Leibovitz's L-15 + 10% FBS,11,Leibovitz L-15,Leibovitz L-15,single component: Leibovitz L-15,10,other,11
+li2019_supp1,Leibovitz's L-15 + 20% FBS,1,Leibovitz L-15,Leibovitz L-15,single component: Leibovitz L-15,20,other,1
+li2019_supp1,McCoy's 5A + 10% FBS,22,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,10,McCoy's 5A,22
+li2019_supp1,McCoy's 5A + 15% FBS,4,McCoy's 5A,McCoy's 5A,single component: McCoy's 5A,15,McCoy's 5A,4
+li2019_supp1,RPMI 1640 + 10% FBS,434,RPMI-1640,RPMI-1640,single component: RPMI-1640,10,RPMI-1640,337
+li2019_supp1,RPMI 1640 + 20% FBS,59,RPMI-1640,RPMI-1640,single component: RPMI-1640,20,RPMI-1640,18
+li2019_supp1,RPMI 1640 + 15% FBS,18,RPMI-1640,RPMI-1640,single component: RPMI-1640,15,RPMI-1640,8
+li2019_supp1,RPMI 1640 + 5% FBS,15,RPMI-1640,RPMI-1640,single component: RPMI-1640,5,RPMI-1640,12
+li2019_supp1,Waymouth MB 7521 medium+ 10% FBS,5,Waymouth's MB 752/1,Waymouth's MB 752/1,single component: Waymouth's MB 752/1,10,other,5
+li2019_supp1,William's E Medium + 10% FBS,4,Williams' E,Williams' E,single component: Williams' E,10,other,4
+li2019_supp1,AMEM + 20% FBS,4,alpha-MEM,alpha-MEM,single component: alpha-MEM,20,other,0
+li2019_supp1,AMEM + 10% FBS,1,alpha-MEM,alpha-MEM,single component: alpha-MEM,10,other,1
+li2019_supp1,RPMI:F12 = 1:1 + 10% FBS,3,mixture,Ham's F12+RPMI-1640,two or more base media,10,other,3
+li2019_supp1,RPMI:MEM = 1:1 + 20% FBS,3,mixture,EMEM/MEM+RPMI-1640,two or more base media,20,other,3
+li2019_supp1,EMEM:F12 = 1:1 + 10% FBS,2,mixture,EMEM/MEM+Ham's F12,two or more base media,10,other,2
+li2019_supp1,MCDB 105:Medium 199 = 1:1 + 15% FBS,2,mixture,MCDB 105+Medium 199,two or more base media,15,other,2
+li2019_supp1,MCDB 105:Medium 199 = 1:1 + 10% FBS,1,mixture,MCDB 105+Medium 199,two or more base media,10,other,1
+li2019_supp1,RPMI:F12 = 1:1 + 5% FBS,1,mixture,Ham's F12+RPMI-1640,two or more base media,5,other,1
+li2019_supp1,DMEM:IMDM = 1:1 + 20% FBS,1,mixture,DMEM+IMDM,two or more base media,20,other,0
+li2019_supp1,RPMI:EMEM = 1:1 + 20% FBS,1,mixture,EMEM/MEM+RPMI-1640,two or more base media,20,other,1
+li2019_supp1,DMEM:RPMI = 2:1 + 10% FBS,1,mixture,DMEM+RPMI-1640,two or more base media,10,other,1

@@ -1,0 +1,10 @@
+step,n_lines
+CCLE 2019 metabolomics lines,928
+... with a DepMap ID,928
+... found in current Model.csv (ModelID or alias),928
+... with CCLE 2019 RNA-seq,913
+... with lineage (OncotreeLineage),913
+... duplicate cell lines removed (DepMap-merged IDs),912
+... cancer models (non-cancerous/fibroblast removed),896
+... solid tumour (Lymphoid/Myeloid removed),735
+... with medium assigned = PRIMARY SET,735
